@@ -1,14 +1,28 @@
 <template>
-  <nav>
-    <router-link :to="{name:'Home', params:{locale:$i18n.locale}}">
-      Home
-    </router-link>
-    <router-link :to="{name:'About', params:{locale:$i18n.locale}}">
-      About
-    </router-link>
-    <router-link :to="{name:'Contact', params:{locale:$i18n.locale}}">
-      Contact
-    </router-link>
-  </nav>
-  <router-view/>
+  <main-header></main-header>
+  <div class="main">
+    <RouterView />
+  </div>
+  <main-footer></main-footer>
 </template>
+
+<script>
+import MainFooter from "@/components/MainFooter"
+import MainHeader from "@/components/MainHeader"
+
+export default {
+  name: 'App',
+  components: {
+    MainFooter,
+    MainHeader,
+  }
+}
+
+</script>
+
+<style lang="sass">
+
+body
+  font-family: 'Open Sans', sans-serif
+
+</style>
