@@ -6,7 +6,6 @@ const translate = {
         contacts: 'Contacts',
     },
     footer: {
-        email: 'E-mail',
         our_products: 'Our Products',
         ad_blocker: 'Ad Blocker',
         network_analyzer: 'Network Analyzer',
@@ -21,6 +20,19 @@ const translate = {
         privacy_policy: 'Privacy Policy',
         cookies_policy: 'Cookies Policy',
         follow_us: 'Follow us',
+    },
+    home: {
+        form_contact_title: 'Get in touch with us',
+        form_contact_desc: 'If you have questions please contact us using this form',
+    },
+    common: {
+        email: 'E-mail',
+        name: 'Name',
+        form_comment: 'Let us know what’s on your mind',
+        send: 'Send',
+        i_agree_with_1: 'I agree with',
+        i_agree_with_2: 'Privacy Policy',
+        message_show_all_errors: 'Please correct the indicated errors'
     },
     languages: {
         language: 'Language',

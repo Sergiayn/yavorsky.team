@@ -6,7 +6,6 @@ const translate = {
         contacts: 'Контакти',
     },
     footer: {
-        email: 'Електронна пошта',
         our_products: 'Наші продукти',
         ad_blocker: 'Ad Blocker',
         network_analyzer: 'Network Analyzer',
@@ -21,6 +20,19 @@ const translate = {
         privacy_policy: 'Політика Конфіденційності',
         cookies_policy: 'Політика Cookie',
         follow_us: 'Підписуйтеся',
+    },
+    home: {
+        form_contact_title: "Зв'яжіться з нами",
+        form_contact_desc: 'Якщо у вас є питання, будь ласка, зв\'яжіться з нами за допомогою цієї форми',
+    },
+    common: {
+        email: 'Електронна пошта',
+        name: "Ім'я",
+        form_comment: 'Повідомте нам про що ви думаєте',
+        send: 'Надіслати',
+        i_agree_with_1: 'Я погоджуюся з',
+        i_agree_with_2: 'політикою конфіденційності',
+        message_show_all_errors: 'Будь ласка, виправте вказані помилки'
     },
     languages: {
         language: 'Мова',

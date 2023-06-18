@@ -26,7 +26,7 @@ export default defineComponent({
         <div class="col-xxl-3 col-lg-2">
           <site-logo/>
           <div class="mail">
-            <strong>{{ $t('footer.email') }}</strong>
+            <strong>{{ $t('common.email') }}</strong>
             <a href="mailto:yavorsky.team@gmail.com">yavorsky.team@gmail.com</a>
           </div>
         </div>
