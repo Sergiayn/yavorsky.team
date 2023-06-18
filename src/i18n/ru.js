@@ -1,4 +1,10 @@
 const translate = {
+    header: {
+        our_apps: 'Наши приложения',
+        company: 'Компания',
+        blog: 'Блог',
+        contacts: 'Контакты',
+    },
     footer: {
         email: 'Электронная почта',
         our_products: 'Наши продукты',

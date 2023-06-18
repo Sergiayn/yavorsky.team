@@ -2,12 +2,14 @@
 import {defineComponent} from 'vue'
 import ChangeLanguage from "@/components/ChangeLanguage"
 import SocialNetwork from "@/components/SocialNetwork"
+import SiteLogo from "@/components/SiteLogo"
 
 export default defineComponent({
   name: "MainFooter",
   components: {
     ChangeLanguage,
-    SocialNetwork
+    SocialNetwork,
+    SiteLogo
   },
   data() {
     return {
@@ -22,9 +24,7 @@ export default defineComponent({
     <div class="container">
       <div class="row">
         <div class="col-xxl-3 col-lg-2">
-          <div class="logo">
-            <img alt="company logo" src="@/assets/img/logo.svg">
-          </div>
+          <site-logo/>
           <div class="mail">
             <strong>{{ $t('footer.email') }}</strong>
             <a href="mailto:yavorsky.team@gmail.com">yavorsky.team@gmail.com</a>
