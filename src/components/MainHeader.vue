@@ -9,7 +9,6 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="header"></div>
   <header>
     <div class="container">
       <div class="row">
@@ -34,16 +33,14 @@ export default defineComponent({
 <style scoped lang="sass">
 @import "@/assets/color.sass"
 
-.header
-  height: 102px
 header
   background-color: $color_white
   height: 102px
   padding-top: 26px
-  position: fixed
-  top: 0
+  //position: fixed
+  //top: 0
   width: 100%
-  z-index: 10
+  //z-index: 10
   nav
     padding-top: 8px
     ul

@@ -75,6 +75,7 @@ export default defineComponent({
 @import "@/assets/color.sass"
 
 footer
+  border-top: 1px solid $color_gray_40
   padding: 40px 0
   .title
     display: inline-block

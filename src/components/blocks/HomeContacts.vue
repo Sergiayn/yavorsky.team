@@ -3,8 +3,10 @@
     <div class="container">
       <div class="row">
         <div class="col-6">
-          <div class="title">{{$t('home.form_contact_title')}}</div>
-          <div class="desc">{{$t('home.form_contact_desc')}}</div>
+          <div class="form-brief">
+            <div class="title">{{$t('home.form_contact_title')}}</div>
+            <div class="desc">{{$t('home.form_contact_desc')}}</div>
+          </div>
           <form
               @submit="checkForm"
               action="#"
@@ -54,13 +56,13 @@
               </textarea>
             </p>
             <div class="row">
-              <div class="col-6">
+              <div class="col-8">
                 <p>
                   <span>{{$t('common.i_agree_with_1')}}</span>&nbsp;
                   <a href="#">{{$t('common.i_agree_with_2')}}</a>
                 </p>
               </div>
-              <div class="col-6">
+              <div class="col-4">
                 <p>
                   <input
                       class="btn btn-primary"
@@ -71,9 +73,9 @@
               </div>
             </div>
           </form>
-
         </div>
-        <div class="col-6">
+        <div class="col"></div>
+        <div class="col-5">
           <div class="logo">
             <img alt="company logo" src="@/assets/img/logo.svg">
             <span>Yavorsky Team</span>
@@ -116,9 +118,17 @@ export default {
 @import "@/assets/color.sass"
 
 .home-contacts
+  padding-bottom: 120px
+  .form-brief
+    background-image: url("@/assets/img/icons/divider-vertical.svg")
+    background-repeat: no-repeat
+    background-size: 2px 63px
+    padding-left: 15px
+    max-width: 286px
   .title
     font-size: 26px
     font-weight: 600
+    padding-bottom: 5px
   .desc
     font-size: 14px
     font-weight: 400
@@ -130,6 +140,8 @@ export default {
       display: none
     a
       color: $color_primary
+      &:hover
+        color: $color_primary_hover
   textarea
     height: 125px
   input[type="submit"]

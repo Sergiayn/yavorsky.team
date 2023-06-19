@@ -42,7 +42,7 @@ body
   background-color: $color_primary
   border-color: $color_primary
   &:hover
-    background-color: $color_secondary
-    border-color: $color_secondary
+    background-color: $color_primary_hover
+    border-color: $color_primary_hover
 
 </style>

@@ -1,10 +1,58 @@
 <template>
   <ul class="social-network">
-    <li><a href="#" class="instagram"></a></li>
-    <li><a href="#" class="facebook"></a></li>
-    <li><a href="#" class="twitter"></a></li>
+    <li v-for="item in list" :key="item.id">
+      <a
+          :href="item.link"
+          :class="item.name"
+          :title="item.name"
+          v-if="screenWidth < 768"
+          class="active"
+      ></a>
+      <a
+          :href="item.link"
+          :class="item.name"
+          :title="item.name"
+          @mouseover="e => e.target.classList.add('active')"
+          @mouseleave="e => e.target.classList.remove('active')"
+          v-else
+      ></a>
+    </li>
   </ul>
 </template>
+
+<script>
+import {ref} from "vue"
+
+export default {
+  name: "SocialNetwork",
+  data() {
+    const list = ref([
+      {id:1,name:'instagram',link:'#'},
+      {id:2,name:'facebook',link:'#'},
+      {id:3,name:'twitter',link:'#'},
+    ])
+
+    return {
+      list,
+      screenWidth: 0
+    }
+  },
+  mounted() {
+    this.updateScreenWidth()
+    this.onScreenResize()
+  },
+  methods: {
+    onScreenResize() {
+      window.addEventListener("resize", () => {
+        this.updateScreenWidth()
+      })
+    },
+    updateScreenWidth() {
+      this.screenWidth = window.innerWidth
+    }
+  },
+}
+</script>
 
 <style scoped lang="sass">
 .social-network
@@ -23,9 +71,15 @@
     width: 32px
   .instagram
     background-image: url("@/assets/img/social-network/instagram.svg")
+    &.active
+      background-image: url("@/assets/img/social-network/instagram-active.svg")
   .facebook
     background-image: url("@/assets/img/social-network/facebook.svg")
+    &.active
+      background-image: url("@/assets/img/social-network/facebook-active.svg")
   .twitter
     background-image: url("@/assets/img/social-network/twitter.svg")
+    &.active
+      background-image: url("@/assets/img/social-network/twitter-active.svg")
 
 </style>
