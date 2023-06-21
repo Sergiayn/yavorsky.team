@@ -30,6 +30,9 @@ body
   border-radius: 8px
   font-size: 14px
   padding: 9px
+  &:focus
+    border-color: $color_primary
+    box-shadow: 0 0 0 0.05rem $color_primary
 
 .btn
   border-radius: 8px
@@ -44,5 +47,11 @@ body
   &:hover
     background-color: $color_primary_hover
     border-color: $color_primary_hover
+
+.link-black a
+  color: $color_black
+  text-decoration: none
+  &:hover
+    color: $color_primary
 
 </style>

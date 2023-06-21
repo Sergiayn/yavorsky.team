@@ -3,33 +3,36 @@
        @mouseover="isOverLang = true"
        @mouseleave="isOverLang = false"
   >
-    <div class="tooltip-lang_label"
-         @mouseover="isOverLangLabel = true"
-         @mouseleave="isOverLangLabel = false"
-    >
-      <label for="locale">{{ $t("languages.language") }}</label>
-      <span class="tooltip-lang_txt" :class="{active:isOpen}">
+    <Popper placement="top-start" offsetDistance="0" :show="isOpen">
+      <div class="tooltip-lang_label"
+           @mouseover="isOverLangLabel = true"
+           @mouseleave="isOverLangLabel = false"
+      >
+        <label for="locale">{{ $t("languages.language") }}</label>
+        <span class="tooltip-lang_txt" :class="{active:isOpen}">
         {{ $t('languages.' + getLocaleName($i18n.locale)) }}
       </span>
-    </div>
-    <div class="tooltip-lang_content"
-         @mouseover="isOverLangContent = true"
-         @mouseleave="isOverLangContent = false"
-         v-if="isOpen">
-      <ul>
-        <li v-for="language in languages"
-            @click.prevent="setLocale(language.key)"
-            :key="language.id">
-          <div class="locale">{{ language.key }}</div>
-          <div class="name">{{ $t('languages.' +language.name) }}</div>
-        </li>
-      </ul>
-    </div>
+      </div>
+      <template #content>
+        <div class="tooltip-lang_content"
+             @mouseover="isOverLangContent = true"
+             @mouseleave="isOverLangContent = false" >
+          <ul>
+            <li v-for="language in languages"
+                @click.prevent="setLocale(language.key)"
+                :key="language.id">
+              <a href="#" class="name">{{ $t('languages.' +language.name) }}</a>
+            </li>
+          </ul>
+        </div>
+      </template>
+    </Popper>
   </div>
 </template>
 
 <script>
 import {ref} from "vue"
+import Popper from "vue3-popper"
 
 export default {
   name: 'ChangeLanguage',
@@ -47,6 +50,9 @@ export default {
       isOverLangContent,
       isOverLangLabel
     }
+  },
+  components: {
+    Popper,
   },
   mounted() {
     this.updateScreenWidth()
@@ -114,16 +120,16 @@ export default {
 </script>
 
 
-<style scoped lang="sass">
+<style lang="sass">
 @import "@/assets/color.sass"
 
 .change-language
-  max-width: 85px
-  width: 80px
+  max-width: 110px
+  height: 48px
 
   label
     font-weight: 600
-    margin: 0 4px 0 0
+    margin: 0 4px 15px 0
     height: 24px
 
   label, .tooltip-lang_txt
@@ -149,34 +155,25 @@ export default {
     background-position: top center
     background-repeat: no-repeat
     color: $color_black
-    padding-top: 10px
-    position: absolute
+    position: relative
+    top: 20px
+    box-shadow: 0 2px 4px 1px rgba(143, 130, 130, 0.25)
+    border-radius: 8px
 
     ul
       background-color: white
       border-radius: 8px
       list-style: none
       margin: 0
-      padding: 6px 0
+      padding: 6px 12px
       text-align: left
 
     li
       cursor: pointer
-      padding: 5px 0
+      padding: 6px 0
 
-      > div
-        display: inline-block
-
-    .locale
-      background-color: $color_gray_60
-      border-radius: 4px
-      color: $color_white
-      font-size: 12px
-      margin-right: 8px
-      padding: 3px
-      text-transform: uppercase
-      height: 22px
-      width: 22px
+    a
+      display: inline-block
 
     .name
       font-size: 14px

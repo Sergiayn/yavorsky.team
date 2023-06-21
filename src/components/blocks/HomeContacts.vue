@@ -45,7 +45,7 @@
               </div>
             </div>
             <p>
-              <label for="comment">{{$t('common.comment')}}</label>
+              <label for="comment">{{$t('common.form_comment')}}</label>
               <textarea
                   required
                   class="form-control"

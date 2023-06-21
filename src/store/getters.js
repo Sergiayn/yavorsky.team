@@ -7,4 +7,5 @@ export default {
         })
         return languages
     },
+    blogs: state => state.blogs,
 }

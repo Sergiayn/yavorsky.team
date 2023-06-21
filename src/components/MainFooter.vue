@@ -20,7 +20,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <footer>
+  <footer class="link-black">
     <div class="container">
       <div class="row">
         <div class="col-xxl-3 col-lg-2">
@@ -80,11 +80,6 @@ footer
   .title
     display: inline-block
     margin-bottom: 16px
-  a
-    color: $color_black
-    text-decoration: none
-    &:hover
-      text-decoration: underline
 
   .logo
     padding-bottom: 30px
@@ -99,7 +94,9 @@ footer
       margin: 0
       padding: 0
     a
+      display: block
       font-size: 14px
+      padding: 6px 0
 
   .social-network
     padding: 0 0 45px
