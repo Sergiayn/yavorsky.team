@@ -47,11 +47,53 @@ body
   &:hover
     background-color: $color_primary_hover
     border-color: $color_primary_hover
+  &:disabled
+    background-color: $color_gray_40
+    border-color: $color_gray_40
 
 .link-black a
   color: $color_black
   text-decoration: none
   &:hover
     color: $color_primary
+
+.link-purrple a
+  color: $color_primary
+  text-decoration: none
+  &:hover
+    color: $color_primary
+
+.link-arrow-right a
+  background-image: url("@/assets/img/icons/link-arrow-right.png")
+  background-repeat: no-repeat
+  background-position: center right
+  display: inline-block
+  padding-right: 32px
+  &:disabled
+    background-image: url("@/assets/img/icons/link-arrow-right-disable.png")
+
+.link-arrow-left a
+  background-image: url("@/assets/img/icons/link-arrow-left.png")
+  background-repeat: no-repeat
+  background-position: center left
+  display: inline-block
+  padding-left: 32px
+  &:disabled
+    background-image: url("@/assets/img/icons/link-arrow-left-disable.png")
+
+.block-brief
+  background-image: url("@/assets/img/icons/divider-vertical.svg")
+  background-repeat: no-repeat
+  background-size: 2px 63px
+  padding-left: 15px
+  padding-bottom: 48px
+  max-width: 286px
+  .title
+    font-size: 26px
+    font-weight: 600
+    padding-bottom: 5px
+  .desc
+    font-size: 14px
+    font-weight: 400
 
 </style>

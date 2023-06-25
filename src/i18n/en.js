@@ -25,6 +25,11 @@ const translate = {
         form_contact_title: 'Get in touch with us',
         form_contact_desc: 'If you have questions please contact us using this form',
     },
+    blog: {
+      title: 'Blog',
+      desc: 'Stay up to date with the latest news, trends, and insights in our blog',
+      see_all: 'See all',
+    },
     common: {
         email: 'E-mail',
         name: 'Name',

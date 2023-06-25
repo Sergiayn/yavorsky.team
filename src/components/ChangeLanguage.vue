@@ -8,7 +8,7 @@
            @mouseover="isOverLangLabel = true"
            @mouseleave="isOverLangLabel = false"
       >
-        <label for="locale">{{ $t("languages.language") }}</label>
+        <label>{{ $t("languages.language") }}</label>
         <span class="tooltip-lang_txt" :class="{active:isOpen}">
         {{ $t('languages.' + getLocaleName($i18n.locale)) }}
       </span>
