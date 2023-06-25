@@ -56,10 +56,12 @@ export default defineComponent({
 @import "@/assets/color.sass"
 
 .home-user-review
+  padding-top: 120px
   .block-brief
     max-width: 390px
 
   .reviews
+    overflow: hidden
     .carousel__track
       margin-bottom: 40px
     .carousel__slide

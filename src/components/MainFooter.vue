@@ -23,14 +23,14 @@ export default defineComponent({
   <footer class="link-black">
     <div class="container">
       <div class="row">
-        <div class="col-xxl-3 col-lg-2">
+        <div class="col-xxl-3 col-lg-3">
           <site-logo/>
           <div class="mail">
             <strong>{{ $t('common.email') }}</strong>
             <a href="mailto:yavorsky.team@gmail.com">yavorsky.team@gmail.com</a>
           </div>
         </div>
-        <div class="col-xxl-2 col-lg-1">
+        <div class="col-xxl-2 col-lg-2">
           <strong class="title">{{ $t('footer.our_products') }}</strong>
           <nav>
             <ul>
@@ -52,7 +52,7 @@ export default defineComponent({
             </ul>
           </nav>
         </div>
-        <div class="col-xxl-3 col-lg-1">
+        <div class="col-xxl-3 col-lg-3">
           <strong class="title">{{ $t('footer.policy') }}</strong>
           <nav>
             <ul>
