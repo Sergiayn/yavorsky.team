@@ -44,8 +44,8 @@ export default defineComponent({
         </slide>
       </carousel>
       <div class="controls">
-        <button @click="prev" class="btn-arrow left"></button>
-        <button @click="next" class="btn-arrow right"></button>
+        <div @click="prev" class="btn-arrow left"></div>
+        <div @click="next" class="btn-arrow right"></div>
       </div>
     </div>
   </div>
@@ -56,17 +56,20 @@ export default defineComponent({
 @import "@/assets/color.sass"
 
 .home-user-review
+  padding-top: 120px
   .block-brief
     max-width: 390px
 
   .reviews
+    overflow: hidden
     .carousel__track
       margin-bottom: 40px
     .carousel__slide
       padding: 0 12px
     .controls
       float: right
-      button
+      div
+        display: inline-block
         margin-left: 24px
 
   .review

@@ -12,10 +12,10 @@ export default defineComponent({
   <header>
     <div class="container">
       <div class="row">
-        <div class="col-xxl-7">
+        <div class="col-xxl-7 col-xl-6 col-lg-4">
           <site-logo/>
         </div>
-        <div class="col-xxl-5">
+        <div class="col-xxl-5 col-xl-6 col-lg-7">
           <nav>
             <ul>
               <li><a href="#">{{ $t('header.our_apps') }}</a></li>

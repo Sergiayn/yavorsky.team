@@ -55,7 +55,7 @@ body
   background-color: $color_white
   background-position: center center
   background-repeat: no-repeat
-  border-color: $color_primary
+  border: 1px solid $color_primary
   border-radius: 4px
   height: 40px
   width: 40px
