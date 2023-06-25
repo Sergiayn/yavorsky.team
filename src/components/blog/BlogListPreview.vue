@@ -55,9 +55,9 @@ export default defineComponent({
 
       <ul class="list link-black">
         <li v-for="blog in blogs" :key="blog.id">
-          <div class="img">
+          <a href="#" class="img">
             <img :src="imgs[blog.id]" :alt="blog.name[$i18n.locale] ?? ''">
-          </div>
+          </a>
           <div class="date">{{timestampToDate(blog.created_at)}}</div>
           <a href="#" class="name">{{blog.name[$i18n.locale] ?? ''}}</a>
         </li>
@@ -82,9 +82,13 @@ export default defineComponent({
     justify-content: space-evenly
     margin-bottom: 0
     padding: 0
+    .img
+      display: block
+
     li
       max-width: 264px
       padding: 0 12px
+
       &:first-child
         padding-left: 0
       &:last-child
@@ -97,5 +101,12 @@ export default defineComponent({
         font-size: 18px
         font-weight: 600
         display: block
+      &:hover
+        img
+          transition: all .2s ease-in-out
+          transform: scale(1.1)
+        a
+          color: $color_black
+          text-decoration: underline
 
 </style>

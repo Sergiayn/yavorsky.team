@@ -8,4 +8,5 @@ export default {
         return languages
     },
     blogs: state => state.blogs,
+    user_reviews: state => state.user_reviews,
 }

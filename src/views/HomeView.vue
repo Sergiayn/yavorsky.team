@@ -1,6 +1,7 @@
 <template>
   <div class="page-home">
-    <blog-list-preview></blog-list-preview>
+    <home-user-review/>
+    <blog-list-preview/>
     <home-contacts/>
   </div>
 </template>
@@ -9,10 +10,12 @@
 
 import HomeContacts from "@/components/blocks/HomeContacts"
 import BlogListPreview from "@/components/blog/BlogListPreview"
+import HomeUserReview from "@/components/blocks/HomeUserReview.vue";
 
 export default {
   name: 'HomeView',
   components: {
+    HomeUserReview,
     BlogListPreview,
     HomeContacts
   }

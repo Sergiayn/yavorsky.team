@@ -51,6 +51,26 @@ body
     background-color: $color_gray_40
     border-color: $color_gray_40
 
+.btn-arrow
+  background-color: $color_white
+  background-position: center center
+  background-repeat: no-repeat
+  border-color: $color_primary
+  border-radius: 4px
+  height: 40px
+  width: 40px
+  &.left
+    background-image: url("@/assets/img/icons/arrow-left-purrple.svg")
+  &.right
+    background-image: url("@/assets/img/icons/arrow-right-purrple.svg")
+  &:hover
+    background-color: $color_primary
+    border-color: $color_primary
+    &.left
+      background-image: url("@/assets/img/icons/arrow-left-white.svg")
+    &.right
+      background-image: url("@/assets/img/icons/arrow-right-white.svg")
+
 .link-black a
   color: $color_black
   text-decoration: none

@@ -24,6 +24,8 @@ const translate = {
     home: {
         form_contact_title: 'Get in touch with us',
         form_contact_desc: 'If you have questions please contact us using this form',
+        user_review__title: 'Our users reviews',
+        user_review__desc: 'Join our growing list of satisfied clients: discover why more and more clients are choosing us',
     },
     blog: {
       title: 'Blog',
