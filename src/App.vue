@@ -108,6 +108,12 @@ body
   padding-left: 15px
   padding-bottom: 48px
   max-width: 286px
+  &.single
+    height: 63px
+    padding-bottom: 0
+    .title
+      padding-top: 12px
+      padding-bottom: 0
   .title
     font-size: 26px
     font-weight: 600
