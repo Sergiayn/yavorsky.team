@@ -35,8 +35,8 @@ export default defineComponent({
 
 header
   background-color: $color_white
-  height: 102px
-  padding-top: 26px
+  height: 62px
+  padding-top: 6px
   //position: fixed
   //top: 0
   width: 100%

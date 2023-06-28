@@ -97,5 +97,23 @@ export default {
                 ru:'Соучредитель Zenith Works',
             }
         },
+        {
+            id: 4,
+            name: {
+                en:'Noah Lewis',
+                ua:'Ноа Льюіс',
+                ru:'Ноа Льюис',
+            },
+            review: {
+                en:'This phone cleaner app is a game-changer. It scans and removes unnecessary files, junk data, and cached files.',
+                ua:'Ця програма для очищення телефону кардинально все змінює. Він сканує та видаляє непотрібні файли, непотрібні дані та кешовані файли',
+                ru:'Это приложение для очистки телефона - просто находка. Оно сканирует и удаляет ненужные файлы, нежелательные данные и кэшированные файлы.',
+            },
+            job_title: {
+                en:'Senior Software Engineer, TechMax Solutions',
+                ua:'Senior Software Engineer, TechMax Solutions',
+                ru:'Senior Software Engineer, TechMax Solutions',
+            }
+        },
     ]
 }

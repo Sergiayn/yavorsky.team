@@ -17,6 +17,28 @@ export default defineComponent({
     reviews() {
       return this.$store.getters.user_reviews
     },
+    reviewsChunks() {
+      const reviews = this.$store.getters.user_reviews
+      let temp = {}
+      let chunks = []
+      let chunkSize = 2
+      let amount = chunkSize
+
+      for (var i = 0; i < Object.keys(reviews).length; i++) {
+        if (i === chunkSize) {
+          chunks.push(temp)
+          chunkSize += amount
+          temp = {}
+        }
+
+        temp[ Object.keys(reviews)[i] ] = reviews[ Object.keys(reviews)[i] ]
+
+        if (i === Object.keys(reviews).length - 1) {
+          chunks.push(temp)
+        }
+      }
+      return chunks
+    }
   },
   components: {
     Carousel,
@@ -33,13 +55,16 @@ export default defineComponent({
       <div class="desc">{{$t('home.user_review__desc')}}</div>
     </div>
     <div class="reviews">
-      <carousel :items-to-show="2" ref="reviewCarousel" itemsToScroll="2">
-        <slide v-for="review in reviews" :key="review.id">
-          <div class="review">
-            <div class="comment">{{ review.review[$i18n.locale] ?? '' }}</div>
-            <hr>
-            <div class="name">{{ review.name[$i18n.locale] ?? '' }}</div>
-            <div class="job-title">{{ review.job_title[$i18n.locale] ?? '' }}</div>
+      <carousel ref="reviewCarousel">
+        <slide v-for="(reviewsChunk, index) in reviewsChunks" :key="index">
+          <div class="review-chunk">
+            <div class="review r-col" v-for="review in reviewsChunk" :key="review.id">
+              <div class="comment">{{ review.review[$i18n.locale] ?? '' }}</div>
+              <hr>
+              <div class="name">{{ review.name[$i18n.locale] ?? '' }}</div>
+              <div class="job-title">{{ review.job_title[$i18n.locale] ?? '' }}</div>
+            </div>
+            <div class="r-col" v-if="Object.keys(reviewsChunk).length === 1"> </div>
           </div>
         </slide>
       </carousel>
@@ -59,19 +84,21 @@ export default defineComponent({
   padding-top: 120px
   .block-brief
     max-width: 390px
-
   .reviews
     overflow: hidden
     .carousel__track
       margin-bottom: 40px
-    .carousel__slide
-      padding: 0 12px
     .controls
       float: right
       div
         display: inline-block
         margin-left: 24px
 
+  .review-chunk
+    display: flex
+    justify-content: space-between
+  .r-col
+    flex: 50%
   .review
     background-image: url("@/assets/img/icons/quotation-mark.png")
     background-repeat: no-repeat
@@ -81,8 +108,14 @@ export default defineComponent({
     height: 100%
     padding: 76px 16px 16px
     text-align: left
+    &:first-child
+      margin-right: 12px
+    &:last-child
+      margin-left: 12px
     .name, .job-title
       font-size: 14px
       color: $color_black
+    .comment
+      min-height: 72px
 
 </style>

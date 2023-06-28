@@ -122,6 +122,8 @@ export default {
     height: 125px
   input[type="submit"]
     float: right
+  form .link-purrple
+    margin: 10px 0 0
 
   .logo
     padding-bottom: 18px

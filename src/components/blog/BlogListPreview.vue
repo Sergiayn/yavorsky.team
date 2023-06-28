@@ -70,7 +70,7 @@ export default defineComponent({
 @import "@/assets/color.sass"
 
 .blog-list-preview
-  padding: 120px 0
+  padding: 88px 0 120px
   .link-arrow-right
     text-align: right
     a
@@ -79,20 +79,25 @@ export default defineComponent({
     display: flex
     display: -webkit-flex
     list-style: none
-    justify-content: space-evenly
+    justify-content: space-between
     margin-bottom: 0
     padding: 0
     .img
+      border-radius: 8px
       display: block
+      overflow: hidden
+    img
+      max-width: 100%
 
     li
-      max-width: 264px
-      padding: 0 12px
+      flex: 25%
+      margin: 0 12px
+      padding: 0
 
       &:first-child
-        padding-left: 0
+        margin-left: 0
       &:last-child
-        padding-right: 0
+        margin-right: 0
       .date
         font-size: 14px
         color: $color_gray_40
@@ -101,12 +106,15 @@ export default defineComponent({
         font-size: 18px
         font-weight: 600
         display: block
-      &:hover
-        img
-          transition: all .2s ease-in-out
-          transform: scale(1.1)
-        a
-          color: $color_black
-          text-decoration: underline
+      img:hover
+        transition: all .2s ease-in-out
+        transform: scale(1.1)
+      a:hover
+        color: $color_black
+        text-decoration: underline
+
+//@media (max-width: 1199px)
+//  .blog-list-preview
+//    .list
 
 </style>
