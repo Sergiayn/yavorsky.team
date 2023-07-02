@@ -18,26 +18,7 @@ export default defineComponent({
       return this.$store.getters.user_reviews
     },
     reviewsChunks() {
-      const reviews = this.$store.getters.user_reviews
-      let temp = {}
-      let chunks = []
-      let chunkSize = 2
-      let amount = chunkSize
-
-      for (var i = 0; i < Object.keys(reviews).length; i++) {
-        if (i === chunkSize) {
-          chunks.push(temp)
-          chunkSize += amount
-          temp = {}
-        }
-
-        temp[ Object.keys(reviews)[i] ] = reviews[ Object.keys(reviews)[i] ]
-
-        if (i === Object.keys(reviews).length - 1) {
-          chunks.push(temp)
-        }
-      }
-      return chunks
+      return window.objectToChunks(this.$store.getters.user_reviews, 2)
     }
   },
   components: {

@@ -16,6 +16,7 @@ export default {
             name: "russian"
         },
     ],
+    apps: {},
     blogs: [
         {
             id: 1,

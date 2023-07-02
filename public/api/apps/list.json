@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Ad Blocker",
+    "desc": {
+      "en": "Block ads on any website",
+      "ua": "Блокування реклами на будь-якому сайті",
+      "ru": "Блокировка рекламы на любом сайте"
+    },
+    "img": "app_1.png"
+  },
+  {
+    "id": 2,
+    "name": "RoboCleaner",
+    "desc": {
+      "en": "Phone cleaner app",
+      "ua": "Застосунок для очищення телефону",
+      "ru": "Приложение для очистки телефона"
+    },
+    "img": "app_2.png"
+  },
+  {
+    "id": 3,
+    "name": "Network Analyzer",
+    "desc": {
+      "en": "Scan network and check the Internet speed",
+      "ua": "Скан мережі та перевірка швидкості Інтернету",
+      "ru": "Скан сети и проверка скорости интернета"
+    },
+    "img": "app_3.png"
+  },
+  {
+    "id": 4,
+    "name": "Secret Valut",
+    "desc": {
+      "en": "Hide photos and protect them with a passcode",
+      "ua": "Приховані фотографії та захист їх паролем",
+      "ru": "Скрытые фотографий и защита их паролем"
+    },
+    "img": "app_4.png"
+  },
+  {
+    "id": 5,
+    "name": "Pill Reminder",
+    "desc": {
+      "en": "Set a reminder to take meds in time",
+      "ua": "Нагадування про прийом ліків",
+      "ru": "Напоминание о приеме лекарств"
+    },
+    "img": "app_5.png"
+  }
+]

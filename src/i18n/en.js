@@ -22,6 +22,9 @@ const translate = {
         follow_us: 'Follow us',
     },
     home: {
+        our_apps__title: 'Our apps',
+        our_apps__desc: 'Great apps for your phone and your lifestyle',
+        our_apps__new_desc: 'New app is coming soon!',
         company__title: 'Company',
         company__desc: 'We, the Yavorsky Team, are committed to creating innovative and user-centric iOS apps that exceed the expectations of standard utilities. With a team of experts dedicated to creating high-quality products, our apps are functional, reliable and designed to provide a pleasant user experience.',
         company__link: 'Find out more about us',

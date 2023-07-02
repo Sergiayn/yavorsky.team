@@ -12,6 +12,10 @@ import MainHeader from "@/components/MainHeader"
 
 export default {
   name: 'App',
+  data(){
+    this.$store.dispatch('loadApps')
+    return {}
+  },
   components: {
     MainFooter,
     MainHeader,
