@@ -55,6 +55,19 @@ body
     background-color: $color_gray_40
     border-color: $color_gray_40
 
+.btn-secondary
+  background-color: transparent
+  border-color: $color_gray_40
+  color: $color_black
+  &:hover
+    background-color: transparent
+    color: $color_primary_hover
+    border-color: $color_primary_hover
+  &:disabled
+    background-color: transparent
+    color: $color_gray_40
+    border-color: $color_gray_40
+
 .btn-arrow
   background-color: $color_white
   background-position: center center
@@ -125,5 +138,18 @@ body
   .desc
     font-size: 14px
     font-weight: 400
+
+.carousel__pagination
+  padding-left: 0
+.carousel .carousel__pagination-button::after
+  background: transparent
+  border: 2px solid $color_black
+  border-radius: 50%
+  height: 8px
+  opacity: .5
+  width: 8px
+.carousel .carousel__pagination-button--active::after
+  background: $color_black
+  opacity: 1
 
 </style>

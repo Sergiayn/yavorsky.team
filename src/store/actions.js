@@ -13,4 +13,10 @@ export default {
         if(getters.apps.length === undefined)
             dispatch('setApps')
     },
+    setAppsBanner: async ({ commit }) => {
+        try {
+            const {data} = await axios.get('apps/banner.json')
+            commit('setAppsBanner', data)
+        } catch (e) {console.error(e.message)}
+    },
 }

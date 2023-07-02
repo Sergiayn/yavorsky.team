@@ -49,7 +49,9 @@ const translate = {
         send: 'Надіслати',
         i_agree_with_1: 'Я погоджуюся з',
         i_agree_with_2: 'політикою конфіденційності',
-        message_show_all_errors: 'Будь ласка, виправте вказані помилки'
+        message_show_all_errors: 'Будь ласка, виправте вказані помилки',
+        learn_more: 'Детальніше',
+        free_download: 'Завантажити',
     },
     languages: {
         language: 'Мова',

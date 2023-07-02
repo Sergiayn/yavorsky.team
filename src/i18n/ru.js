@@ -49,7 +49,9 @@ const translate = {
         send: 'Отправить',
         i_agree_with_1: 'Я согласен с',
         i_agree_with_2: 'политикой конфиденциальности',
-        message_show_all_errors: 'Пожалуйста исправьте указанные ошибки'
+        message_show_all_errors: 'Пожалуйста исправьте указанные ошибки',
+        learn_more: 'Подробнее',
+        free_download: 'Скачать',
     },
     languages: {
         language: 'Язык',

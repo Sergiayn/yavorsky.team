@@ -49,7 +49,9 @@ const translate = {
         send: 'Send',
         i_agree_with_1: 'I agree with',
         i_agree_with_2: 'Privacy Policy',
-        message_show_all_errors: 'Please correct the indicated errors'
+        message_show_all_errors: 'Please correct the indicated errors',
+        learn_more: 'Learn more',
+        free_download: 'Free download',
     },
     languages: {
         language: 'Language',
