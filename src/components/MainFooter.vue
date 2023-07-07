@@ -14,6 +14,26 @@ export default defineComponent({
   data() {
     return {
       isOpenMobileMenu: true,
+      screenWidth: 0
+    }
+  },
+  mounted() {
+    this.updateScreenWidth()
+    this.onScreenResize()
+  },
+  methods: {
+    onScreenResize() {
+      window.addEventListener("resize", () => {
+        this.updateScreenWidth()
+      })
+    },
+    updateScreenWidth() {
+      this.screenWidth = window.innerWidth
+    }
+  },
+  computed: {
+    apps() {
+      return this.$store.getters.apps
     }
   }
 })
@@ -22,7 +42,7 @@ export default defineComponent({
 <template>
   <footer class="link-black">
     <div class="container">
-      <div class="row">
+      <div class="row f-desktop" v-if="screenWidth > 990">
         <div class="col-xxl-3 col-lg-3">
           <site-logo/>
           <div class="mail">
@@ -34,11 +54,9 @@ export default defineComponent({
           <strong class="title">{{ $t('footer.our_products') }}</strong>
           <nav>
             <ul>
-              <li><a href="#">{{ $t('footer.ad_blocker') }}</a></li>
-              <li><a href="#">{{ $t('footer.network_analyzer') }}</a></li>
-              <li><a href="#">{{ $t('footer.secret_vault') }}</a></li>
-              <li><a href="#">{{ $t('footer.robo_cleaner') }}</a></li>
-              <li><a href="#">{{ $t('footer.pill_reminder') }}</a></li>
+              <li v-for="app in apps" :key="app.id">
+                <a href="#">{{ app.name }}</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -65,6 +83,106 @@ export default defineComponent({
           <strong class="title">{{ $t('footer.follow_us') }}</strong>
           <social-network></social-network>
           <change-language @eventSetLocale="isOpenMobileMenu = false"></change-language>
+        </div>
+      </div>
+      <div class="row f-tablet" v-else-if="screenWidth > 767">
+        <div class="col-5">
+          <site-logo/>
+          <div class="mail">
+            <strong>{{ $t('common.email') }}</strong>
+            <a href="mailto:yavorsky.team@gmail.com">yavorsky.team@gmail.com</a>
+          </div>
+        </div>
+        <div class="col-4">
+          <div>
+            <strong class="title">{{ $t('footer.our_products') }}</strong>
+            <nav>
+              <ul>
+                <li v-for="app in apps" :key="app.id">
+                  <a href="#">{{ app.name }}</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <strong class="title">{{ $t('footer.company') }}</strong>
+            <nav>
+              <ul>
+                <li><a href="#">{{ $t('footer.about_company') }}</a></li>
+                <li><a href="#">{{ $t('footer.blog') }}</a></li>
+                <li><a href="#">{{ $t('footer.support') }}</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="col-3">
+          <div>
+            <strong class="title">{{ $t('footer.policy') }}</strong>
+            <nav>
+              <ul>
+                <li><a href="#">{{ $t('footer.privacy_policy') }}</a></li>
+                <li><a href="#">{{ $t('footer.cookies_policy') }}</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <strong class="title">{{ $t('footer.follow_us') }}</strong>
+            <social-network></social-network>
+            <change-language @eventSetLocale="isOpenMobileMenu = false"></change-language>
+          </div>
+        </div>
+      </div>
+      <div class="row f-mobile" v-else>
+        <div class="col-12">
+          <div>
+            <site-logo/>
+            <div class="mail">
+              <strong>{{ $t('common.email') }}</strong>
+              <a href="mailto:yavorsky.team@gmail.com">yavorsky.team@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div>
+            <div>
+              <strong class="title">{{ $t('footer.our_products') }}</strong>
+              <nav>
+                <ul>
+                  <li v-for="app in apps" :key="app.id">
+                    <a href="#">{{ app.name }}</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div>
+              <strong class="title">{{ $t('footer.company') }}</strong>
+              <nav>
+                <ul>
+                  <li><a href="#">{{ $t('footer.about_company') }}</a></li>
+                  <li><a href="#">{{ $t('footer.blog') }}</a></li>
+                  <li><a href="#">{{ $t('footer.support') }}</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div>
+            <div>
+              <strong class="title">{{ $t('footer.policy') }}</strong>
+              <nav>
+                <ul>
+                  <li><a href="#">{{ $t('footer.privacy_policy') }}</a></li>
+                  <li><a href="#">{{ $t('footer.cookies_policy') }}</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div>
+              <strong class="title">{{ $t('footer.follow_us') }}</strong>
+              <social-network/>
+              <change-language @eventSetLocale="isOpenMobileMenu = false"></change-language>
+            </div>
+          </div>
         </div>
       </div>
     </div>

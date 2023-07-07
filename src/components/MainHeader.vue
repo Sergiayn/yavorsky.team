@@ -12,10 +12,10 @@ export default defineComponent({
   <header>
     <div class="container">
       <div class="row">
-        <div class="col-xxl-7 col-xl-6 col-lg-4">
+        <div class="col-xxl-8 col-xl-7 col-lg-7 col-md-5">
           <site-logo/>
         </div>
-        <div class="col-xxl-5 col-xl-6 col-lg-7">
+        <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7">
           <nav>
             <ul>
               <li><a href="#">{{ $t('header.our_apps') }}</a></li>
@@ -47,7 +47,7 @@ header
       display: flex
       display: -webkit-flex
       list-style: none
-      justify-content: space-evenly
+      justify-content: space-between
       margin-bottom: 0
       padding: 5px 0
     a

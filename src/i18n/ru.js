@@ -7,11 +7,6 @@ const translate = {
     },
     footer: {
         our_products: 'Наши продукты',
-        ad_blocker: 'Ad Blocker',
-        network_analyzer: 'Network Analyzer',
-        secret_vault: 'Secret Vault',
-        robo_cleaner: 'RoboCleaner',
-        pill_reminder: 'Pill Reminder',
         company: 'Компания',
         about_company: 'О компании',
         blog: 'Блог',
@@ -36,6 +31,7 @@ const translate = {
         subscribe_title: 'Подпишитесь, чтобы быть первым',
         subscribe_desc: 'Получайте эксклюзивные предложения и обновления наших приложений, доставленные прямо на вашу почту нашей надежной почтовой совой',
         subscribe_btn: 'Подписаться',
+        soon_on_app_store: 'Скоро в App Store',
     },
     blog: {
         title: 'Блог',
@@ -48,7 +44,7 @@ const translate = {
         form_comment: 'Дайте нам знать, о чем вы думаете',
         send: 'Отправить',
         i_agree_with_1: 'Я согласен с',
-        i_agree_with_2: 'политикой конфиденциальности',
+        i_agree_with_2: 'Политикой Конфиденциальности',
         message_show_all_errors: 'Пожалуйста исправьте указанные ошибки',
         learn_more: 'Подробнее',
         free_download: 'Скачать',

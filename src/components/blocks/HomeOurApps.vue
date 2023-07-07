@@ -23,9 +23,10 @@ export default defineComponent({
       <div class="list-app-chunks link-black">
         <div v-for="(chunkValue, chunkKey) in appsChunks" :key="chunkKey" class="app-chunk">
           <div v-for="app in chunkValue" :key="app.id" class="app">
-            <div class="app-inner">
+            <div class="app-inner" :class="{'app-inner-dev':!app.url}">
               <a href="#" class="img"><img :src="app.img" :alt="app.name"></a>
               <div class="brief">
+                <div class="msg-dev">{{ $t('home.soon_on_app_store') }}</div>
                 <a href="#" class="name">{{app.name}}</a>
                 <div class="desc">{{app.desc[$i18n.locale] ?? ''}}</div>
               </div>
@@ -52,6 +53,17 @@ export default defineComponent({
 
 .home-our-apps
   padding-top: 120px
+  .block-brief
+    max-width: none
+  .msg-dev
+    border: 1px solid $color_green
+    border-radius: 4px
+    display: none
+    color: $color_green
+    font-size: 14px
+    font-weight: 600
+    margin: 0 auto 4px
+    padding: 2px 8px
   .app
     flex: 1
     &:first-child .app-inner
@@ -66,7 +78,14 @@ export default defineComponent({
     height: 100%
     padding: 24px
     text-align: center
+    &.app-inner-dev
+      padding: 10px 24px
+      .brief
+        padding-top: 12px
+      .msg-dev
+        display: inline-block
     .name
+      display: block
       font-size: 18px
       font-weight: 600
       padding-bottom: 4px

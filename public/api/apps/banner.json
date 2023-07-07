@@ -53,7 +53,7 @@
   {
     "id": 4,
     "name": "Network Analyzer",
-    "url": null,
+    "url": "network-analyzer-speed-test/id1660559510",
     "bg": "linear-gradient(164deg, #ECF3FF 0%, rgba(220, 249, 255, 0.52) 47.78%, #B9D9FF 100%)",
     "brief": {
       "en": "Scan and check Internet speed",

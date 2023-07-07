@@ -93,6 +93,13 @@ export default defineComponent({
       flex: 25%
       margin: 0 12px
       padding: 0
+      &:hover
+        img
+          transition: all .2s ease-in-out
+          transform: scale(1.1)
+        a
+          color: $color_black
+          text-decoration: none
 
       &:first-child
         margin-left: 0
@@ -106,15 +113,5 @@ export default defineComponent({
         font-size: 18px
         font-weight: 600
         display: block
-      img:hover
-        transition: all .2s ease-in-out
-        transform: scale(1.1)
-      a:hover
-        color: $color_black
-        text-decoration: underline
-
-//@media (max-width: 1199px)
-//  .blog-list-preview
-//    .list
 
 </style>

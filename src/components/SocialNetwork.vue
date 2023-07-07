@@ -5,7 +5,7 @@
           :href="item.link"
           :class="item.name"
           :title="item.name"
-          v-if="screenWidth < 768"
+          v-if="isColor || screenWidth < 768"
           class="active"
       ></a>
       <a
@@ -25,6 +25,14 @@ import {ref} from "vue"
 
 export default {
   name: "SocialNetwork",
+  props: {
+    isColor: {
+      type: Boolean,
+      default() {
+        return false
+      }
+    }
+  },
   data() {
     const list = ref([
       {id:1,name:'instagram',link:'#'},

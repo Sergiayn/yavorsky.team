@@ -22,7 +22,7 @@ export default defineComponent({
       </div>
       <div class="social-network-part">
         <div class="title">{{$t('home.company__network_title')}}:</div>
-        <social-network/>
+        <social-network :is-color="true"/>
       </div>
     </div>
   </div>

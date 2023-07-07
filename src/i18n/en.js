@@ -7,11 +7,6 @@ const translate = {
     },
     footer: {
         our_products: 'Our Products',
-        ad_blocker: 'Ad Blocker',
-        network_analyzer: 'Network Analyzer',
-        secret_vault: 'Secret Vault',
-        robo_cleaner: 'RoboCleaner',
-        pill_reminder: 'Pill Reminder',
         company: 'Company',
         about_company: 'About the company',
         blog: 'Blog',
@@ -36,6 +31,7 @@ const translate = {
         subscribe_title: 'Subscribe to be the first',
         subscribe_desc: 'Receive YavorskyTeam\'s exclusive offers and updates on our latest apps, delivered straight to your inbox by our trusty delivery owl',
         subscribe_btn: 'Subscribe',
+        soon_on_app_store: 'Soon on App Store',
     },
     blog: {
       title: 'Blog',

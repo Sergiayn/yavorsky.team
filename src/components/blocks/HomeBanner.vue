@@ -36,7 +36,7 @@ export default defineComponent({
 
 <template>
   <div class="home-banner">
-    <carousel ref="appsBannerCarousel">
+    <carousel ref="appsBannerCarousel" :autoplay="10000" :wrapAround="true">
       <slide v-for="banner in banners" :key="banner.id" :style="{'background':banner.bg}" class="banner">
         <div class="container">
           <div class="banner-inner">
@@ -44,17 +44,18 @@ export default defineComponent({
               <div class="col">
                 <ul class="images">
                   <li class="image" v-for="(image,index) in banner.images" :key="index">
-                    <img :src="image" :alt="banner.name">
+                    <img :src="image" :alt="banner.name" class="img-fluid">
                   </li>
                 </ul>
               </div>
               <div class="col">
+                <div class="msg-dev" v-if="banner.url === null">{{ $t('home.soon_on_app_store') }}</div>
                 <div class="name">{{banner.name}}</div>
                 <div class="brief">{{banner.brief[$i18n.locale] ?? ''}}</div>
                 <div class="desc">{{banner.desc[$i18n.locale] ?? ''}}</div>
                 <div class="buttons">
                   <a href="#" class="btn btn-secondary">{{$t('common.learn_more')}}</a>
-                  <a :href="banner.url ? this.getBasePath() + banner.url : '#'" target="_blank"
+                  <a v-if="banner.url" :href="this.getBasePath() + banner.url" target="_blank"
                      class="btn btn-primary">{{$t('common.free_download')}}</a>
                 </div>
               </div>
@@ -72,15 +73,32 @@ export default defineComponent({
 </template>
 
 <style scoped lang="sass">
+@import "@/assets/color.sass"
+
 .home-banner
+  .msg-dev
+    background-color: $color_green
+    border-radius: 4px
+    display: inline-block
+    color: $color_white
+    font-size: 14px
+    font-weight: 600
+    margin: 20px auto 26px
+    padding: 2px 8px
   .banner
-    padding: 116px 0
+    padding: 116px 0 16px
     .images
+      background-image: url("@/assets/img/image-shadow.png")
+      background-repeat: no-repeat
+      background-position: bottom center
       list-style: none
-      padding: 0
+      padding: 0 0 100px
+      margin: auto
+      max-width: 510px
       li
         display: inline-block
         padding: 0 6px
+        max-width: 177px
     .name
       font-size: 26px
       font-weight: 600

@@ -7,11 +7,6 @@ const translate = {
     },
     footer: {
         our_products: 'Наші продукти',
-        ad_blocker: 'Ad Blocker',
-        network_analyzer: 'Network Analyzer',
-        secret_vault: 'Secret Vault',
-        robo_cleaner: 'RoboCleaner',
-        pill_reminder: 'Pill Reminder',
         company: 'Компанія',
         about_company: 'Про компанію',
         blog: 'Блог',
@@ -36,6 +31,7 @@ const translate = {
         subscribe_title: 'Підпишіться, щоб бути першим',
         subscribe_desc: 'Отримуйте ексклюзивні пропозиції та оновлення наших додатків, доставлені прямо на вашу пошту нашим надійним поштовим совеням',
         subscribe_btn: 'Підписатися',
+        soon_on_app_store: 'Незабаром в App Store',
     },
     blog: {
         title: 'Блог',
@@ -48,7 +44,7 @@ const translate = {
         form_comment: 'Повідомте нам про що ви думаєте',
         send: 'Надіслати',
         i_agree_with_1: 'Я погоджуюся з',
-        i_agree_with_2: 'політикою конфіденційності',
+        i_agree_with_2: 'Політикою Конфіденційності',
         message_show_all_errors: 'Будь ласка, виправте вказані помилки',
         learn_more: 'Детальніше',
         free_download: 'Завантажити',

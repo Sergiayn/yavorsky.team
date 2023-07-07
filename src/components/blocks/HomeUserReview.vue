@@ -36,7 +36,7 @@ export default defineComponent({
       <div class="desc">{{$t('home.user_review__desc')}}</div>
     </div>
     <div class="reviews">
-      <carousel ref="reviewCarousel">
+      <carousel ref="reviewCarousel" :wrapAround="true">
         <slide v-for="(reviewsChunk, index) in reviewsChunks" :key="index">
           <div class="review-chunk">
             <div class="review r-col" v-for="review in reviewsChunk" :key="review.id">
@@ -64,11 +64,12 @@ export default defineComponent({
 .home-user-review
   padding-top: 120px
   .block-brief
-    max-width: 390px
+    max-width: 530px
   .reviews
     overflow: hidden
-    .carousel__track
+    .carousel__viewport
       margin-bottom: 40px
+      padding-bottom: 1px
     .controls
       float: right
       div
