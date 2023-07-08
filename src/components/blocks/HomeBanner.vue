@@ -1,7 +1,6 @@
 <script>
 import {defineComponent} from 'vue'
-import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination } from 'vue3-carousel'
+import SliderDissolve from "@/components/SliderDissolve.vue";
 
 export default defineComponent({
   name: "HomeBanner",
@@ -27,52 +26,49 @@ export default defineComponent({
     }
   },
   components: {
-    Carousel,
-    Slide,
-    Pagination
+    SliderDissolve
   },
 })
 </script>
 
 <template>
   <div class="home-banner">
-    <carousel ref="appsBannerCarousel" :autoplay="10000" :wrapAround="true">
-      <slide v-for="banner in banners" :key="banner.id" :style="{'background':banner.bg}" class="banner">
+    <slider-dissolve
+        :list="banners"
+        v-slot:default="slotProps"
+        :wrap-around="true"
+        :autoplay="10">
+      <div class="banner" :style="{'background':slotProps.item.bg}">
         <div class="container">
           <div class="banner-inner">
             <div class="row">
               <div class="col">
                 <ul class="images">
-                  <li class="image" v-for="(image,index) in banner.images" :key="index">
-                    <img :src="image" :alt="banner.name" class="img-fluid">
+                  <li class="image" v-for="(image,index) in slotProps.item.images" :key="index">
+                    <img :src="image" :alt="slotProps.item.name" class="img-fluid">
                   </li>
                 </ul>
               </div>
               <div class="col">
-                <div class="msg-dev" v-if="banner.url === null">{{ $t('home.soon_on_app_store') }}</div>
-                <div class="name">{{banner.name}}</div>
-                <div class="brief">{{banner.brief[$i18n.locale] ?? ''}}</div>
-                <div class="desc">{{banner.desc[$i18n.locale] ?? ''}}</div>
+                <div class="msg-dev" v-if="slotProps.item.url === null">{{ $t('home.soon_on_app_store') }}</div>
+                <div class="name">{{slotProps.item.name}}</div>
+                <div class="brief">{{slotProps.item.brief[$i18n.locale] ?? ''}}</div>
+                <div class="desc">{{slotProps.item.desc[$i18n.locale] ?? ''}}</div>
                 <div class="buttons">
                   <a href="#" class="btn btn-secondary">{{$t('common.learn_more')}}</a>
-                  <a v-if="banner.url" :href="this.getBasePath() + banner.url" target="_blank"
+                  <a v-if="slotProps.item.url" :href="this.getBasePath() + slotProps.item.url" target="_blank"
                      class="btn btn-primary">{{$t('common.free_download')}}</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </slide>
-      <template #addons>
-        <div class="container">
-          <pagination/>
-        </div>
-      </template>
-    </carousel>
+      </div>
+    </slider-dissolve>
   </div>
 </template>
 
-<style scoped lang="sass">
+<style lang="sass">
 @import "@/assets/color.sass"
 
 .home-banner
