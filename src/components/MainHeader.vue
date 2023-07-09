@@ -18,7 +18,11 @@ export default defineComponent({
         <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7">
           <nav>
             <ul>
-              <li><a href="#">{{ $t('header.our_apps') }}</a></li>
+              <li>
+                <router-link :to="{name:'Apps', params:{locale:$i18n.locale}}">
+                  {{ $t('header.our_apps') }}
+                </router-link>
+              </li>
               <li><a href="#">{{ $t('header.company') }}</a></li>
               <li><a href="#">{{ $t('header.blog') }}</a></li>
               <li><a href="#">{{ $t('header.contacts') }}</a></li>

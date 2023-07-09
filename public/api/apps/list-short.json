@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Ad Blocker",
+    "url": "ad-blocker-safari-adblock/id1587657245",
+    "desc": {
+      "en": "Block ads on any website",
+      "ua": "Блокування реклами на будь-якому сайті",
+      "ru": "Блокировка рекламы на любом сайте"
+    },
+    "logo": "app_1/logo.png"
+  },
+  {
+    "id": 2,
+    "name": "RoboCleaner",
+    "url": "phone-cleaner-robo-clean-up/id1603385704",
+    "desc": {
+      "en": "Phone cleaner app",
+      "ua": "Застосунок для очищення телефону",
+      "ru": "Приложение для очистки телефона"
+    },
+    "logo": "app_2/logo.png"
+  },
+  {
+    "id": 3,
+    "name": "Network Analyzer",
+    "url": "network-analyzer-speed-test/id1660559510",
+    "desc": {
+      "en": "Scan network and check the Internet speed",
+      "ua": "Скан мережі та перевірка швидкості Інтернету",
+      "ru": "Скан сети и проверка скорости интернета"
+    },
+    "logo": "app_3/logo.png"
+  },
+  {
+    "id": 4,
+    "name": "Secret Valut",
+    "url": null,
+    "desc": {
+      "en": "Hide photos and protect them with a passcode",
+      "ua": "Приховані фотографії та захист їх паролем",
+      "ru": "Скрытые фотографий и защита их паролем"
+    },
+    "logo": "app_4/logo.png"
+  },
+  {
+    "id": 5,
+    "name": "Pill Reminder",
+    "url": null,
+    "desc": {
+      "en": "Set a reminder to take meds in time",
+      "ua": "Нагадування про прийом ліків",
+      "ru": "Напоминание о приеме лекарств"
+    },
+    "logo": "app_5/logo.png"
+  }
+]

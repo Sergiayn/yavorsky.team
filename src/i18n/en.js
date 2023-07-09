@@ -32,6 +32,7 @@ const translate = {
         subscribe_desc: 'Receive YavorskyTeam\'s exclusive offers and updates on our latest apps, delivered straight to your inbox by our trusty delivery owl',
         subscribe_btn: 'Subscribe',
         soon_on_app_store: 'Soon on App Store',
+        coming_soon: 'Coming soon',
     },
     blog: {
       title: 'Blog',
@@ -48,6 +49,11 @@ const translate = {
         message_show_all_errors: 'Please correct the indicated errors',
         learn_more: 'Learn more',
         free_download: 'Free download',
+        download: 'Download',
+        years: 'years',
+        on_market: 'on the market',
+        app_downloads: 'app downloads',
+        average_rate: 'average rate',
     },
     languages: {
         language: 'Language',

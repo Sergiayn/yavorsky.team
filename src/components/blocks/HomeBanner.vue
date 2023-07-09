@@ -50,7 +50,7 @@ export default defineComponent({
                 </ul>
               </div>
               <div class="col">
-                <div class="msg-dev" v-if="slotProps.item.url === null">{{ $t('home.soon_on_app_store') }}</div>
+                <div class="msg-dev" v-if="slotProps.item.dev">{{ $t('home.soon_on_app_store') }}</div>
                 <div class="name">{{slotProps.item.name}}</div>
                 <div class="brief">{{slotProps.item.brief[$i18n.locale] ?? ''}}</div>
                 <div class="desc">{{slotProps.item.desc[$i18n.locale] ?? ''}}</div>

@@ -9,9 +9,15 @@ export default {
             commit('setApps', data)
         } catch (e) {console.error(e.message)}
     },
-    loadApps: async ({ getters, dispatch }) => {
-        if(getters.apps.length === undefined)
-            dispatch('setApps')
+    setAppsShort: async ({ commit }) => {
+        try {
+            const {data} = await axios.get('apps/list-short.json')
+            commit('setAppsShort', data)
+        } catch (e) {console.error(e.message)}
+    },
+    loadAppsShort: async ({ getters, dispatch }) => {
+        if(getters.apps_short.length === undefined)
+            dispatch('setAppsShort')
     },
     setAppsBanner: async ({ commit }) => {
         try {

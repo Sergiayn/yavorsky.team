@@ -17,6 +17,7 @@ export default {
         },
     ],
     apps: {},
+    apps_short: {},
     apps_banner: {},
     blogs: [
         {

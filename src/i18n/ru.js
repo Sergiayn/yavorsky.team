@@ -32,6 +32,7 @@ const translate = {
         subscribe_desc: 'Получайте эксклюзивные предложения и обновления наших приложений, доставленные прямо на вашу почту нашей надежной почтовой совой',
         subscribe_btn: 'Подписаться',
         soon_on_app_store: 'Скоро в App Store',
+        coming_soon: 'Скоро',
     },
     blog: {
         title: 'Блог',
@@ -48,6 +49,11 @@ const translate = {
         message_show_all_errors: 'Пожалуйста исправьте указанные ошибки',
         learn_more: 'Подробнее',
         free_download: 'Скачать',
+        download: 'Скачать',
+        years: 'лет',
+        on_market: 'в App Store',
+        app_downloads: 'скаченых приложений',
+        average_rate: 'средняя оценка',
     },
     languages: {
         language: 'Язык',

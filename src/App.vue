@@ -13,7 +13,7 @@ import MainHeader from "@/components/MainHeader"
 export default {
   name: 'App',
   data(){
-    this.$store.dispatch('loadApps')
+    this.$store.dispatch('loadAppsShort')
     return {}
   },
   components: {
@@ -67,6 +67,11 @@ body
     background-color: transparent
     color: $color_gray_40
     border-color: $color_gray_40
+
+.btn-disabled
+  background-color: transparent
+  color: $color_gray_40
+  border-color: $color_gray_40
 
 .btn-arrow
   background-color: $color_white

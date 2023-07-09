@@ -32,6 +32,7 @@ const translate = {
         subscribe_desc: 'Отримуйте ексклюзивні пропозиції та оновлення наших додатків, доставлені прямо на вашу пошту нашим надійним поштовим совеням',
         subscribe_btn: 'Підписатися',
         soon_on_app_store: 'Незабаром в App Store',
+        coming_soon: 'Незабаром',
     },
     blog: {
         title: 'Блог',
@@ -48,6 +49,11 @@ const translate = {
         message_show_all_errors: 'Будь ласка, виправте вказані помилки',
         learn_more: 'Детальніше',
         free_download: 'Завантажити',
+        download: 'Завантажити',
+        years: 'років',
+        on_market: 'в App Store',
+        app_downloads: 'завантажених застосунків',
+        average_rate: 'середня оцінка',
     },
     languages: {
         language: 'Мова',

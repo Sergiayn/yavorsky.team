@@ -7,7 +7,7 @@ export default defineComponent({
   components: {SiteLogo},
   computed: {
     appsChunks() {
-      return window.objectToChunks(this.$store.getters.apps, 3)
+      return window.objectToChunks(this.$store.getters.apps_short, 3)
     }
   }
 })
@@ -23,8 +23,8 @@ export default defineComponent({
       <div class="list-app-chunks link-black">
         <div v-for="(chunkValue, chunkKey) in appsChunks" :key="chunkKey" class="app-chunk">
           <div v-for="app in chunkValue" :key="app.id" class="app">
-            <div class="app-inner" :class="{'app-inner-dev':!app.url}">
-              <a href="#" class="img"><img :src="app.img" :alt="app.name"></a>
+            <div class="app-inner" :class="{'app-inner-dev':app.dev}">
+              <a href="#" class="img"><img :src="app.logo" :alt="app.name" class="img-fluid"></a>
               <div class="brief">
                 <div class="msg-dev">{{ $t('home.soon_on_app_store') }}</div>
                 <a href="#" class="name">{{app.name}}</a>

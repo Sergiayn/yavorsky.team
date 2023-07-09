@@ -4,54 +4,59 @@
     "name": "Ad Blocker",
     "url": "ad-blocker-safari-adblock/id1587657245",
     "desc": {
-      "en": "Block ads on any website",
-      "ua": "Блокування реклами на будь-якому сайті",
-      "ru": "Блокировка рекламы на любом сайте"
+      "en": "A reliable ad-blocking app that helps you enjoy a safe and efficient browsing experience by blocking banner ads and pop-ups.",
+      "ua": "Надійний блокувальник реклами убезпечить користування Інтернетом, блокуючи рекламу та спливаючі вікна.",
+      "ru": "Надежный блокировщик рекламы обезопасит пользование Интернетом, блокируя рекламу и всплывающие окна."
     },
-    "img": "app_1.png"
+    "logo": "app_1/logo.png",
+    "img": "app_1/app.png"
   },
   {
     "id": 2,
     "name": "RoboCleaner",
     "url": "phone-cleaner-robo-clean-up/id1603385704",
     "desc": {
-      "en": "Phone cleaner app",
-      "ua": "Застосунок для очищення телефону",
-      "ru": "Приложение для очистки телефона"
+      "en": "A fast app for cleaning your phone of unwanted files and debris, ensuring optimal performance for your device.",
+      "ua": "Швидка програма для очищення телефону від сміття та оптимізації продуктивності пристрою.",
+      "ru": "Быстрое приложение для очистки телефона от мусора и оптимизации производительности устройства."
     },
-    "img": "app_2.png"
+    "logo": "app_2/logo.png",
+    "img": "app_2/app.png"
   },
   {
     "id": 3,
     "name": "Network Analyzer",
     "url": "network-analyzer-speed-test/id1660559510",
     "desc": {
-      "en": "Scan network and check the Internet speed",
-      "ua": "Скан мережі та перевірка швидкості Інтернету",
-      "ru": "Скан сети и проверка скорости интернета"
+      "en": "A powerful and easy-to-use network scanning and analysis program.",
+      "ua": "Потужна та проста у використанні програма сканування та аналізу мережі.",
+      "ru": "Мощная и простая в использовании программа сканирования и анализа сети."
     },
-    "img": "app_3.png"
+    "logo": "app_3/logo.png",
+    "img": "app_3/app.png"
   },
   {
     "id": 4,
     "name": "Secret Valut",
     "url": null,
     "desc": {
-      "en": "Hide photos and protect them with a passcode",
-      "ua": "Приховані фотографії та захист їх паролем",
-      "ru": "Скрытые фотографий и защита их паролем"
+      "en": "A secure photo storage app that allows you to hide important photos from prying eyes and store them in a private vault.\n",
+      "ua": "Додаток для безпечного зберігання фотографій у власному сховищі.",
+      "ru": "Приложение для безопасного хранения фотографий в личном хранилище."
     },
-    "img": "app_4.png"
+    "logo": "app_4/logo.png",
+    "img": "app_4/app.png"
   },
   {
     "id": 5,
     "name": "Pill Reminder",
     "url": null,
     "desc": {
-      "en": "Set a reminder to take meds in time",
-      "ua": "Нагадування про прийом ліків",
-      "ru": "Напоминание о приеме лекарств"
+      "en": "A medication reminder app that allows you to set up a medication schedule and receive timely reminders to take your medications.",
+      "ua": "Додаток для нагадування про прийом ліків за розкладом.",
+      "ru": "Приложение для напоминания о приеме лекарств по расписанию."
     },
-    "img": "app_5.png"
+    "logo": "app_5/logo.png",
+    "img": "app_5/app.png"
   }
 ]
