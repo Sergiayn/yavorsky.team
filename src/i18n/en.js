@@ -27,7 +27,7 @@ const translate = {
         form_contact_title: 'Get in touch with us',
         form_contact_desc: 'If you have questions please contact us using this form',
         user_review__title: 'Our users reviews',
-        user_review__desc: 'Join our growing list of satisfied clients: discover why more and more clients are choosing us',
+        user_review__desc: 'Join our growing list of satisfied users: discover why more and more clients are choosing us',
         subscribe_title: 'Subscribe to be the first',
         subscribe_desc: 'Receive YavorskyTeam\'s exclusive offers and updates on our latest apps, delivered straight to your inbox by our trusty delivery owl',
         subscribe_btn: 'Subscribe',

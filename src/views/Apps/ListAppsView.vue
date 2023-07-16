@@ -99,7 +99,7 @@ export default defineComponent({
       height: 100%
       padding: 22px 12px
     .img
-      background-color: $color_gray_40
+      background-color: #EEECF4
       background-size: 40px 40px
       background-repeat: no-repeat
       background-position: 15px 26px
@@ -127,11 +127,18 @@ export default defineComponent({
   .buttons
     margin-top: 16px
     .btn
+      border-radius: 4px
       font-size: 14px
-      padding: 10px
+      padding: 8px 1px
       min-width: 110px
       &:first-child
         margin-right: 20px
+    .btn-primary
+      font-size: 16px
+      padding: 6px 1px
+      &:hover
+        background-color: $color_primary
+        border-color: $color_primary
   .info-list
     list-style: none
     margin: 0

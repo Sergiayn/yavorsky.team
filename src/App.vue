@@ -69,8 +69,8 @@ body
     border-color: $color_gray_40
 
 .btn-disabled
-  background-color: transparent
-  color: $color_gray_40
+  background-color: $color_gray_40
+  color: $color_white
   border-color: $color_gray_40
 
 .btn-arrow

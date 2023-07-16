@@ -29,9 +29,10 @@ export default defineComponent({
   },
   data() {
     const activeItemIndex = ref(0)
+    const sliderTimer = ref(0)
     this.startAutoplay()
 
-    return {activeItemIndex}
+    return {activeItemIndex, sliderTimer}
   },
   methods: {
     isActiveItem(index) {
@@ -41,7 +42,10 @@ export default defineComponent({
       if (!this.autoplay)
         return
 
-      setInterval(() => this.nextItem(), this.autoplay * 1000)
+      if (undefined !== this.sliderTimer)
+        clearInterval(String(this.sliderTimer))
+
+      this.sliderTimer = setInterval(() => this.nextItem(), this.autoplay * 1000)
     },
     nextItem() {
       if (this.wrapAround) {
@@ -53,9 +57,11 @@ export default defineComponent({
         if (this.activeItemIndex + 1 < this.list.length)
           this.activeItemIndex++
       }
+      this.startAutoplay()
     },
     goToItem(index){
       this.activeItemIndex = index
+      this.startAutoplay()
     }
   },
 })
@@ -66,7 +72,7 @@ export default defineComponent({
     <TransitionGroup name="list" tag="ul">
       <li v-for="(item, index) in list" :key="index" class="dissolve-effect"
           :class="{show: isActiveItem(index)}">
-        <div v-if="isActiveItem(index)">
+        <div v-show="isActiveItem(index)">
           <slot :item="item" :index="index"></slot>
         </div>
       </li>
@@ -93,7 +99,7 @@ export default defineComponent({
     list-style: none
   .dissolve-effect
     opacity: 0
-    transition: opacity .7s ease-in-out
+    transition: opacity 1s ease-in-out
     &.show
       opacity: 1
 

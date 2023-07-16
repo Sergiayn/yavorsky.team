@@ -46,24 +46,24 @@ export default {
         },
     ],
     user_reviews: [
-        {
-            id: 1,
-            name: {
-                en:'Mark Hen',
-                ua:'Марк Хен',
-                ru:'Марк Хен',
-            },
-            review: {
-                en: 'I have been using this app for over a year now. I used to struggle with remembering to take my medication on time, but with this app\'s reminders and easy-to-use interface, I have not missed a single dose.',
-                ua:'Користуюсь цим додатком уже більше року. Раніше були труднощі з вживанням ліків вчасно, але завдяки додатку я не пропустив жодної таблетки.',
-                ru:'Пользуюсь этим приложением уже больше года. Раньше были трудности с принятием лекарств вовремя, но благодаря приложению я не пропустил ни одной таблетки.',
-            },
-            job_title: {
-                en:'CEO, NexusTech',
-                ua:'Генеральний директор, NexusTech',
-                ru:'Генеральный директор, NexusTech',
-            }
-        },
+        // {
+        //     id: 1,
+        //     name: {
+        //         en:'Mark Hen',
+        //         ua:'Марк Хен',
+        //         ru:'Марк Хен',
+        //     },
+        //     review: {
+        //         en: 'I have been using this app for over a year now. I used to struggle with remembering to take my medication on time, but with this app\'s reminders and easy-to-use interface, I have not missed a single dose.',
+        //         ua:'Користуюсь цим додатком уже більше року. Раніше були труднощі з вживанням ліків вчасно, але завдяки додатку я не пропустив жодної таблетки.',
+        //         ru:'Пользуюсь этим приложением уже больше года. Раньше были трудности с принятием лекарств вовремя, но благодаря приложению я не пропустил ни одной таблетки.',
+        //     },
+        //     job_title: {
+        //         en:'CEO, NexusTech',
+        //         ua:'Генеральний директор, NexusTech',
+        //         ru:'Генеральный директор, NexusTech',
+        //     }
+        // },
         {
             id: 2,
             name: {
@@ -82,24 +82,24 @@ export default {
                 ru:'Соучредитель SwiftMind',
             }
         },
-        {
-            id: 3,
-            name: {
-                en:'Alex Kohen',
-                ua:'Алекс Коен',
-                ru:'Алекс Коен',
-            },
-            review: {
-                en:'I\'ve been using this secret vault app for a few months now and it\'s exceeded my expectations. The app is easy to use and provides a secure way to store my photos and protect them with passcode.',
-                ua:'Використовую Secret Vault вже кілька місяців, і я задоволений. Додаток зрозумілий та забезпечує надійний спосіб зберігання моїх фотографій та їх захист за допомогою пароля',
-                ru:'Использую Secret Vault уже несколько месяцев, и я доволен. Приложение понятное и обеспечивает надежный способ хранения моих фотографий и их защиту с помощью пароля',
-            },
-            job_title: {
-                en:'Co-founder, Zenith Works',
-                ua:'Співзасновник Zenith Works',
-                ru:'Соучредитель Zenith Works',
-            }
-        },
+        // {
+        //     id: 3,
+        //     name: {
+        //         en:'Alex Kohen',
+        //         ua:'Алекс Коен',
+        //         ru:'Алекс Коен',
+        //     },
+        //     review: {
+        //         en:'I\'ve been using this secret vault app for a few months now and it\'s exceeded my expectations. The app is easy to use and provides a secure way to store my photos and protect them with passcode.',
+        //         ua:'Використовую Secret Vault вже кілька місяців, і я задоволений. Додаток зрозумілий та забезпечує надійний спосіб зберігання моїх фотографій та їх захист за допомогою пароля',
+        //         ru:'Использую Secret Vault уже несколько месяцев, и я доволен. Приложение понятное и обеспечивает надежный способ хранения моих фотографий и их защиту с помощью пароля',
+        //     },
+        //     job_title: {
+        //         en:'Co-founder, Zenith Works',
+        //         ua:'Співзасновник Zenith Works',
+        //         ru:'Соучредитель Zenith Works',
+        //     }
+        // },
         {
             id: 4,
             name: {

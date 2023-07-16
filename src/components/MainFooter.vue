@@ -33,7 +33,7 @@ export default defineComponent({
   },
   computed: {
     apps() {
-      return this.$store.getters.apps
+      return this.$store.getters.apps_short
     }
   }
 })

@@ -116,6 +116,8 @@ export default {
 
 .home-contacts
   padding-bottom: 120px
+  .block-brief
+    max-width: 340px
   p
     margin-bottom: 24px
   textarea
