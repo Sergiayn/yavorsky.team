@@ -24,7 +24,11 @@ export default defineComponent({
                 </router-link>
               </li>
               <li><a href="#">{{ $t('header.company') }}</a></li>
-              <li><a href="#">{{ $t('header.blog') }}</a></li>
+              <li>
+                <router-link :to="{name:'Blogs', params:{locale:$i18n.locale}}">
+                  {{ $t('header.blog') }}
+                </router-link>
+              </li>
               <li><a href="#">{{ $t('header.contacts') }}</a></li>
             </ul>
           </nav>

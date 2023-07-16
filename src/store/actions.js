@@ -25,4 +25,16 @@ export default {
             commit('setAppsBanner', data)
         } catch (e) {console.error(e.message)}
     },
+    setBlogs: async ({ commit }) => {
+        try {
+            const {data} = await axios.get('blogs/list.json')
+            commit('setBlogs', data)
+        } catch (e) {console.error(e.message)}
+    },
+    setBlogsShort: async ({ commit }) => {
+        try {
+            const {data} = await axios.get('blogs/list-short.json')
+            commit('setBlogsShort', data)
+        } catch (e) {console.error(e.message)}
+    },
 }

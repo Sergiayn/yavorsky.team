@@ -37,6 +37,24 @@ export default {
             })
         return banners
     },
-    blogs: state => state.blogs,
+    blogs: state => {
+        let blogs = structuredClone( state.blogs)
+        Object.keys(blogs).forEach(key => {
+                blogs[key].preview = '/images/blogs/' + blogs[key].id + '/' + blogs[key].preview_small
+
+                blogs[key].preview_large = '/images/blogs/' + blogs[key].id + '/' +
+                    ((undefined === blogs[key].preview_large) ? blogs[key].preview_small : blogs[key].preview_large)
+            }
+        )
+        return blogs
+    },
+    blogs_short: state => {
+        let blogs = structuredClone( state.blogs_short)
+        Object.keys(blogs).forEach(key => {
+                blogs[key].preview = '/images/blogs/' + blogs[key].id + '/' + blogs[key].preview_small
+            }
+        )
+        return blogs
+    },
     user_reviews: state => state.user_reviews,
 }

@@ -65,7 +65,11 @@ export default defineComponent({
           <nav>
             <ul>
               <li><a href="#">{{ $t('footer.about_company') }}</a></li>
-              <li><a href="#">{{ $t('footer.blog') }}</a></li>
+              <li>
+                <router-link :to="{name:'Blogs', params:{locale:$i18n.locale}}">
+                  {{ $t('footer.blog') }}
+                </router-link>
+              </li>
               <li><a href="#">{{ $t('footer.support') }}</a></li>
             </ul>
           </nav>
@@ -109,7 +113,11 @@ export default defineComponent({
             <nav>
               <ul>
                 <li><a href="#">{{ $t('footer.about_company') }}</a></li>
-                <li><a href="#">{{ $t('footer.blog') }}</a></li>
+                <li>
+                  <router-link :to="{name:'Blogs', params:{locale:$i18n.locale}}">
+                    {{ $t('footer.blog') }}
+                  </router-link>
+                </li>
                 <li><a href="#">{{ $t('footer.support') }}</a></li>
               </ul>
             </nav>
@@ -159,7 +167,11 @@ export default defineComponent({
               <nav>
                 <ul>
                   <li><a href="#">{{ $t('footer.about_company') }}</a></li>
-                  <li><a href="#">{{ $t('footer.blog') }}</a></li>
+                  <li>
+                    <router-link :to="{name:'Blogs', params:{locale:$i18n.locale}}">
+                      {{ $t('footer.blog') }}
+                    </router-link>
+                  </li>
                   <li><a href="#">{{ $t('footer.support') }}</a></li>
                 </ul>
               </nav>

@@ -1,16 +1,14 @@
 <script>
 import {defineComponent} from 'vue'
 import moment from 'moment'
-import blog_1 from '@/assets/img/blog/blog_1.png'
-import blog_2 from '@/assets/img/blog/blog_2.png'
-import blog_3 from '@/assets/img/blog/blog_3.png'
-import blog_4 from '@/assets/img/blog/blog_4.png'
 
 export default defineComponent({
-  name: "BlogListPreview",
-  data() {
-    const imgs = {1:blog_1,2:blog_2,3:blog_3,4:blog_4}
-    return {imgs}
+  name: "Blog_ListPreview",
+  props: {
+    list: {
+      type: Object,
+      default() {return {}}
+    }
   },
   methods: {
     timestampToDate(timestamp){
@@ -31,57 +29,42 @@ export default defineComponent({
     }
   },
   computed: {
-    blogs() {
-      return this.$store.getters.blogs
-    },
-  },
+    blogsChunks() {
+      return window.objectToChunks(this.list,4)
+    }
+  }
 })
 </script>
 
 <template>
-  <div class="blog-list-preview">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-9">
-          <div class="block-brief">
-            <div class="title">{{$t('blog.title')}}</div>
-            <div class="desc">{{$t('blog.desc')}}</div>
-          </div>
-        </div>
-        <div class="col-lg-3 link-arrow-right link-purrple">
-          <a href="#" class="all-blogs">{{$t('blog.see_all')}}</a>
-        </div>
-      </div>
-
-      <ul class="list link-black">
-        <li v-for="blog in blogs" :key="blog.id">
-          <a href="#" class="img">
-            <img :src="imgs[blog.id]" :alt="blog.name[$i18n.locale] ?? ''">
-          </a>
-          <div class="date">{{timestampToDate(blog.created_at)}}</div>
-          <a href="#" class="name">{{blog.name[$i18n.locale] ?? ''}}</a>
-        </li>
-      </ul>
-    </div>
+  <div class="blog__list-preview">
+    <ul class="list link-black" v-for="(blogs, index) in blogsChunks" :key="index">
+      <li v-for="blog in blogs" :key="blog.id">
+        <a href="#" class="img">
+          <img :src="blog.preview" :alt="blog.name[$i18n.locale] ?? ''">
+        </a>
+        <div class="date">{{timestampToDate(blog.created_at)}}</div>
+        <a href="#" class="name">{{blog.name[$i18n.locale] ?? ''}}</a>
+      </li>
+    </ul>
   </div>
 </template>
 
 <style scoped lang="sass">
 @import "@/assets/color.sass"
 
-.blog-list-preview
-  padding: 88px 0 120px
-  .link-arrow-right
-    text-align: right
-    a
-      margin-top: 40px
+.blog__list-preview
   .list
     display: flex
     display: -webkit-flex
     list-style: none
     justify-content: space-between
     margin-bottom: 0
-    padding: 0
+    padding: 12px 0
+    &:first-child
+      padding-top: 0
+    &:last-child
+      padding-bottom: 0
     .img
       border-radius: 8px
       display: block
