@@ -106,22 +106,22 @@ body
     color: $color_primary
 
 .link-arrow-right a
-  background-image: url("@/assets/img/icons/link-arrow-right.png")
+  background-image: url("@/assets/img/icons/link-arrow-right.webp")
   background-repeat: no-repeat
   background-position: center right
   display: inline-block
   padding-right: 32px
   &:disabled
-    background-image: url("@/assets/img/icons/link-arrow-right-disable.png")
+    background-image: url("@/assets/img/icons/link-arrow-right-disable.webp")
 
 .link-arrow-left a
-  background-image: url("@/assets/img/icons/link-arrow-left.png")
+  background-image: url("@/assets/img/icons/link-arrow-left.webp")
   background-repeat: no-repeat
   background-position: center left
   display: inline-block
   padding-left: 32px
   &:disabled
-    background-image: url("@/assets/img/icons/link-arrow-left-disable.png")
+    background-image: url("@/assets/img/icons/link-arrow-left-disable.webp")
 
 .block-brief
   background-image: url("@/assets/img/icons/divider-vertical.svg")

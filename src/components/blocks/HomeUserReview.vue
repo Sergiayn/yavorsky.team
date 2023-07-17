@@ -82,7 +82,7 @@ export default defineComponent({
   .r-col
     flex: 50%
   .review
-    background-image: url("@/assets/img/icons/quotation-mark.png")
+    background-image: url("@/assets/img/icons/quotation-mark.webp")
     background-repeat: no-repeat
     background-position: 16px 16px
     border-radius: 12px

@@ -84,7 +84,7 @@ export default defineComponent({
   .banner
     padding: 116px 0 16px
     .images
-      background-image: url("@/assets/img/image-shadow.png")
+      background-image: url("@/assets/img/image-shadow.webp")
       background-repeat: no-repeat
       background-position: bottom center
       list-style: none
