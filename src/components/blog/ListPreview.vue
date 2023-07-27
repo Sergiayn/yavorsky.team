@@ -41,7 +41,7 @@ export default defineComponent({
     <ul class="list link-black" v-for="(blogs, index) in blogsChunks" :key="index">
       <li v-for="blog in blogs" :key="blog.id">
         <a href="#" class="img">
-          <img :src="blog.preview" :alt="blog.name[$i18n.locale] ?? ''">
+          <img :src="blog.preview" :alt="blog.name[$i18n.locale] ?? ''" class="img-fluid">
         </a>
         <div class="date">{{timestampToDate(blog.created_at)}}</div>
         <a href="#" class="name">{{blog.name[$i18n.locale] ?? ''}}</a>

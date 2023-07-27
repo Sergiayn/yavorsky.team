@@ -2,7 +2,7 @@
 import {defineComponent} from 'vue'
 
 export default defineComponent({
-  name: "HomeSubscribe",
+  name: "BlockSubscribe",
   methods: {
     subscribeUser() {
       let formData = new FormData();
@@ -46,7 +46,7 @@ export default defineComponent({
 </template>
 
 <style scoped lang="sass">
-@import "@/assets/color.sass"
+@import "@/assets/color"
 .home-subscribe-inner
   max-width: 750px
   margin: auto

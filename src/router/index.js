@@ -35,6 +35,7 @@ const routes = [
         path: "blogs",
         name: "Blogs",
         component: () => import("@/views/Blogs/ListBlogsView"),
+        props: route => ({ target_rubric: route.query.rubric, search: route.query.search })
       },
     ]
   },

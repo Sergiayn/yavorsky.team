@@ -38,6 +38,10 @@ const translate = {
         title: 'Блог',
         desc: 'Будьте в курсі останніх новин, тенденцій та ідей у нашому блозі',
         see_all: 'Усі статті',
+        search: 'Пошук',
+        rubric_all: 'Усі статті',
+        rubric_news: 'Новини',
+        rubric_how_to: 'How To',
     },
     common: {
         email: 'Електронна пошта',

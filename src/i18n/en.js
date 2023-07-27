@@ -38,6 +38,10 @@ const translate = {
       title: 'Blog',
       desc: 'Stay up to date with the latest news, trends, and insights in our blog',
       see_all: 'See all',
+      search: 'Search',
+      rubric_all: 'All articles',
+      rubric_news: 'News',
+      rubric_how_to: 'How To',
     },
     common: {
         email: 'E-mail',
