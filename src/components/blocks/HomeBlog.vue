@@ -27,7 +27,7 @@ export default defineComponent({
             <div class="desc">{{$t('blog.desc')}}</div>
           </div>
         </div>
-        <div class="col-lg-3 link-arrow-right link-purrple">
+        <div class="col-lg-3 link-arrow-right link-purplle">
           <router-link :to="{name:'Blogs', params:{locale:$i18n.locale}}" class="all-blogs">
             {{ $t('blog.see_all') }}
           </router-link>

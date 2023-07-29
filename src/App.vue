@@ -82,9 +82,9 @@ body
   height: 40px
   width: 40px
   &.left
-    background-image: url("@/assets/img/icons/arrow-left-purrple.svg")
+    background-image: url("@/assets/img/icons/arrow-left-purplle.svg")
   &.right
-    background-image: url("@/assets/img/icons/arrow-right-purrple.svg")
+    background-image: url("@/assets/img/icons/arrow-right-purplle.svg")
   &:hover
     background-color: $color_primary
     border-color: $color_primary
@@ -99,7 +99,7 @@ body
   &:hover
     color: $color_primary
 
-.link-purrple a
+.link-purplle a
   color: $color_primary
   text-decoration: none
   &:hover
@@ -156,5 +156,12 @@ body
 .carousel .carousel__pagination-button--active::after
   background: $color_black
   opacity: 1
+
+.page-content
+  padding: 60px 0 120px
+
+@media (max-width: 768px)
+  .page-content
+    padding: 40px 0 40px
 
 </style>

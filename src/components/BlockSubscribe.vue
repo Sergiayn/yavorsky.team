@@ -6,7 +6,7 @@ export default defineComponent({
   methods: {
     subscribeUser() {
       let formData = new FormData();
-      formData.append('email', this.email);
+      formData.append('email', this.email)
       formData.append('type', 'yavorsky.team')
 
       const requestOptions = {
@@ -31,9 +31,9 @@ export default defineComponent({
 </script>
 
 <template>
-<div class="home-subscribe">
+<div class="block-subscribe">
   <div class="container">
-    <div class="home-subscribe-inner">
+    <div class="block-subscribe-inner">
       <div class="title">{{ $t("home.subscribe_title") }}</div>
       <div class="desc">{{ $t("home.subscribe_desc") }}</div>
       <form @submit.prevent="subscribeUser">
@@ -47,10 +47,10 @@ export default defineComponent({
 
 <style scoped lang="sass">
 @import "@/assets/color"
-.home-subscribe-inner
+.block-subscribe-inner
   max-width: 750px
   margin: auto
-.home-subscribe
+.block-subscribe
   background-color: $color_background_dark
   color: $color_white
   padding: 48px 0

@@ -58,6 +58,9 @@ const translate = {
         on_market: 'в App Store',
         app_downloads: 'завантажених застосунків',
         average_rate: 'середня оцінка',
+        page_contact__desc: 'Якщо у вас є питання, коментарі або зауваження, будь ласка, зв\'яжіться з нами.',
+        contact_form__file_desc_1: 'Перетягніть сюди',
+        contact_form__file_desc_2: 'або Пошук файлу',
     },
     languages: {
         language: 'Мова',

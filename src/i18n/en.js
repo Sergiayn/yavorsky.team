@@ -58,6 +58,9 @@ const translate = {
         on_market: 'on the market',
         app_downloads: 'app downloads',
         average_rate: 'average rate',
+        page_contact__desc: 'If you have any questions, comments, or concerns, please don\'t hesitate to get in touch with us.',
+        contact_form__file_desc_1: 'Drag and Drop here',
+        contact_form__file_desc_2: 'or Browse file',
     },
     languages: {
         language: 'Language',
