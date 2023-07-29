@@ -40,7 +40,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="list-blogs-view">
+  <div class="page-content list-blogs-view">
     <div class="container">
       <div class="block-brief single">
         <div class="title">{{$t('blog.title')}}</div>
@@ -77,7 +77,6 @@ export default defineComponent({
 @import "@/assets/color"
 
 .list-blogs-view
-  padding: 60px 0 120px
   .block-brief
     margin-bottom: 40px
   .filter-form

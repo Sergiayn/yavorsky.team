@@ -16,7 +16,7 @@ export default defineComponent({
       </div>
       <div class="desc-part">
         <div class="desc">{{$t('home.company__desc')}}</div>
-        <div class="link-purrple link-arrow-right">
+        <div class="link-purplle link-arrow-right">
           <a href="#">{{$t('home.company__link')}}</a>
         </div>
       </div>

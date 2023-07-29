@@ -28,7 +28,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="list-apps-view">
+  <div class="page-content list-apps-view">
     <div class="container">
       <div class="row">
         <div class="col-xxl-6 col-xl-6 col-lg-5 col-md-12 col-sm-12 col-xs-12">
@@ -85,7 +85,6 @@ export default defineComponent({
 @import "@/assets/color.sass"
 
 .list-apps-view
-  padding: 60px 0 120px
   .list
     list-style: none
     margin: 0
@@ -222,7 +221,6 @@ export default defineComponent({
 
 @media (max-width: 768px)
   .list-apps-view
-    padding: 40px 0 40px
     .list
       li
         width: 100%
