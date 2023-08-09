@@ -42,6 +42,7 @@ const translate = {
       rubric_all: 'All articles',
       rubric_news: 'News',
       rubric_how_to: 'How To',
+      latest_posts: 'Latest posts',
     },
     common: {
         email: 'E-mail',
@@ -61,6 +62,8 @@ const translate = {
         page_contact__desc: 'If you have any questions, comments, or concerns, please don\'t hesitate to get in touch with us.',
         contact_form__file_desc_1: 'Drag and Drop here',
         contact_form__file_desc_2: 'or Browse file',
+        thank_you: 'Thank you',
+        successfully_subscribed: 'You have been successfully subscribed',
     },
     languages: {
         language: 'Language',

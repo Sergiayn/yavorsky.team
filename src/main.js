@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import i18n from './i18n'
+import mitt from 'mitt'
+const emitter = mitt()
 
 window.objectToChunks = function(obj, size) {
     let temp = {}
@@ -22,4 +24,4 @@ window.objectToChunks = function(obj, size) {
     return chunks
 }
 
-createApp(App).use(store).use(router).use(i18n).mount('#app')
+createApp(App).provide('emitter', emitter).use(store).use(router).use(i18n).mount('#app')

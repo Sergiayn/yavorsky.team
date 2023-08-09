@@ -4,11 +4,13 @@
     <RouterView />
   </div>
   <main-footer></main-footer>
+  <modal-info/>
 </template>
 
 <script>
 import MainFooter from "@/components/MainFooter"
 import MainHeader from "@/components/MainHeader"
+import ModalInfo from "@/components/ModalInfo";
 
 export default {
   name: 'App',
@@ -17,6 +19,7 @@ export default {
     return {}
   },
   components: {
+    ModalInfo,
     MainFooter,
     MainHeader,
   }
@@ -48,9 +51,10 @@ body
 .btn-primary
   background-color: $color_primary
   border-color: $color_primary
-  &:hover
+  &:hover, &:active, &:focus
     background-color: $color_primary_hover
     border-color: $color_primary_hover
+    box-shadow: none
   &:disabled
     background-color: $color_gray_40
     border-color: $color_gray_40

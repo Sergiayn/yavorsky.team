@@ -76,6 +76,7 @@ export default defineComponent({
       flex: 25%
       margin: 0 12px
       padding: 0
+      text-transform: capitalize
       &:hover
         img
           transition: all .2s ease-in-out

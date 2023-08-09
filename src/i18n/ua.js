@@ -42,6 +42,7 @@ const translate = {
         rubric_all: 'Усі статті',
         rubric_news: 'Новини',
         rubric_how_to: 'How To',
+        latest_posts: 'Останні публікації',
     },
     common: {
         email: 'Електронна пошта',
@@ -61,6 +62,8 @@ const translate = {
         page_contact__desc: 'Якщо у вас є питання, коментарі або зауваження, будь ласка, зв\'яжіться з нами.',
         contact_form__file_desc_1: 'Перетягніть сюди',
         contact_form__file_desc_2: 'або Пошук файлу',
+        thank_you: 'Дякуємо',
+        successfully_subscribed: 'Ви успішно підписалися',
     },
     languages: {
         language: 'Мова',

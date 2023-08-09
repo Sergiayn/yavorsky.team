@@ -42,6 +42,7 @@ const translate = {
         rubric_all: 'Все статьи',
         rubric_news: 'Новости',
         rubric_how_to: 'How To',
+        latest_posts: 'Последние публикации',
     },
     common: {
         email: 'Электронная почта',
@@ -61,6 +62,8 @@ const translate = {
         page_contact__desc: 'Если у вас есть какие-либо вопросы, комментарии или замечания, пожалуйста, свяжитесь с нами.',
         contact_form__file_desc_1: 'Перетащите сюда',
         contact_form__file_desc_2: 'или Поиск файла',
+        thank_you: 'Спасибо',
+        successfully_subscribed: 'Вы успешно подписались',
     },
     languages: {
         language: 'Язык',

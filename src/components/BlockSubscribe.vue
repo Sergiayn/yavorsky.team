@@ -3,6 +3,7 @@ import {defineComponent} from 'vue'
 
 export default defineComponent({
   name: "BlockSubscribe",
+  inject: ['emitter'],
   methods: {
     subscribeUser() {
       let formData = new FormData();
@@ -17,7 +18,7 @@ export default defineComponent({
 
       fetch("https://api.galaxys.info/v1/subscribe", requestOptions)
           .then(() => {
-            this.isVisible = true
+            this.emitter.emit( 'modal_info', {type:'open'})
             this.email = ''
           })
     }

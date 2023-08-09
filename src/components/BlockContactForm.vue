@@ -19,6 +19,7 @@ export default defineComponent({
       comment: '',
     };
   },
+  inject: ['emitter'],
   methods: {
     checkForm: function (e) {
       e.preventDefault()
@@ -42,7 +43,7 @@ export default defineComponent({
       try {
         fetch("https://dev.api.yavorsky.team.galaxys.info/v1/contact", requestOptions)
             .then(() => {
-              // this.isVisible = true
+              this.emitter.emit( 'modal_info', {type:'open'})
               this.name = ''
               this.email = ''
               this.comment = ''

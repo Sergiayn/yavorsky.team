@@ -79,15 +79,22 @@ export default defineComponent({
     font-size: 20px
     font-weight: 600
   .first-item
+    &:hover
+      img
+        transition: all .2s ease-in-out
+        transform: scale(1.1)
     .img
+      border-radius: 8px
+      overflow: hidden
       padding-bottom: 8px
   .list
     list-style: none
     margin: 0
     padding: 0
     li
-      border-bottom: 1px solid $color_gray_60
+      border-bottom: 1px solid $color_gray_40
       padding: 8px 0
+      text-transform: capitalize
       &:first-child
         padding-top: 0
 

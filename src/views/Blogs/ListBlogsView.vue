@@ -50,7 +50,7 @@ export default defineComponent({
         <div class="row">
           <div class="col">
             <div class="rubrics">
-              <ul class="link-black">
+              <ul>
                 <li v-for="rubric in rubrics" :key="rubric" :class="{active: target_rubric === rubric}">
                   <router-link :to="{name:'Blogs', params:{locale:$i18n.locale}, query: {rubric: rubric}}">
                     {{ $t('blog.rubric_' + rubric)  }}
@@ -61,12 +61,13 @@ export default defineComponent({
           </div>
           <div class="col">
             <div class="search">
-              <input class="form-control" type="search" :placeholder="$t('blog.search')" :value="search">
+              <input type="search" :placeholder="$t('blog.search')" :value="search">
             </div>
           </div>
         </div>
       </div>
       <list-preview-top :list="list_top"/>
+      <div class="list-preview-desc">{{$t('blog.latest_posts')}}</div>
       <list-preview :list="list_main"/>
     </div>
   </div>
@@ -93,9 +94,12 @@ export default defineComponent({
         &:first-child
           padding-left: 0
       a
+        color: $color_black
+        cursor: pointer
         display: inline-block
         font-size: 18px
         padding-bottom: 5px
+        text-decoration: none
       .active a
         border-bottom: 1px solid $color_black
     .search
@@ -105,11 +109,22 @@ export default defineComponent({
         background-position: 8px center
         border: none
         color: $color_black
+        display: block
         font-size: 18px
         margin: 0 0 0 auto
         max-width: 130px
-        padding-left: 40px
-        &:focus
+        padding: 8px 8px 8px 40px
+        &:focus, &:focus-visible
+          border-left: none
+          border-bottom: 1px solid $color_black
+          box-shadow: none
           max-width: none
+          margin-left: 15px
+          outline: 0
+          width: 100%
+  .list-preview-desc
+    color: $color_gray_60
+    font-size: 18px
+    padding-bottom: 32px
 
 </style>
