@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "Sergey",
+      "ua": "Сергій",
+      "ru": "Сергей"
+    },
+    "position": "CEO",
+    "img": "img.png"
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Kirill",
+      "ua": "Кирил",
+      "ru": "Кирил"
+    },
+    "position": "iOS Developer",
+    "img": "img.png"
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Yaroslav",
+      "ua": "Ярослав",
+      "ru": "Ярослав"
+    },
+    "position": "QA Tester",
+    "img": "img.png"
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Serhii",
+      "ua": "Сергій",
+      "ru": "Сергей"
+    },
+    "position": "Web Developer",
+    "img": "img.png"
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "Galina",
+      "ua": "Галина",
+      "ru": "Галина"
+    },
+    "position": "Marketing Promotion, Content Writer",
+    "img": "img.png"
+  },
+  {
+    "id": 6,
+    "name": {
+      "en": "Alina",
+      "ua": "Аліна",
+      "ru": "Алина"
+    },
+    "position": "UI/UX Designer",
+    "img": "img.png"
+  },
+  {
+    "id": 7,
+    "name": {
+      "en": "Danil",
+      "ua": "Данил",
+      "ru": "Данил"
+    },
+    "position": "iOS Developer",
+    "img": "img.png"
+  }
+]

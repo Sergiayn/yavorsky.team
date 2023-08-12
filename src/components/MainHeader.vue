@@ -23,7 +23,11 @@ export default defineComponent({
                   {{ $t('header.our_apps') }}
                 </router-link>
               </li>
-              <li><a href="#">{{ $t('header.company') }}</a></li>
+              <li>
+                <router-link :to="{name:'Company', params:{locale:$i18n.locale}}">
+                  {{ $t('header.company') }}
+                </router-link>
+              </li>
               <li>
                 <router-link :to="{name:'Blogs', params:{locale:$i18n.locale}}">
                   {{ $t('header.blog') }}

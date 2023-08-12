@@ -63,7 +63,8 @@ const translate = {
         contact_form__file_desc_1: 'Drag and Drop here',
         contact_form__file_desc_2: 'or Browse file',
         thank_you: 'Thank you',
-        successfully_subscribed: 'You have been successfully subscribed',
+        modal_successfully_subscribed: 'You have been successfully subscribed',
+        modal_successfully_sent: 'The form was submitted successfully',
     },
     languages: {
         language: 'Language',

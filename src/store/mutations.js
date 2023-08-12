@@ -4,5 +4,6 @@ export default {
     setAppsShort: (state, data) => state.apps_short = data,
     setAppsBanner: (state, data) => state.apps_banner = data,
     setBlogs: (state, data) => state.blogs = data,
-    setBlogsShort: (state, data) => state.blogs_short = data
+    setBlogsShort: (state, data) => state.blogs_short = data,
+    setCompany: (state, data) => state.company = data,
 }

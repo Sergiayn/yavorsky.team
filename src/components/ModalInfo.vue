@@ -10,6 +10,9 @@ export default defineComponent({
     this.emitter.on('modal_info', (data) => {
       if ('open' === data.type)
         this.open_modal()
+
+      if (undefined !== data.desc)
+        this.desc = data.desc
     })
   },
   methods: {
@@ -19,8 +22,9 @@ export default defineComponent({
     }
   },
   data() {
+    const desc = ref('')
     const is_visible = ref(false)
-    return {is_visible}
+    return {desc, is_visible}
   }
 })
 </script>
@@ -29,9 +33,11 @@ export default defineComponent({
   <div class="modal-info-wrap">
     <Modal :visible="is_visible"
            title="" modalClass="modal-info">
-      <div class="img"><img src="@/assets/img/icons/check.svg" alt="check"/> </div>
+      <div class="img"><img src="@/assets/img/icons/check.svg" alt="check"/></div>
       <div class="title">{{ $t("common.thank_you") }}!</div>
-      <div class="desc">{{ $t("common.successfully_subscribed") }}!</div>
+      <div class="desc">
+        {{ desc ? $t(desc) : $t("common.modal_successfully_sent") }}!
+      </div>
     </Modal>
   </div>
 </template>

@@ -21,6 +21,7 @@ export default {
     apps_banner: {},
     blogs: [],
     blogs_short: [],
+    company: [],
     user_reviews: [
         // {
         //     id: 1,

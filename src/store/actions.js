@@ -37,4 +37,12 @@ export default {
             commit('setBlogsShort', data)
         } catch (e) {console.error(e.message)}
     },
+    setCompany: async ({ commit }, params) => {
+        try {
+            if (undefined !== params && Array.isArray(params) && params.includes('employees')) {
+                const {data} = await axios.get('company/employees.json')
+                commit('setCompany', data)
+            }
+        } catch (e) {console.error(e.message)}
+    },
 }

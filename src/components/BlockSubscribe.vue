@@ -18,7 +18,7 @@ export default defineComponent({
 
       fetch("https://api.galaxys.info/v1/subscribe", requestOptions)
           .then(() => {
-            this.emitter.emit( 'modal_info', {type:'open'})
+            this.emitter.emit( 'modal_info', {type:'open', desc: 'common.modal_successfully_subscribed'})
             this.email = ''
           })
     }

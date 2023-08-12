@@ -56,5 +56,13 @@ export default {
         )
         return blogs
     },
+    company: state => {
+        let company = structuredClone( state.company)
+        Object.keys(company).forEach(key => {
+                company[key].img = '/images/company/employees/' + company[key].id + '/' + company[key].img
+            }
+        )
+        return company
+    },
     user_reviews: state => state.user_reviews,
 }

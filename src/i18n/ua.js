@@ -63,7 +63,8 @@ const translate = {
         contact_form__file_desc_1: 'Перетягніть сюди',
         contact_form__file_desc_2: 'або Пошук файлу',
         thank_you: 'Дякуємо',
-        successfully_subscribed: 'Ви успішно підписалися',
+        modal_successfully_subscribed: 'Ви успішно підписалися',
+        modal_successfully_sent: 'Форма успішно відправлена',
     },
     languages: {
         language: 'Мова',
