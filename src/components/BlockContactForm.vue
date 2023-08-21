@@ -115,8 +115,7 @@ export default defineComponent({
       <div class="row">
         <div class="col-8">
           <p class="link-purplle">
-            <span>{{ $t('common.i_agree_with_1') }}</span>&nbsp;
-            <a href="#">{{ $t('common.i_agree_with_2') }}</a>
+            <span>{{ $t('common.i_agree_with_1') }}</span>&nbsp;<a href="#">{{ $t('common.i_agree_with_2') }}</a>
           </p>
         </div>
         <div class="col-4">
