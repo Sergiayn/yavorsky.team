@@ -36,7 +36,8 @@ body
 .form-control
     border-radius: 8px
     font-size: 14px
-    padding: 8px 9px
+    line-height: 24px
+    padding: 7px 9px
 
     &:focus
         border-color: $color_primary
@@ -82,6 +83,10 @@ body
     background-color: $color_gray_40
     color: $color_white
     border-color: $color_gray_40
+    &:hover
+        background-color: $color_gray_40
+        color: $color_white
+        border-color: $color_gray_40
 
 .btn-arrow
     background-color: $color_white

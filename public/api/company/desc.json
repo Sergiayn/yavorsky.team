@@ -1,0 +1,54 @@
+[
+    {
+        "id":1,
+        "title": {
+            "en": "We’re the Yavorsky Team",
+            "ua": "Ми — Yavorsky Team",
+            "ru": "Мы — Yavorsky Team"
+        },
+        "brief": {
+            "en": "We, the YavorskyTeam, are committed to creating innovative and user-centric iOS apps that exceed the expectations of standard utilities. With a team of experts dedicated to creating high-quality products, our apps are functional, reliable and designed to provide a pleasant user experience.",
+            "ua": "Ми, Yavorsky Team, прагнемо створювати інноваційні та орієнтовані на користувача програми для iOS, що перевершують очікування стандартних утиліт. Завдяки команді експертів, які займаються створенням високоякісних продуктів, наші додатки функціональні, надійні та призначені для забезпечення приємного користувальницького досвіду.",
+            "ru": "Мы, Yavorsky Team, стремимся создавать инновационные и ориентированные на пользователя приложения для iOS, превосходящие ожидания стандартных утилит. Благодаря команде экспертов, занимающихся созданием высококачественных продуктов, наши приложения функциональны, надежны и предназначены для обеспечения приятного пользовательского опыта."
+        }
+    },
+    {
+        "id":2,
+        "title": {
+            "en": "Our mission",
+            "ua": "Наша задача",
+            "ru": "Наша задача"
+        },
+        "brief": {
+            "en": "Our mission at the Yavorsky Team is to create innovative and intuitive mobile applications that enhance people's lives. We strive to use the latest technologies and design practices to develop apps that are user-friendly, functional, and aesthetically pleasing. Our team is dedicated to delivering high-quality solutions that meet the needs and exceed the expectations of our clients and their users.",
+            "ua": "Наша задача в Yavorsky Team полягає у створенні інноваційних та інтуїтивно зрозумілих мобільних застосунків, які покращують життя людей. Ми прагнемо використовувати новітні технології та методи проектування для розробки зручних, функціональних та естетично привабливих програм. Наша команда прагне надавати високоякісні рішення, які відповідають потребам та перевершують очікування наших клієнтів та їх користувачів.",
+            "ru": "Наша задача в Yavorsky Team заключается в создании инновационных и интуитивно понятных мобильных приложений, которые улучшают жизнь людей. Мы стремимся использовать новейшие технологии и методы проектирования для разработки удобных, функциональных и эстетически привлекательных приложений. Наша команда стремится предоставлять высококачественные решения, которые отвечают потребностям и превосходят ожидания наших клиентов и их пользователей."
+        }
+    },
+    {
+        "id":3,
+        "title": {
+            "en": "Our core values",
+            "ua": "Наші ключові цінності",
+            "ru": "Наши ключевые ценности"
+        },
+        "brief": {
+            "en": "We believe in fostering a culture of innovation and creativity, where every team member is encouraged to bring their unique ideas and perspectives to the table. Our team works together to create cutting-edge solutions that make a positive impact on our industry and the world.",
+            "ua": "Ми віримо в розвиток культури інновацій та креативу, де кожен член команди заохочується до того, щоб приносити свої унікальні ідеї та погляди. Наша команда працює разом для створення передових рішень, які позитивно впливають на нашу галузь і весь світ.",
+            "ru": "Мы верим в развитие культуры инноваций и креатива, где каждый член команды поощряется к тому, чтобы приносить свои уникальные идеи и взгляды. Наша команда работает вместе для создания передовых решений, которые оказывают положительное влияние на нашу отрасль и весь мир."
+        }
+    },
+    {
+        "id":4,
+        "title": {
+            "en": "Our team",
+            "ua": "Наша команда",
+            "ru": "Наша команда"
+        },
+        "brief": {
+            "en": "Meet a team of creative and dedicated people.",
+            "ua": "Познайомтеся з командою творчих та відданих своїй справі людей",
+            "ru": "Познакомьтесь с командой творческих и преданных своему делу людей"
+        }
+    }
+]

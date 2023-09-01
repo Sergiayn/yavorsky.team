@@ -59,9 +59,20 @@ export default {
     company: state => {
         let company = structuredClone( state.company)
         Object.keys(company).forEach(key => {
-                company[key].img = '/images/company/employees/' + company[key].id + '/' + company[key].img
+            if('employees' === key) {
+                Object.keys(company[key]).forEach(k => {
+                    company[key][k].img = '/images/company/employees/' + company[key][k].id + '/' + company[key][k].img
+                })
+            } else if('slider' === key) {
+                Object.keys(company[key]).forEach(k => {
+                    company[key][k].img = '/images/company/slider/' + company[key][k].id + '/' + company[key][k].img
+                })
+            } else if('tasks' === key) {
+                Object.keys(company[key]).forEach(k => {
+                    company[key][k].img = '/images/company/tasks/' + company[key][k].id + '/' + company[key][k].img
+                })
             }
-        )
+        })
         return company
     },
     user_reviews: state => state.user_reviews,

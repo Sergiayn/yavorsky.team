@@ -39,10 +39,14 @@ export default {
     },
     setCompany: async ({ commit }, params) => {
         try {
-            if (undefined !== params && Array.isArray(params) && params.includes('employees')) {
-                const {data} = await axios.get('company/employees.json')
-                commit('setCompany', data)
+            let data = {}
+            if (undefined !== params && Array.isArray(params)) {
+                for (const param of params) {
+                    const param_res = await axios.get('company/' + param + '.json')
+                    data[param] = param_res.data
+                }
             }
+            commit('setCompany', data)
         } catch (e) {console.error(e.message)}
     },
 }
