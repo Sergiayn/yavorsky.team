@@ -251,30 +251,48 @@ export default {
         ul
             justify-content: center
             margin: 36px 0
+            &:first-child
+                margin-bottom: 85px
+                li:hover
+                    .inner-item
+                        width: calc(100% - 24px)
 
         li
             flex: 25%
             max-width: 25%
             padding: 0 12px
+            position: relative
+            &:hover
+                .inner-item
+                    margin-right: 12px
+                    position: absolute
+                .desc
+                    display: block
+
+                    -webkit-transition: max-height 3s
+                    -moz-transition: max-height 3s
+                    -ms-transition: max-height 3s
+                    -o-transition: max-height 3s
+                    transition: max-height 3s
+                    max-height: 300px
 
         .inner-item
             border-radius: 12px
             cursor: default
             padding: 20px 12px
             text-align: center
-            &:hover
-                padding: 12px
-                .desc
-                    display: block
 
         .name
             font-size: 16px
             font-weight: 600
 
         .desc
-            display: none
+            //display: none
             font-size: 14px
             padding-top: 8px
+
+            overflow: hidden
+            max-height: 0
 
     .list-employees
         ul

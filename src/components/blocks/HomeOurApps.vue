@@ -23,14 +23,14 @@ export default defineComponent({
             <div class="list-app-chunks link-black">
                 <div v-for="(chunkValue, chunkKey) in appsChunks" :key="chunkKey" class="app-chunk">
                     <div v-for="app in chunkValue" :key="app.id" class="app">
-                        <div class="app-inner" :class="{'app-inner-dev':app.dev}">
-                            <a href="#" class="img"><img :src="app.logo" :alt="app.name" class="img-fluid"></a>
-                            <div class="brief">
-                                <div class="msg-dev">{{ $t('home.soon_on_app_store') }}</div>
-                                <a href="#" class="name">{{ app.name }}</a>
-                                <div class="desc">{{ app.desc[$i18n.locale] ?? '' }}</div>
-                            </div>
-                        </div>
+                        <a href="#" class="app-inner" :class="{'app-inner-dev':app.dev}">
+                            <span class="img"><img :src="app.logo" :alt="app.name" class="img-fluid"></span>
+                            <span class="brief">
+                                <span class="msg-dev">{{ $t('home.soon_on_app_store') }}</span>
+                                <span class="name">{{ app.name }}</span>
+                                <span class="desc">{{ app.desc[$i18n.locale] ?? '' }}</span>
+                            </span>
+                        </a>
                     </div>
                     <div v-if="1 === chunkKey" class="app app-new">
                         <div class="app-inner">
@@ -53,6 +53,9 @@ export default defineComponent({
 
 .home-our-apps
     padding-top: 120px
+
+    .link-black a:hover
+        color: $color_black
 
     .block-brief
         max-width: none
@@ -80,6 +83,7 @@ export default defineComponent({
         border-radius: 12px
         border: 1px solid $color_secondary
         background: $color_white
+        display: block
         margin: 0 12px
         height: 100%
         padding: 24px
@@ -101,11 +105,15 @@ export default defineComponent({
             padding-bottom: 4px
 
         .desc
+            display: block
             font-size: 14px
 
         .brief
+            display: block
             padding-top: 16px
 
+        .img
+            display: block
         img
             height: 80px
             width: 80px

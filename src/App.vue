@@ -50,15 +50,16 @@ body
     font-size: 16px
     font-weight: 600
     padding: 7px
+    &:active, &:focus
+        box-shadow: none!important
 
 .btn-primary
     background-color: $color_primary
     border-color: $color_primary
 
-    &:hover, &:active, &:focus
+    &:hover, &:active, &:focus, &:focus-visible
         background-color: $color_primary_hover
         border-color: $color_primary_hover
-        box-shadow: none
 
     &:disabled
         background-color: $color_gray_40
@@ -85,8 +86,9 @@ body
     border-color: $color_gray_40
     &:hover
         background-color: $color_gray_40
-        color: $color_white
         border-color: $color_gray_40
+        color: $color_white
+        cursor: default
 
 .btn-arrow
     background-color: $color_white

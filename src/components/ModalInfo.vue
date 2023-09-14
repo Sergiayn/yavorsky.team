@@ -45,7 +45,7 @@ export default defineComponent({
 <style lang="sass">
 .modal-info-wrap
   .modal-vue3-content
-    border-radius: 8px
+    border-radius: 8px!important
     background: #FFF
     box-shadow: 0 2px 4px 1px rgba(143, 130, 130, 0.25)
     width: 550px
@@ -61,6 +61,5 @@ export default defineComponent({
   .desc
     font-size: 18px
     margin: auto
-    width: 220px
 
 </style>

@@ -72,6 +72,7 @@ export default defineComponent({
         height: 40px
 
     input[type="email"]
+        height: 40px
         margin-right: 30px
         width: 370px
 
