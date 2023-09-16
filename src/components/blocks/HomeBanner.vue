@@ -55,8 +55,11 @@ export default defineComponent({
                                 <div class="brief">{{ slotProps.item.brief[$i18n.locale] ?? '' }}</div>
                                 <div class="desc">{{ slotProps.item.desc[$i18n.locale] ?? '' }}</div>
                                 <div class="buttons">
-                                    <a href="#" class="btn btn-secondary">{{ $t('common.learn_more') }}</a>
-                                    <a v-if="slotProps.item.url" :href="this.getBasePath() + slotProps.item.url"
+                                    <router-link class="btn btn-secondary"
+                                                 :to="{name:'App', params:{locale:$i18n.locale, slug:slotProps.item.slug}}">
+                                        {{ $t('common.learn_more') }}
+                                    </router-link>
+                                    <a v-if="slotProps.item.url_app" :href="this.getBasePath() + slotProps.item.url_app"
                                        target="_blank"
                                        class="btn btn-primary">{{ $t('common.free_download') }}</a>
                                 </div>

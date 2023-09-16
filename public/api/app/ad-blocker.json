@@ -1,0 +1,12 @@
+{
+    "id": 1,
+    "name": "Ad Blocker",
+    "url_app": "ad-blocker-safari-adblock/id1587657245",
+    "desc": {
+        "en": "AdBlocker is a powerful mobile application that provides maximum protection against unwanted ads and malicious content on your iOS device. With advanced features and an easy-to-use interface, it makes your web browsing experience seamless and safe.",
+        "ua": "Потужний мобільний додаток для iOS, який забезпечує максимальний захист від небажаної реклами та шкідливого контенту на вашому пристрої. Завдяки розширеним можливостям забезпечує легкий та безпечний перегляд веб-сторінок.",
+        "ru": "Мощное мобильное приложение для iOS, которое обеспечивает максимальную защиту от нежелательной рекламы и вредоносного контента на вашем устройстве . Благодаря расширенным возможностям обеспечивает легкий и безопасный просмотр веб-страниц."
+    },
+    "logo": "logo.png",
+    "logo_bg": "logo_bg.svg"
+}

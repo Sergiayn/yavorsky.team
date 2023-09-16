@@ -16,6 +16,7 @@ export default {
             name: "russian"
         },
     ],
+    app: {},
     apps: {},
     apps_short: {},
     apps_banner: {},

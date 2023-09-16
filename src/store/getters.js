@@ -7,12 +7,21 @@ export default {
         })
         return languages
     },
+    app: state => {
+        let app = structuredClone( state.app)
+        if (Object.keys(app).length) {
+            app.logo = '/images/app/' + app.id + '/' + app.logo
+            app.logo_bg = '/images/app/' + app.id + '/' + app.logo_bg
+            app.dev = app.url_app === null
+        }
+        return app
+    },
     apps: state => {
         let apps = structuredClone( state.apps)
         Object.keys(apps).forEach(key => {
             apps[key].logo = '/images/apps/' + apps[key].logo
             apps[key].img = '/images/apps/' + apps[key].img
-            apps[key].dev = apps[key].url === null
+            apps[key].dev = apps[key].url_app === null
         })
         return apps
     },
@@ -20,7 +29,7 @@ export default {
         let apps = structuredClone( state.apps_short)
         Object.keys(apps).forEach(key => {
                 apps[key].logo = '/images/apps/' + apps[key].logo
-                apps[key].dev = apps[key].url === null
+                apps[key].dev = apps[key].url_app === null
             }
         )
         return apps
@@ -32,7 +41,7 @@ export default {
                 banners[key].images
                     .forEach((v,i) => {
                         banners[key].images[i] = '/images/apps/banner/' + banners[key].id + '/' + v
-                        banners[key].dev = banners[key].url === null
+                        banners[key].dev = banners[key].url_app === null
                     })
             })
         return banners

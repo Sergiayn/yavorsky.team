@@ -3,6 +3,13 @@ import axios from "@/axios/axios"
 // const dev_mode = process.env.NODE_ENV === 'development'
 
 export default {
+    setApp: async ({ commit }, params) => {
+        try {
+            const slug = params.slug
+            const {data} = await axios.get('app/' + slug + '.json')
+            commit('setApp', data)
+        } catch (e) {console.error(e.message); commit('setApp', {})}
+    },
     setApps: async ({ commit }) => {
         try {
             const {data} = await axios.get('apps/list.json')

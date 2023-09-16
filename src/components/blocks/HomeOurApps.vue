@@ -23,14 +23,14 @@ export default defineComponent({
             <div class="list-app-chunks link-black">
                 <div v-for="(chunkValue, chunkKey) in appsChunks" :key="chunkKey" class="app-chunk">
                     <div v-for="app in chunkValue" :key="app.id" class="app">
-                        <a href="#" class="app-inner" :class="{'app-inner-dev':app.dev}">
+                        <router-link class="app-inner" :class="{'app-inner-dev':app.dev}" :to="{name:'App', params:{locale:$i18n.locale, slug:app.slug}}">
                             <span class="img"><img :src="app.logo" :alt="app.name" class="img-fluid"></span>
                             <span class="brief">
                                 <span class="msg-dev">{{ $t('home.soon_on_app_store') }}</span>
                                 <span class="name">{{ app.name }}</span>
                                 <span class="desc">{{ app.desc[$i18n.locale] ?? '' }}</span>
                             </span>
-                        </a>
+                        </router-link>
                     </div>
                     <div v-if="1 === chunkKey" class="app app-new">
                         <div class="app-inner">
@@ -114,6 +114,7 @@ export default defineComponent({
 
         .img
             display: block
+
         img
             height: 80px
             width: 80px

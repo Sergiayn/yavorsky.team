@@ -55,7 +55,9 @@ export default defineComponent({
                     <nav>
                         <ul>
                             <li v-for="app in apps" :key="app.id">
-                                <a href="#">{{ app.name }}</a>
+                                <router-link :to="{name:'App', params:{locale:$i18n.locale, slug:app.slug}}">
+                                    {{ app.name }}
+                                </router-link>
                             </li>
                         </ul>
                     </nav>

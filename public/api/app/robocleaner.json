@@ -1,0 +1,12 @@
+{
+    "id": 2,
+    "name": "RoboCleaner",
+    "url_app": "phone-cleaner-robo-clean-up/id1603385704",
+    "desc": {
+        "en": "RoboCleaner is a revolutionary mobile app that helps you keep your iOS device clean and optimize its performance. With its advanced features and intuitive interface, it makes it easy to free up space, improve performance, and extend battery life.",
+        "ua": "Новий мобільний додаток, який допоможе містити iOS-пристрій у чистоті та оптимізувати його роботу. Розширені можливості та зрозумілий інтерфейс дозволяє легко звільнити місце, підвищити продуктивність та продовжити термін служби батареї.",
+        "ru": "Новое мобильное приложение, которое поможет содержать iOS-устройство в чистоте и оптимизировать его работу. Расширенные возможности и понятный интерфейс позволяет легко освободить место, повысить производительность и продлить срок службы батареи."
+    },
+    "logo": "logo.png",
+    "logo_bg": "logo_bg.svg"
+}

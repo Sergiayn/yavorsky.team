@@ -66,11 +66,13 @@ export default defineComponent({
                         </div>
                         <div class="desc">{{ app.desc[$i18n.locale] ?? '' }}</div>
                         <div class="buttons">
-                            <a href="#" class="btn btn-secondary">{{ $t('common.learn_more') }}</a>
+                            <router-link class="btn btn-secondary" :to="{name:'App', params:{locale:$i18n.locale, slug:app.slug}}">
+                                {{ $t('common.learn_more') }}
+                            </router-link>
                             <a v-if="app.dev" href="#" class="btn btn-disabled">
                                 {{ $t('common.download') }}
                             </a>
-                            <a v-else :href="this.getBasePath() + app.url" target="_blank" class="btn btn-primary">
+                            <a v-else :href="this.getBasePath() + app.url_app" target="_blank" class="btn btn-primary">
                                 {{ $t('common.download') }}
                             </a>
                         </div>

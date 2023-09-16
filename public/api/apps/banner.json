@@ -1,87 +1,112 @@
 [
-  {
-    "id": 1,
-    "name": "Pill Reminder",
-    "url": null,
-    "bg": "linear-gradient(292deg, rgba(58, 166, 190, 0.30) 0%, #D6EDF2 47.78%, #FCFFFF 100%)",
-    "brief": {
-      "en": "Stay on top of your medication schedule",
-      "ua": "Дотримуйтесь графіку прийому ліків",
-      "ru": "Соблюдайте график приема лекарств"
+    {
+        "id": 4,
+        "name": "Pill Reminder",
+        "url_app": null,
+        "slug": "pill-reminder",
+        "bg": "linear-gradient(292deg, rgba(58, 166, 190, 0.30) 0%, #D6EDF2 47.78%, #FCFFFF 100%)",
+        "brief": {
+            "en": "Stay on top of your medication schedule",
+            "ua": "Дотримуйтесь графіку прийому ліків",
+            "ru": "Соблюдайте график приема лекарств"
+        },
+        "desc": {
+            "en": "Pill Reminder is an easy-to-use medication reminder app that allows you to set up a medication schedule and receive timely reminders to take your medications.",
+            "ua": "Pill Reminder — зручна програма для нагадування про прийом ліків, яка дозволяє встановити розклад прийому ліків і отримувати своєчасні нагадування про необхідність їх прийому.",
+            "ru": "Pill Reminder — удобное приложение для напоминания о приеме лекарств, которое позволяет установить расписание приема лекарств и получать своевременные напоминания о необходимости их приема."
+        },
+        "images": [
+            "img1.webp",
+            "img2.webp",
+            "img3.webp"
+        ]
     },
-    "desc": {
-      "en": "Pill Reminder is an easy-to-use medication reminder app that allows you to set up a medication schedule and receive timely reminders to take your medications.",
-      "ua": "Pill Reminder — зручна програма для нагадування про прийом ліків, яка дозволяє встановити розклад прийому ліків і отримувати своєчасні нагадування про необхідність їх прийому.",
-      "ru": "Pill Reminder — удобное приложение для напоминания о приеме лекарств, которое позволяет установить расписание приема лекарств и получать своевременные напоминания о необходимости их приема."
+    {
+        "id": 1,
+        "name": "Ad Blocker",
+        "url_app": "adblocker-protection/id1587657245",
+        "slug": "ad-blocker",
+        "bg": "linear-gradient(134deg, #A4E2A6 0%, #D1EEDC 47.78%, #E0FAE1 100%)",
+        "brief": {
+            "en": "Block ads on any website",
+            "ua": "Блокування реклами на будь-якому сайті",
+            "ru": "Блокировка рекламы на любом сайте"
+        },
+        "desc": {
+            "en": "AdBlocker Protection is a reliable ad-blocking app that helps you enjoy a safe and efficient browsing experience by blocking banner ads and pop-ups.",
+            "ua": "AdBlocker Protection — надійна програма для блокування реклами, яка допоможе вам насолоджуватися безпечним і комфортним переглядом веб-сторінок, блокуючи банерну рекламу та спливаючі вікна.",
+            "ru": "AdBlocker Protection — надежное приложение для блокировки рекламы, которое поможет вам наслаждаться безопасным и комфортным просмотром веб-страниц, блокируя баннерную рекламу и всплывающие окна."
+        },
+        "images": [
+            "img1.webp",
+            "img2.webp",
+            "img3.webp"
+        ]
     },
-    "images": ["img1.webp","img2.webp","img3.webp"]
-  },
-  {
-    "id": 2,
-    "name": "Ad Blocker",
-    "url": "adblocker-protection/id1587657245",
-    "bg": "linear-gradient(134deg, #A4E2A6 0%, #D1EEDC 47.78%, #E0FAE1 100%)",
-    "brief": {
-      "en": "Block ads on any website",
-      "ua": "Блокування реклами на будь-якому сайті",
-      "ru": "Блокировка рекламы на любом сайте"
+    {
+        "id": 2,
+        "name": "RoboCleaner",
+        "url_app": "robocleaner/id1603385704",
+        "slug": "robocleaner",
+        "bg": "linear-gradient(180deg, #C2CDF3 12.35%, #F6F5FF 100%)",
+        "brief": {
+            "en": "Easily clean your phone of unwanted files",
+            "ua": "Легке очищення телефону від непотрібних файлів",
+            "ru": "Легкая очистка телефона от ненужных файлов"
+        },
+        "desc": {
+            "en": "RoboCleaner is a fast and reliable app for cleaning your phone of unwanted files and debris, ensuring optimal performance for your device.",
+            "ua": "RoboCleaner — швидка програма для очищення телефону від непотрібних файлів та сміття, що забезпечує оптимальну продуктивність вашого пристрою.",
+            "ru": "RoboCleaner — быстрое приложение для очистки телефона от ненужных файлов и мусора, обеспечивающее оптимальную производительность вашего устройства."
+        },
+        "images": [
+            "img1.webp",
+            "img2.webp",
+            "img3.webp"
+        ]
     },
-    "desc": {
-      "en": "AdBlocker Protection is a reliable ad-blocking app that helps you enjoy a safe and efficient browsing experience by blocking banner ads and pop-ups.",
-      "ua": "AdBlocker Protection — надійна програма для блокування реклами, яка допоможе вам насолоджуватися безпечним і комфортним переглядом веб-сторінок, блокуючи банерну рекламу та спливаючі вікна.",
-      "ru": "AdBlocker Protection — надежное приложение для блокировки рекламы, которое поможет вам наслаждаться безопасным и комфортным просмотром веб-страниц, блокируя баннерную рекламу и всплывающие окна."
+    {
+        "id": 3,
+        "name": "Network Analyzer",
+        "url_app": "network-analyzer-speed-test/id1660559510",
+        "slug": "network-analyzer",
+        "bg": "linear-gradient(164deg, #ECF3FF 0%, rgba(220, 249, 255, 0.52) 47.78%, #B9D9FF 100%)",
+        "brief": {
+            "en": "Scan and check Internet speed",
+            "ua": "Скануйте та перевіряйте швидкість Інтернету",
+            "ru": "Сканируйте и проверяйте скорость Интернета"
+        },
+        "desc": {
+            "en": "Network Analyzer is a powerful and easy-to-use network scanning and analysis program.",
+            "ua": "Network Analyzer – ефективна та проста у використанні програма сканування та аналізу мережі.",
+            "ru": "Network Analyzer — эффективная и простая в использовании программа сканирования и анализа сети."
+        },
+        "images": [
+            "img1.webp",
+            "img2.webp",
+            "img3.webp"
+        ]
     },
-    "images": ["img1.webp","img2.webp","img3.webp"]
-  },
-  {
-    "id": 3,
-    "name": "RoboCleaner",
-    "url": "robocleaner/id1603385704",
-    "bg": "linear-gradient(180deg, #C2CDF3 12.35%, #F6F5FF 100%)",
-    "brief": {
-      "en": "Easily clean your phone of unwanted files",
-      "ua": "Легке очищення телефону від непотрібних файлів",
-      "ru": "Легкая очистка телефона от ненужных файлов"
-    },
-    "desc": {
-      "en": "RoboCleaner is a fast and reliable app for cleaning your phone of unwanted files and debris, ensuring optimal performance for your device.",
-      "ua": "RoboCleaner — швидка програма для очищення телефону від непотрібних файлів та сміття, що забезпечує оптимальну продуктивність вашого пристрою.",
-      "ru": "RoboCleaner — быстрое приложение для очистки телефона от ненужных файлов и мусора, обеспечивающее оптимальную производительность вашего устройства."
-    },
-    "images": ["img1.webp","img2.webp","img3.webp"]
-  },
-  {
-    "id": 4,
-    "name": "Network Analyzer",
-    "url": "network-analyzer-speed-test/id1660559510",
-    "bg": "linear-gradient(164deg, #ECF3FF 0%, rgba(220, 249, 255, 0.52) 47.78%, #B9D9FF 100%)",
-    "brief": {
-      "en": "Scan and check Internet speed",
-      "ua": "Скануйте та перевіряйте швидкість Інтернету",
-      "ru": "Сканируйте и проверяйте скорость Интернета"
-    },
-    "desc": {
-      "en": "Network Analyzer is a powerful and easy-to-use network scanning and analysis program.",
-      "ua": "Network Analyzer – ефективна та проста у використанні програма сканування та аналізу мережі.",
-      "ru": "Network Analyzer — эффективная и простая в использовании программа сканирования и анализа сети."
-    },
-    "images": ["img1.webp","img2.webp","img3.webp"]
-  },
-  {
-    "id": 5,
-    "name": "Secret Vault",
-    "url": null,
-    "bg": "linear-gradient(357deg, #92E0D7 0%, rgba(74, 227, 163, 0.10) 63.19%, rgba(142, 208, 188, 0.05) 100%)",
-    "brief": {
-      "en": "Keep your photos safe",
-      "ua": "Зберігайте ваші фотографії в безпеці",
-      "ru": "Храните ваши фотографии в безопасности"
-    },
-    "desc": {
-      "en": "Secret Vault is a secure photo storage app that allows you to hide important photos from prying eyes and store them in a private vault.",
-      "ua": "Secret Vault — додаток для безпечного зберігання фотографій, який дозволяє приховати важливі фотографії від сторонніх очей та зберігати їх у приватному сховищі.",
-      "ru": "Secret Vault — приложение для безопасного хранения фотографий, которое позволяет скрыть важные фотографии от посторонних глаз и хранить их в частном хранилище."
-    },
-    "images": ["img1.webp","img2.webp","img3.webp"]
-  }
+    {
+        "id": 5,
+        "name": "Secret Vault",
+        "url_app": null,
+        "slug": "secret-vault",
+        "bg": "linear-gradient(357deg, #92E0D7 0%, rgba(74, 227, 163, 0.10) 63.19%, rgba(142, 208, 188, 0.05) 100%)",
+        "brief": {
+            "en": "Keep your photos safe",
+            "ua": "Зберігайте ваші фотографії в безпеці",
+            "ru": "Храните ваши фотографии в безопасности"
+        },
+        "desc": {
+            "en": "Secret Vault is a secure photo storage app that allows you to hide important photos from prying eyes and store them in a private vault.",
+            "ua": "Secret Vault — додаток для безпечного зберігання фотографій, який дозволяє приховати важливі фотографії від сторонніх очей та зберігати їх у приватному сховищі.",
+            "ru": "Secret Vault — приложение для безопасного хранения фотографий, которое позволяет скрыть важные фотографии от посторонних глаз и хранить их в частном хранилище."
+        },
+        "images": [
+            "img1.webp",
+            "img2.webp",
+            "img3.webp"
+        ]
+    }
 ]

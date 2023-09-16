@@ -1,0 +1,12 @@
+{
+    "id": 3,
+    "name": "Network Analyzer",
+    "url_app": "network-analyzer-speed-test/id1660559510",
+    "desc": {
+        "en": "Network Analyzer is a powerful tool for testing and analyzing the quality of your Internet connection. With this application, you can easily and quickly determine the speed of your Internet connection, the quality of your network connection, and other important parameters.",
+        "ua": "Сучасний інструмент для тестування та аналізу якості вашого інтернет-з'єднання. З цією програмою ви можете легко і швидко визначити швидкість вашого інтернет-з'єднання, якість мережного підключення та інші важливі параметри мережі.",
+        "ru": "Современный инструмент для тестирования и анализа качества вашего интернет-соединения. С этим приложением вы можете легко и быстро определить скорость вашего интернет-соединения, качество сетевого подключения и другие важные параметры сети."
+    },
+    "logo": "logo.png",
+    "logo_bg": "logo_bg.svg"
+}
