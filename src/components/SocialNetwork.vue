@@ -37,7 +37,7 @@ export default {
     const list = ref([
       {id:1,name:'instagram',link:'#'},
       {id:2,name:'facebook',link:'#'},
-      {id:3,name:'twitter',link:'#'},
+      // {id:3,name:'twitter',link:'#'},
     ])
 
     return {

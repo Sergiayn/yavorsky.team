@@ -6,8 +6,12 @@ export default {
     setApp: async ({ commit }, params) => {
         try {
             const slug = params.slug
-            const {data} = await axios.get('app/' + slug + '.json')
-            commit('setApp', data)
+            if (undefined === slug) {
+                commit('setApp', {})
+            } else {
+                const {data} = await axios.get('app/' + slug + '.json')
+                commit('setApp', data)
+            }
         } catch (e) {console.error(e.message); commit('setApp', {})}
     },
     setApps: async ({ commit }) => {

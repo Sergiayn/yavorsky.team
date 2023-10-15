@@ -31,6 +31,7 @@ export default {
 @import "@/assets/color.sass"
 
 body
+    background-color: $color_background_light
     font-family: 'Open Sans', sans-serif
 
 .form-control

@@ -10,8 +10,6 @@ export default {
     app: state => {
         let app = structuredClone( state.app)
         if (Object.keys(app).length) {
-            app.logo = '/images/app/' + app.id + '/' + app.logo
-            app.logo_bg = '/images/app/' + app.id + '/' + app.logo_bg
             app.dev = app.url_app === null
         }
         return app

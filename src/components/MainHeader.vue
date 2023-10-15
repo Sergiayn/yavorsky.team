@@ -50,7 +50,7 @@ export default defineComponent({
 @import "@/assets/color.sass"
 
 header
-  background-color: $color_white
+  //background-color: $color_white
   height: 62px
   padding-top: 6px
   //position: fixed

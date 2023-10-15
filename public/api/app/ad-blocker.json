@@ -7,6 +7,124 @@
         "ua": "Потужний мобільний додаток для iOS, який забезпечує максимальний захист від небажаної реклами та шкідливого контенту на вашому пристрої. Завдяки розширеним можливостям забезпечує легкий та безпечний перегляд веб-сторінок.",
         "ru": "Мощное мобильное приложение для iOS, которое обеспечивает максимальную защиту от нежелательной рекламы и вредоносного контента на вашем устройстве . Благодаря расширенным возможностям обеспечивает легкий и безопасный просмотр веб-страниц."
     },
-    "logo": "logo.png",
-    "logo_bg": "logo_bg.svg"
+    "logo": "/images/app/1/logo.webp",
+    "logo_bg": "/images/app/1/logo_bg.webp",
+    "blocks": [
+        {
+            "id" : 1,
+            "type" : 1,
+            "direction": "row",
+            "bg_color": "#F5FBF9",
+            "first": {
+                "type": "text",
+                "rubric_color": "#0C4A34",
+                "rubric_title": {
+                    "en": "Effective",
+                    "ua": "Ефективний",
+                    "ru": "Эффективный"
+                },
+                "title": {
+                    "en": "Block intrusive ads",
+                    "ua": "Блокуйте нав'язливу рекламу",
+                    "ru": "Блокируйте навязчивую рекламу"
+                },
+                "desc": {
+                    "en": "AdBlocker blocks all types of ads, including pop-ups, banners, and video ads, allowing you to enjoy a smoother and faster web browsing experience. It also prevents trackers and data collectors from tracking your online activities, ensuring your privacy and security.",
+                    "ua": "AdBlocker блокує рекламу, спливаючі вікна, банери та відеорекламу, дозволяючи вам насолоджуватися швидшим переглядом веб-сторінок. Він також не дає трекерам та збирачам даних відстежувати ваші дії в Інтернеті, забезпечуючи вашу конфіденційність та безпеку.",
+                    "ru": "AdBlocker блокирует рекламу, всплывающие окна, баннеры и видеорекламу, позволяя вам наслаждаться более быстрым просмотром веб-страниц. Он также не позволяет трекерам и сборщикам данных отслеживать ваши действия в Интернете, обеспечивая вашу конфиденциальность и безопасность."
+                }
+            },
+            "last": {
+                "type": "img",
+                "img": "/images/app/1/block_1_img.webp",
+                "bg": "/images/app/1/block_bg_1.png"
+            }
+        },
+        {
+            "id" : 2,
+            "type" : 1,
+            "direction": "row",
+            "bg_color": "#FDFDFD",
+            "first": {
+                "type": "img",
+                "img": "/images/app/1/block_2_img.webp",
+                "bg": "/images/app/1/block_bg_1.png"
+            },
+            "last": {
+                "type": "text",
+                "rubric_color": "#0C4A34",
+                "rubric_title": {
+                    "en": "Customizable",
+                    "ua": "Налаштований",
+                    "ru": "Настраиваемый"
+                },
+                "title": {
+                    "en": "Adjust filters",
+                    "ua": "Налаштуйте фільтри",
+                    "ru": "Настройте фильтры"
+                },
+                "desc": {
+                    "en": "One of the unique features of AdBlocker is the ability to customize filters. This feature allows you to customize (enable) filters for yourself. You can also whitelist certain websites that you trust and want to support.",
+                    "ua": "Однією з унікальних функцій AdBlocker є можливість налаштування фільтрів. Ця функція дозволяє самостійно налаштовувати фільтри. Ви також можете внести до білого списку певні сайти, яким ви довіряєте.",
+                    "ru": "Одной из уникальных особенностей AdBlocker является возможность настройки фильтров. Эта функция позволяет вам самостоятельно настраивать фильтры. Вы также можете внести в белый список определенные сайты, которым вы доверяете."
+                }
+            }
+        },
+        {
+            "id" : 3,
+            "type" : 1,
+            "direction": "column",
+            "bg_color": "#FDFDFD",
+            "first": {
+                "type": "text",
+                "rubric_color": "#0C4A34",
+                "rubric_title": {
+                    "en": "User-friendly",
+                    "ua": "Зручний для користувача",
+                    "ru": "Удобный для пользователя"
+                },
+                "title": {
+                    "en": "Advanced ad-blocking protection",
+                    "ua": "Покращений захист блокування реклами",
+                    "ru": "Улучшенная защита блокировки рекламы"
+                },
+                "desc": {
+                    "en": "The program's advanced algorithms constantly update ad blocking filters to provide the highest level of protection against the latest threats. In addition, the program's interface is user-friendly, making it easy to navigate and customize settings according to your preferences.",
+                    "ua": "Поліпшені алгоритми програми постійно оновлюють фільтри блокування реклами, забезпечуючи високий рівень захисту від нових загроз. Крім того, зручний інтерфейс дозволяє легко орієнтуватися та налаштовувати параметри відповідно до ваших уподобань.",
+                    "ru": "Улучшенные алгоритмы программы постоянно обновляют фильтры блокировки рекламы, обеспечивая высочайший уровень защиты от новейших угроз. Кроме того, удобный интерфейс позволяет легко ориентироваться и настраивать параметры в соответствии с вашими предпочтениями."
+                },
+                "bg_side": "/images/app/1/block_bg_side_right.svg"
+            },
+            "last": {
+                "type": "img",
+                "imgs": ["/images/app/1/block_3_1_img.webp", "/images/app/1/block_3_2_img.webp"],
+                "bg": "/images/app/1/block_bg_1.png",
+                "bg_side": "/images/app/1/block_bg_side_left.svg"
+            }
+        },
+        {
+            "id" : 4,
+            "type" : 1,
+            "direction": "row",
+            "bg_color": "#FDFDFD",
+            "first": {
+                "type": "text",
+                "title": {
+                    "en": "Protect your privacy online with AdBlocker for iOS",
+                    "ua": "Захистіть свою конфіденційність в Інтернеті за допомогою AdBlocker для iOS",
+                    "ru": "Защитите свою конфиденциальность в Интернете с помощью AdBlocker для iOS"
+                },
+                "desc": {
+                    "en": "AdBlocker is available in the App Store and is compatible with all iOS devices (starting with iOS 13.0). The app offers a free trial period that allows you to test its features before subscribing. Thanks to its advanced features and comprehensive protection, AdBlocker is a must-have app for anyone who values their privacy and security online",
+                    "ua": "AdBlocker доступний в App Store і сумісний з усіма пристроями iOS (починаючи з iOS 13.0). Програма пропонує безкоштовний пробний період, який дозволяє протестувати його функції перед підпискою. Завдяки розширеним можливостям та комплексному захисту AdBlocker є обов'язковим додатком для всіх, хто цінує свою конфіденційність та безпеку в Інтернеті.",
+                    "ru": "AdBlocker доступен в App Store и совместим со всеми устройствами iOS (начиная с iOS 13.0). Приложение предлагает бесплатный пробный период, который позволяет протестировать его функции перед подпиской. Благодаря расширенным возможностям и комплексной защите AdBlocker является обязательным приложением для всех, кто ценит свою конфиденциальность и безопасность в Интернете."
+                },
+                "show_url": true
+            },
+            "last": {
+                "type": "img",
+                "img": "/images/app/1/block_4_img.webp"
+            }
+        }
+    ]
 }

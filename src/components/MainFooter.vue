@@ -218,6 +218,9 @@ footer
         display: inline-block
         margin-bottom: 16px
 
+    strong
+        font-weight: 600
+
     .logo
         padding-bottom: 30px
 

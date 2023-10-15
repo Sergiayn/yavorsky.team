@@ -1,6 +1,9 @@
 <script>
+import AppBlock1 from "@/components/app/app-block-1.vue";
+
 export default {
     name: "AppView",
+    components: {AppBlock1},
     methods: {
         getBasePath() {
             let str = 'https://apps.apple.com/'
@@ -32,8 +35,8 @@ export default {
 </script>
 
 <template>
-    <div class="app-view">
-        <div class="container" v-if="app.id">
+    <div class="app-view" v-if="app.id">
+        <div class="container">
             <div class="app-item">
                 <div class="row">
                     <div class="col-6">
@@ -56,6 +59,11 @@ export default {
                 </div>
             </div>
         </div>
+        <div class="app-blocks" v-if="app.blocks !== undefined">
+            <div class="app-block" v-for="appBlock in app.blocks" :key="appBlock.id">
+                <app-block1 v-if="appBlock.type === 1" :block="appBlock" :app-url="this.getBasePath() + app.url_app"></app-block1>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -70,6 +78,7 @@ export default {
         .img
             background-position: center
             background-repeat: no-repeat
+            background-size: 70%
         img
             height: 264px
             width: 264px
@@ -91,5 +100,7 @@ export default {
             padding-bottom: 12px
         .btn
             margin-top: 40px
+    .app-blocks
+        margin-bottom: 100px
 
 </style>

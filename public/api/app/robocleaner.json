@@ -7,6 +7,93 @@
         "ua": "Новий мобільний додаток, який допоможе містити iOS-пристрій у чистоті та оптимізувати його роботу. Розширені можливості та зрозумілий інтерфейс дозволяє легко звільнити місце, підвищити продуктивність та продовжити термін служби батареї.",
         "ru": "Новое мобильное приложение, которое поможет содержать iOS-устройство в чистоте и оптимизировать его работу. Расширенные возможности и понятный интерфейс позволяет легко освободить место, повысить производительность и продлить срок службы батареи."
     },
-    "logo": "logo.png",
-    "logo_bg": "logo_bg.svg"
+    "logo": "/images/app/2/logo.png",
+    "logo_bg": "/images/app/2/logo_bg.webp",
+    "blocks": [
+        {
+            "id" : 1,
+            "type" : 1,
+            "direction": "row",
+            "bg_color": "#F9F7FF",
+            "first": {
+                "type": "text",
+                "rubric_color": "#6A31A5",
+                "rubric_title": {
+                    "en": "Smart",
+                    "ua": "Розумний",
+                    "ru": "Умный"
+                },
+                "title": {
+                    "en": "Duplicate file remover",
+                    "ua": "Видалення дублікатів файлів",
+                    "ru": "Удаление дубликатов файлов"
+                },
+                "desc": {
+                    "en": "One of the unique features of RoboCleaner is its intelligent cleaning system. This feature uses advanced algorithms to scan your device and identify duplicate files (such as photos, videos, contacts) that are taking up valuable space.",
+                    "ua": "Однією з унікальних особливостей RoboCleaner є система інтелектуальної очистки. Функція використовує передові алгоритми для сканування пристрою та виявлення файлів, що дублюються (таких як фотографії, відео, контакти), які займають цінний простір.",
+                    "ru": "Одной из уникальных особенностей RoboCleaner является интеллектуальная система очистки. Функция использует передовые алгоритмы для сканирования устройства и выявления дублирующихся файлов (таких как фотографии, видео, контакты), которые занимают ценное пространство."
+                }
+            },
+            "last": {
+                "type": "img",
+                "img": "/images/app/2/block_1_img.png",
+                "bg": "/images/app/2/block_bg_1.png"
+            }
+        },
+        {
+            "id" : 2,
+            "type" : 1,
+            "direction": "column",
+            "bg_color": "#FDFDFD",
+            "bg_img": "/images/app/2/main_bg.svg",
+            "first": {
+                "type": "text",
+                "rubric_color": "#6A31A5",
+                "rubric_title": {
+                    "en": "Efficient",
+                    "ua": "Ефективний",
+                    "ru": "Эффективный"
+                },
+                "title": {
+                    "en": "Easy navigation and usage",
+                    "ua": "Зручна навігація та використання",
+                    "ru": "Удобная навигация и использование"
+                },
+                "desc": {
+                    "en": "The program's interface is user-friendly, making it easy to navigate and use all of its features. In addition, RoboCleaner is regularly updated with the latest cleaning algorithms to ensure the highest level of performance and protection.",
+                    "ua": "Інтерфейс програми зручний для користувача та дозволяє легко орієнтуватися та використовувати всі функції. RoboCleaner регулярно оновлюється найновішими алгоритмами очищення для забезпечення найвищого рівня продуктивності та захисту.",
+                    "ru": "Интерфейс программы удобен для пользователя и позволяет легко ориентироваться и использовать все функции. RoboCleaner регулярно обновляется новейшими алгоритмами очистки для обеспечения высочайшего уровня производительности и защиты."
+                }
+            },
+            "last": {
+                "type": "img",
+                "imgs": ["/images/app/2/block_2_1_img.webp", "/images/app/2/block_2_2_img.webp", "/images/app/2/block_2_3_img.webp"],
+                "bg": "/images/app/2/block_bg_1.png"
+            }
+        },
+        {
+            "id" : 3,
+            "type" : 1,
+            "direction": "row",
+            "bg_color": "#FDFDFD",
+            "first": {
+                "type": "text",
+                "title": {
+                    "en": "Must-have cleaning tool for iOS devices",
+                    "ua": "Обов'язковий інструмент для очищення пристроїв iOS",
+                    "ru": "Обязательный инструмент для очистки устройств iOS"
+                },
+                "desc": {
+                    "en": "RoboCleaner is available in the App Store and is compatible with all iOS devices (after 14.0). The app offers a free trial period that allows you to test its features before subscribing. With its advanced features and comprehensive cleaning tools, RoboCleaner is a must-have for anyone who wants to keep their iOS device running smoothly and efficiently.",
+                    "ua": "RoboCleaner доступний у App Store і сумісний з усіма пристроями iOS (після 14.0). Програма пропонує безкоштовний пробний період, який дозволяє протестувати його можливості перед підпискою. Розширені можливості та ефективні інструменти очищення роблять RoboCleaner незамінним помічником для тих, хто хоче, щоб його iOS-пристрій працював швидко та ефективно.",
+                    "ru": "RoboCleaner доступен в App Store и совместим со всеми устройствами iOS (после 14.0). Приложение предлагает бесплатный пробный период, который позволяет протестировать его возможности перед подпиской. Расширенные возможности и эффективные инструменты очистки делают RoboCleaner незаменимым помощником для тех, кто хочет, чтобы его iOS-устройство работало быстро и эффективно."
+                },
+                "show_url": true
+            },
+            "last": {
+                "type": "img",
+                "img": "/images/app/2/block_3_img.webp"
+            }
+        }
+    ]
 }
