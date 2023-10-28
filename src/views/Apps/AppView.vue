@@ -1,9 +1,11 @@
 <script>
-import AppBlock1 from "@/components/app/app-block-1.vue";
+import AppBlock1 from "@/components/app/AppBlock1"
+import AppBlock2 from "@/components/app/AppBlock2"
+import AppBlockUserReview from "@/components/app/AppBlockUserReview"
 
 export default {
     name: "AppView",
-    components: {AppBlock1},
+    components: {AppBlock1, AppBlock2, AppBlockUserReview},
     methods: {
         getBasePath() {
             let str = 'https://apps.apple.com/'
@@ -62,6 +64,8 @@ export default {
         <div class="app-blocks" v-if="app.blocks !== undefined">
             <div class="app-block" v-for="appBlock in app.blocks" :key="appBlock.id">
                 <app-block1 v-if="appBlock.type === 1" :block="appBlock" :app-url="this.getBasePath() + app.url_app"></app-block1>
+                <app-block2 v-else-if="appBlock.type === 2" :block="appBlock" :app-url="this.getBasePath() + app.url_app"></app-block2>
+                <app-block-user-review v-else-if="appBlock.type === 'user-review'" :block="appBlock"></app-block-user-review>
             </div>
         </div>
     </div>

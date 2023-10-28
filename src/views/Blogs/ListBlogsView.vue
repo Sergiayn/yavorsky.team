@@ -117,6 +117,7 @@ export default defineComponent({
 
         .search
             input
+                background-color: transparent
                 background-image: url("@/assets/img/icons/search.svg")
                 background-repeat: no-repeat
                 background-position: 8px center

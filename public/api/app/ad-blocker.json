@@ -104,6 +104,56 @@
         },
         {
             "id" : 4,
+            "type" : "user-review",
+            "title": {
+                "en": "Block intrusive ads",
+                "ua": "Блокуйте нав'язливу рекламу",
+                "ru": "Блокируйте навязчивую рекламу"
+            },
+            "reviews": [
+                {
+                    "id": 1,
+                    "name": {
+                        "en":"Noah Lewis",
+                        "ua":"Ноа Льюїс",
+                        "ru":"Ноа Льюис"
+                    },
+                    "review": {
+                        "en":"Blocker works good. It not only blocks ads but also protects against trackers. My online privacy feels more secure, and my device runs smoother.",
+                        "ua":"Блокувальник хороший. Блокує рекламу та трекери. Я почуваюся більш захищеним в Інтернеті, а мій пристрій працює швидше.",
+                        "ru":"Блокировщик хороший. Блокирует рекламу и трекеры. Я чувствую себя более защищенным в Интернете, а мое устройство работает быстрее."
+                    }
+                },
+                {
+                    "id": 2,
+                    "name": {
+                        "en":"Alex Kohen",
+                        "ua":"Алекс Коен",
+                        "ru":"Алекс Коэн"
+                    },
+                    "review": {
+                        "en":"I've tried many, but this one's a cut above. No more ads, faster loading, and complete control.",
+                        "ua":"Я перепробував безліч програм, але ця – на висоті. Жодної реклами, швидке завантаження та повний контроль.",
+                        "ru":"Я перепробовал множество программ, но эта - на высоте. Никакой рекламы, быстрая загрузка и полный контроль."
+                    }
+                },
+                {
+                    "id": 3,
+                    "name": {
+                        "en":"Oliver Reynolds",
+                        "ua":"Олівер Рейнольдс",
+                        "ru":"Оливер Рейнольдс"
+                    },
+                    "review": {
+                        "en":"It not only blocks ads but also enhances my privacy. No more creepy targeted ads following me around the internet.",
+                        "ua":"Блокує рекламу та підвищує рівень конфіденційності. Більше ніякої нав'язливої реклами, яка переслідує мене по всьому Інтернету.",
+                        "ru":"Блокирует рекламу и повышает уровень конфиденциальности. Больше никакой навязчивой рекламы, преследующей меня по всему Интернету."
+                    }
+                }
+            ]
+        },
+        {
+            "id" : 5,
             "type" : 1,
             "direction": "row",
             "bg_color": "#FDFDFD",

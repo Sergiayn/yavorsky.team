@@ -73,6 +73,56 @@
         },
         {
             "id" : 3,
+            "type" : "user-review",
+            "title": {
+                "en": "Discover our app through their experiences",
+                "ua":"Дізнайтесь про наш додаток з досвіду інших",
+                "ru":"Узнайте о нашем приложении из опыта других"
+            },
+            "reviews": [
+                {
+                    "id": 1,
+                    "name": {
+                        "en":"Isla Bennett",
+                        "ua":"Айла Беннетт",
+                        "ru":"Айла Беннетт"
+                    },
+                    "review": {
+                        "en":"This phone cleaner app transformed my sluggish phone into a lightning-fast device. It cleared tons of space, and now my phone runs smoother than ever.",
+                        "ua":"Цей клінер прискорив мій телефон. Він звільнив багато місця і тепер мій телефон працює як ніколи швидко.",
+                        "ru":"Этот клинер ускорил мой телефон. Он освободил много места, и теперь мой телефон работает как никогда быстро."
+                    }
+                },
+                {
+                    "id": 2,
+                    "name": {
+                        "en":"Ava Montgomery",
+                        "ua":"Ейва Монтгомері",
+                        "ru":"Эйва Монтгомери"
+                    },
+                    "review": {
+                        "en":"Easy to use. App cleaned up junk files and optimized my phone's performance effortlessly.",
+                        "ua":"Простий у використанні. Додаток легко очистив непотрібні файли і оптимізував роботу мого телефону.",
+                        "ru":"Простой в использовании. Приложение без труда очистило ненужные файлы и оптимизировало работу моего телефона."
+                    }
+                },
+                {
+                    "id": 3,
+                    "name": {
+                        "en":"Noah Harrison",
+                        "ua":"Ной Харрісон",
+                        "ru":"Ной Харрисон"
+                    },
+                    "review": {
+                        "en":"The user interface is intuitive, making it easy for anyone to use. Plus, the deep cleaning capabilities amazed me. My phone not only looks cleaner but performs faster!",
+                        "ua":"Інтерфейс інтуїтивно зрозумілий, простий у використанні. Повне очищення. Мій телефон не тільки виглядає чистішим, але й працює швидше!",
+                        "ru":"Интерфейс интуитивно понятен, простой в использовании. Полная очистка. Мой телефон не только выглядит чище, но и работает быстрее!"
+                    }
+                }
+            ]
+        },
+        {
+            "id" : 4,
             "type" : 1,
             "direction": "row",
             "bg_color": "#FDFDFD",
