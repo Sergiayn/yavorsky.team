@@ -183,9 +183,9 @@ body
     background: transparent
     border: 2px solid $color_black
     border-radius: 50%
-    height: 8px
+    height: 10px
     opacity: .5
-    width: 8px
+    width: 10px
 
 .carousel .carousel__pagination-button--active::after
     background: $color_black

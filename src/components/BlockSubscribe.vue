@@ -32,8 +32,8 @@ export default defineComponent({
 </script>
 
 <template>
-    <div class="block-subscribe">
-        <div class="container">
+    <div class="container">
+        <div class="block-subscribe">
             <div class="block-subscribe-inner">
                 <div class="title">{{ $t("home.subscribe_title") }}</div>
                 <div class="desc" v-html='$t("home.subscribe_desc")'></div>
@@ -55,7 +55,9 @@ export default defineComponent({
 
 .block-subscribe
     background-color: $color_background_dark
+    border-radius: 12px
     color: $color_white
+    margin-top: 140px
     padding: 48px 0
     text-align: center
 

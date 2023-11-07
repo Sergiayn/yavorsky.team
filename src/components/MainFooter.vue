@@ -239,6 +239,9 @@ footer
             font-size: 14px
             padding: 6px 0
 
+        li:first-child a
+            padding-top: 0
+
     .social-network
         padding: 0 0 45px
 

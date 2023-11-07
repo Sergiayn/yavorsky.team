@@ -1,6 +1,7 @@
 <script>
 import {defineComponent} from 'vue'
-import SliderDissolve from "@/components/SliderDissolve.vue";
+import 'vue3-carousel/dist/carousel.css'
+import SliderDissolve from "@/components/SliderDissolve"
 
 export default defineComponent({
     name: "HomeBanner",
@@ -43,7 +44,12 @@ export default defineComponent({
                     <div class="banner-inner">
                         <div class="row">
                             <div class="col">
-                                <ul class="images">
+                                <div class="image-single" v-if="1 === slotProps.item.images.length">
+                                    <div class="image">
+                                        <img :src="slotProps.item.images[0]" :alt="slotProps.item.name" class="img-fluid">
+                                    </div>
+                                </div>
+                                <ul class="images" v-else>
                                     <li class="image" v-for="(image,index) in slotProps.item.images" :key="index">
                                         <img :src="image" :alt="slotProps.item.name" class="img-fluid">
                                     </li>
@@ -89,7 +95,7 @@ export default defineComponent({
     .banner
         padding: 116px 0 16px
 
-        .images
+        .images, .image-single
             background-image: url("@/assets/img/image-shadow.webp")
             background-repeat: no-repeat
             background-position: bottom center
@@ -101,7 +107,12 @@ export default defineComponent({
             li
                 display: inline-block
                 padding: 0 6px
-                max-width: 177px
+
+            img
+                max-height: 336px
+
+        .images li
+            max-width: 177px
 
         .name
             font-size: 26px

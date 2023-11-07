@@ -36,8 +36,7 @@
             },
             "last": {
                 "type": "img",
-                "img": "/images/app/1/block_1_img.webp",
-                "bg": "/images/app/1/block_bg_1.png"
+                "img": "/images/app/1/block_1_img.png"
             }
         },
         {
@@ -47,8 +46,8 @@
             "bg_color": "#FDFDFD",
             "first": {
                 "type": "img",
-                "img": "/images/app/1/block_2_img.webp",
-                "bg": "/images/app/1/block_bg_1.png"
+                "img": "/images/app/1/block_2_img.png",
+                "size": "xl"
             },
             "last": {
                 "type": "text",
@@ -106,9 +105,9 @@
             "id" : 4,
             "type" : "user-review",
             "title": {
-                "en": "Block intrusive ads",
-                "ua": "Блокуйте нав'язливу рекламу",
-                "ru": "Блокируйте навязчивую рекламу"
+                "en": "Discover our app through their experiences",
+                "ua": "Дізнайтесь про наш додаток з досвіду інших",
+                "ru": "Узнайте о нашем приложении из опыта других"
             },
             "reviews": [
                 {

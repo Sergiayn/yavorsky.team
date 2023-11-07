@@ -43,7 +43,10 @@ export default {
                             </a>
                         </div>
                     </div>
-                    <div v-else-if='item.type === "img"' class="img-part" :style="{ backgroundImage: item.bg ? 'url(' + item.bg + ')' : '' }">
+                    <div v-else-if='item.type === "img"'
+                         :style="{ backgroundImage: item.bg ? 'url(' + item.bg + ')' : ''}"
+                         :class="{'img-part-padding-top-xl': item.padding_top === 'xl', 'img-part-size-xl': item.size === 'xl'}"
+                         class="img-part" >
                         <div class="img-part-inner" :style="{ backgroundImage: item.bg_side ? 'url(' + item.bg_side + ')' : '' }">
                             <div class="app-img" v-if="item.img">
                                 <img :src="item.img" class="img-fluid">
@@ -57,7 +60,9 @@ export default {
             </div>
             <div class="direction_column" v-else-if='block.direction === "column"'>
                 <div v-for="item in items()" :key="item">
-                    <div v-if='item.type === "text"' class="txt-part">
+                    <div v-if='item.type === "text"'
+                         :class="{'txt-part-padding-top-xl': item.padding_top === 'xl'}"
+                         class="txt-part">
                         <div class="txt-part-inner"
                              :style="{ backgroundImage: item.bg_side ? 'url(' + item.bg_side + ')' : '' }" >
                             <div :style="{ color: item.rubric_color ?? 'inherit' }"
@@ -72,7 +77,10 @@ export default {
                             </a>
                         </div>
                     </div>
-                    <div v-else-if='item.type === "img"' class="img-part" :style="{ backgroundImage: item.bg ? 'url(' + item.bg + ')' : '' }">
+                    <div v-else-if='item.type === "img"'
+                         :style="{ backgroundImage: item.bg ? 'url(' + item.bg + ')' : ''}"
+                         :class="{'img-part-padding-top-xl': item.padding_top === 'xl', 'img-part-size-xl': item.size === 'xl'}"
+                         class="img-part">
                         <div class="img-part-inner" :class="{'img-part-inner-3': item.imgs.length === 3}"
                              :style="{ backgroundImage: item.bg_side ? 'url(' + item.bg_side + ')' : '' }">
                             <div class="app-img" v-if="item.img">
@@ -92,12 +100,11 @@ export default {
 </template>
 
 <style scoped lang="sass">
+$app_block_1_padding: 54px
+
 .app-block-1
     background-position: center 240%
     background-repeat: no-repeat
-    padding: 120px 0 70px
-    &.block-has-bg-color
-        padding: 54px 0
     .txt-part
         .rubric_title
             display: inline-block
@@ -140,7 +147,7 @@ export default {
                     margin-bottom: 60px
             &.app-imgs-3
                 img
-                    max-height: 320px
+                    max-height: 380px
                     margin-left: 95px
                     margin-right: 95px
                     &:first-child
@@ -153,19 +160,32 @@ export default {
                     &:nth-child(2)
                         margin-bottom: 0
                         margin-top: 140px
+        &.img-part-size-xl
+            .app-img, .app-imgs
+                img
+                    max-height: 580px
+
     .txt-part-inner, .img-part-inner
         background-repeat: no-repeat
 
     .direction_row
+        .txt-part, .img-part
+            padding: $app_block_1_padding 0
         .txt-part
             align-items: center
             display: flex
             height: 100%
+            padding: $app_block_1_padding 0
         .txt-part-inner
             display: block
+        .txt-part-padding-top-xl, .img-part-padding-top-xl
+            padding-top: 147px
     .direction_column
         > div:nth-child(1) > div > div
             background-position: right 75%
+            padding-top: $app_block_1_padding
+        > div:nth-child(2) > div > div
+            padding-bottom: $app_block_1_padding
         .txt-part-inner
             margin: auto
             max-width: 850px
@@ -178,5 +198,7 @@ export default {
             margin: auto
             &.img-part-inner
                 max-width: none
+        .txt-part-padding-top-xl, .img-part-padding-top-xl
+            padding-top: 147px
 
 </style>

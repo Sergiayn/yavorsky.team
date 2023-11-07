@@ -20,16 +20,6 @@
     "img": "img.png"
   },
   {
-    "id": 3,
-    "name": {
-      "en": "Yaroslav",
-      "ua": "Ярослав",
-      "ru": "Ярослав"
-    },
-    "position": "QA Tester",
-    "img": "img.png"
-  },
-  {
     "id": 4,
     "name": {
       "en": "Serhii",

@@ -4,7 +4,7 @@
         "name": "Pill Reminder",
         "url_app": null,
         "slug": "pill-reminder",
-        "bg": "linear-gradient(292deg, rgba(58, 166, 190, 0.30) 0%, #D6EDF2 47.78%, #FCFFFF 100%)",
+        "bg": "linear-gradient(270deg, rgba(58, 166, 190, 0.30) -10.97%, #FCFFFF 68.56%, #D6EDF2 89.01%)",
         "brief": {
             "en": "Stay on top of your medication schedule",
             "ua": "Дотримуйтесь графіку прийому ліків",
@@ -15,18 +15,14 @@
             "ua": "Pill Reminder — зручна програма для нагадування про прийом ліків, яка дозволяє встановити розклад прийому ліків і отримувати своєчасні нагадування про необхідність їх прийому.",
             "ru": "Pill Reminder — удобное приложение для напоминания о приеме лекарств, которое позволяет установить расписание приема лекарств и получать своевременные напоминания о необходимости их приема."
         },
-        "images": [
-            "img1.webp",
-            "img2.webp",
-            "img3.webp"
-        ]
+        "images": ["img1.svg"]
     },
     {
         "id": 1,
         "name": "Ad Blocker",
         "url_app": "adblocker-protection/id1587657245",
         "slug": "ad-blocker",
-        "bg": "linear-gradient(134deg, #A4E2A6 0%, #D1EEDC 47.78%, #E0FAE1 100%)",
+        "bg": "linear-gradient(96deg, #A4E2A6 -4.32%, #E0FAE1 35.38%, #D1EEDC 101.58%)",
         "brief": {
             "en": "Block ads on any website",
             "ua": "Блокування реклами на будь-якому сайті",
@@ -48,7 +44,7 @@
         "name": "RoboCleaner",
         "url_app": "robocleaner/id1603385704",
         "slug": "robocleaner",
-        "bg": "linear-gradient(180deg, #C2CDF3 12.35%, #F6F5FF 100%)",
+        "bg": "linear-gradient(250deg, #C2CDF3 40.73%, #F6F5FF 64.91%, #C2CDF3 86.98%)",
         "brief": {
             "en": "Easily clean your phone of unwanted files",
             "ua": "Легке очищення телефону від непотрібних файлів",
@@ -70,7 +66,7 @@
         "name": "Network Analyzer",
         "url_app": "network-analyzer-speed-test/id1660559510",
         "slug": "network-analyzer",
-        "bg": "linear-gradient(164deg, #ECF3FF 0%, rgba(220, 249, 255, 0.52) 47.78%, #B9D9FF 100%)",
+        "bg": "linear-gradient(100deg, #ECF3FF -2.81%, rgba(246, 253, 255, 0.52) 50.69%, #B9D9FF 109.16%)",
         "brief": {
             "en": "Scan and check Internet speed",
             "ua": "Скануйте та перевіряйте швидкість Інтернету",
@@ -92,7 +88,7 @@
         "name": "Secret Vault",
         "url_app": null,
         "slug": "secret-vault",
-        "bg": "linear-gradient(357deg, #92E0D7 0%, rgba(74, 227, 163, 0.10) 63.19%, rgba(142, 208, 188, 0.05) 100%)",
+        "bg": "linear-gradient(85deg, #CFEAEE -0.25%, rgba(167, 212, 218, 0.05) 30.36%, #CFEDF1 82.66%)",
         "brief": {
             "en": "Keep your photos safe",
             "ua": "Зберігайте ваші фотографії в безпеці",

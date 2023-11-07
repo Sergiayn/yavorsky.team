@@ -47,7 +47,8 @@
             "first": {
                 "type": "img",
                 "img": "/images/app/3/block_2_img.png",
-                "bg": "/images/app/3/block_bg_1.png"
+                "bg": "/images/app/3/block_bg_1.png",
+                "padding_top": "xl"
             },
             "last": {
                 "type": "text",

@@ -27,6 +27,7 @@ export default defineComponent({
                 <social-network :is-color="true"/>
             </div>
         </div>
+        <div class="home-company-bg"></div>
     </div>
 </template>
 
@@ -53,5 +54,13 @@ export default defineComponent({
 
         ul
             padding: 0
+
+    .home-company-bg
+        background-image: url("@/assets/img/home/company_bg.png")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: auto 100%
+        height: 850px
+        margin: -194px auto 0
 
 </style>

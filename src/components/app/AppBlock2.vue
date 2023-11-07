@@ -57,8 +57,8 @@ export default {
 <style scoped lang="sass">
 .app-block-2
     background-repeat: no-repeat
-    background-position: right 25px
-    background-size: 50%
+    background-position: right 0
+    background-size: 65%
     .txt-part-inner
         padding: 150px 0
     .rubric_title

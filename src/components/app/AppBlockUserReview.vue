@@ -1,5 +1,4 @@
 <script>
-// import {defineComponent} from 'vue'
 import 'vue3-carousel/dist/carousel.css'
 import {Carousel, Slide, Navigation} from 'vue3-carousel'
 
@@ -13,18 +12,9 @@ export default {
             }
         }
     },
-    methods: {
-        next() {
-            this.$refs.reviewCarousel.next()
-        },
-        prev() {
-            this.$refs.reviewCarousel.prev()
-        },
-
-    },
     computed: {
-        reviewsChunks() {
-            return window.objectToChunks(this.block.reviews, 2)
+        reviews() {
+            return this.block.reviews
         }
     },
     components: {
@@ -40,15 +30,12 @@ export default {
         <div class="container" v-if="block">
             <div class="title">{{block.title[$i18n.locale] ?? ''}}</div>
             <div class="reviews">
-                <carousel ref="reviewCarousel" :wrapAround="true">
-                    <slide v-for="(reviewsChunk, index) in reviewsChunks" :key="index">
-                        <div class="review-chunk">
-                            <div class="review r-col" v-for="review in reviewsChunk" :key="review.id">
-                                <div class="comment">{{ review.review[$i18n.locale] ?? '' }}</div>
-                                <hr>
-                                <div class="name">{{ review.name[$i18n.locale] ?? '' }}</div>
-                            </div>
-                            <div class="r-col" v-if="Object.keys(reviewsChunk).length === 1"></div>
+                <carousel :wrapAround="true" :items-to-show="2" snapAlign="start">
+                    <slide v-for="(review, index) in reviews" :key="index">
+                        <div class="review">
+                            <div class="comment">{{ review.review[$i18n.locale] ?? '' }}</div>
+                            <hr>
+                            <div class="name">{{ review.name[$i18n.locale] ?? '' }}</div>
                         </div>
                     </slide>
                     <template #addons>
@@ -62,6 +49,7 @@ export default {
 
 <style lang="sass">
 @import "@/assets/color.sass"
+
 .app-block-user-review
     padding: 54px
 
@@ -113,13 +101,6 @@ export default {
             background-image: url("@/assets/img/icons/arrow-right-purplle.svg")
             right: -95px
 
-    .review-chunk
-        display: flex
-        justify-content: space-between
-
-    .r-col
-        flex: 50%
-
     .review
         background-image: url("@/assets/img/icons/quotation-mark.webp")
         background-repeat: no-repeat
@@ -138,6 +119,5 @@ export default {
 
         .comment
             min-height: 72px
-
 
 </style>
