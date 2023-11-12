@@ -73,7 +73,7 @@ export default defineComponent({
 @import "@/assets/color.sass"
 
 .blog__list-preview-top
-    padding-bottom: 80px
+    //padding-bottom: 80px
 
     .date
         color: $color_gray_60

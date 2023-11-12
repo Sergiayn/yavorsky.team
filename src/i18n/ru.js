@@ -43,6 +43,8 @@ const translate = {
         rubric_news: 'Новости',
         rubric_how_to: 'How To',
         latest_posts: 'Последние публикации',
+        no_results_found: 'Результаты не найдены',
+        all_results: 'Все результаты',
     },
     common: {
         email: 'Электронная почта',
