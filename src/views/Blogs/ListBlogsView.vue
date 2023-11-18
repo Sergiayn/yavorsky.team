@@ -181,7 +181,7 @@ export default defineComponent({
             </template>
         </div>
     </div>
-    <block-subscribe/>
+    <block-subscribe :is_wide="true" :margin_top="0"/>
 </template>
 
 <style lang="sass">
@@ -317,8 +317,5 @@ export default defineComponent({
         color: $color_gray_60
         font-size: 18px
         padding-bottom: 32px
-
-.block-subscribe
-    margin-top: 0!important
 
 </style>

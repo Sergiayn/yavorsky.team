@@ -42,10 +42,8 @@
         },
         {
             "id" : 2,
-            "type" : 1,
-            "direction": "column",
+            "type" : 3,
             "bg_color": "#FDFDFD",
-            "bg_img": "/images/app/2/main_bg.svg",
             "first": {
                 "type": "text",
                 "rubric_color": "#6A31A5",
@@ -63,12 +61,14 @@
                     "en": "The program's interface is user-friendly, making it easy to navigate and use all of its features. In addition, RoboCleaner is regularly updated with the latest cleaning algorithms to ensure the highest level of performance and protection.",
                     "ua": "Інтерфейс програми зручний для користувача та дозволяє легко орієнтуватися та використовувати всі функції. RoboCleaner регулярно оновлюється найновішими алгоритмами очищення для забезпечення найвищого рівня продуктивності та захисту.",
                     "ru": "Интерфейс программы удобен для пользователя и позволяет легко ориентироваться и использовать все функции. RoboCleaner регулярно обновляется новейшими алгоритмами очистки для обеспечения высочайшего уровня производительности и защиты."
-                }
+                },
+                "padding_top": "l"
             },
             "last": {
                 "type": "img",
                 "imgs": ["/images/app/2/block_2_1_img.webp", "/images/app/2/block_2_2_img.webp", "/images/app/2/block_2_3_img.webp"],
-                "bg": "/images/app/2/block_bg_1.png"
+                "bg_1": "/images/app/2/block_bg_1.png",
+                "bg_2": "/images/app/2/main_bg.svg"
             }
         },
         {
