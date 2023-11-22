@@ -7,4 +7,5 @@ export default {
     setBlogs: (state, data) => state.blogs = data,
     setBlogsShort: (state, data) => state.blogs_short = data,
     setCompany: (state, data) => state.company = data,
+    setPage: (state, data) => state.page = data,
 }

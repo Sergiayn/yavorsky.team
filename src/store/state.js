@@ -23,6 +23,7 @@ export default {
     blogs: [],
     blogs_short: [],
     company: [],
+    page: [],
     user_reviews: [
         // {
         //     id: 1,

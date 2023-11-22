@@ -84,8 +84,16 @@ export default defineComponent({
                     <strong class="title">{{ $t('footer.policy') }}</strong>
                     <nav>
                         <ul>
-                            <li><a href="#">{{ $t('footer.privacy_policy') }}</a></li>
-                            <li><a href="#">{{ $t('footer.cookies_policy') }}</a></li>
+                            <li>
+                                <router-link :to="{name:'PrivacyPolicy', params:{locale:$i18n.locale}}">
+                                    {{ $t('footer.privacy_policy') }}
+                                </router-link>
+                            </li>
+                            <li>
+                                <router-link :to="{name:'CookiesPolicy', params:{locale:$i18n.locale}}">
+                                    {{ $t('footer.cookies_policy') }}
+                                </router-link>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -134,8 +142,16 @@ export default defineComponent({
                         <strong class="title">{{ $t('footer.policy') }}</strong>
                         <nav>
                             <ul>
-                                <li><a href="#">{{ $t('footer.privacy_policy') }}</a></li>
-                                <li><a href="#">{{ $t('footer.cookies_policy') }}</a></li>
+                                <li>
+                                    <router-link :to="{name:'PrivacyPolicy', params:{locale:$i18n.locale}}">
+                                        {{ $t('footer.privacy_policy') }}
+                                    </router-link>
+                                </li>
+                                <li>
+                                    <router-link :to="{name:'CookiesPolicy', params:{locale:$i18n.locale}}">
+                                        {{ $t('footer.cookies_policy') }}
+                                    </router-link>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -190,8 +206,16 @@ export default defineComponent({
                             <strong class="title">{{ $t('footer.policy') }}</strong>
                             <nav>
                                 <ul>
-                                    <li><a href="#">{{ $t('footer.privacy_policy') }}</a></li>
-                                    <li><a href="#">{{ $t('footer.cookies_policy') }}</a></li>
+                                    <li>
+                                        <router-link :to="{name:'PrivacyPolicy', params:{locale:$i18n.locale}}">
+                                            {{ $t('footer.privacy_policy') }}
+                                        </router-link>
+                                    </li>
+                                    <li>
+                                        <router-link :to="{name:'CookiesPolicy', params:{locale:$i18n.locale}}">
+                                            {{ $t('footer.cookies_policy') }}
+                                        </router-link>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>

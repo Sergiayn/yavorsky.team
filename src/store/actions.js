@@ -60,4 +60,15 @@ export default {
             commit('setCompany', data)
         } catch (e) {console.error(e.message)}
     },
+    setPage: async ({ commit }, params) => {
+        try {
+            const slug = params.slug
+            if (undefined === slug) {
+                commit('setPage', {})
+            } else {
+                const {data} = await axios.get('page/' + slug + '.json')
+                commit('setPage', data)
+            }
+        } catch (e) {console.error(e.message); commit('setPage', {})}
+    },
 }

@@ -121,7 +121,7 @@ body
     color: $color_black
     text-decoration: none
 
-    &:hover
+    &:hover, &.active
         color: $color_primary
 
 .link-purplle a

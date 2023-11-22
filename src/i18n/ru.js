@@ -67,6 +67,11 @@ const translate = {
         thank_you: 'Спасибо',
         modal_successfully_subscribed: 'Вы успешно подписались',
         modal_successfully_sent: 'Форма успешно отправлена',
+        table_of_contents: "Содержание",
+        updated: "Обновлено",
+        contact_us: "Написать",
+        still_have_questions: "Остались вопросы?",
+        still_have_questions__msg: "Свяжитесь с нами и мы ответим вам как можно скорее",
     },
     languages: {
         language: 'Язык',

@@ -42,6 +42,18 @@ const routes = [
                 component: () => import("@/views/ContactView"),
             },
             {
+                path: "privacy-policy",
+                name: "PrivacyPolicy",
+                component: () => import("@/views/PolicyView"),
+                props: () => ({slug: "privacy-policy"})
+            },
+            {
+                path: "cookies-policy",
+                name: "CookiesPolicy",
+                component: () => import("@/views/PolicyView"),
+                props: () => ({slug: "cookies-policy"})
+            },
+            {
                 path: "blogs",
                 name: "Blogs",
                 component: () => import("@/views/Blogs/ListBlogsView"),

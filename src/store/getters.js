@@ -82,5 +82,8 @@ export default {
         })
         return company
     },
+    page: state => {
+        return state.page
+    },
     user_reviews: state => state.user_reviews,
 }
