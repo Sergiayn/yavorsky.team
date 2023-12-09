@@ -1,7 +1,7 @@
 [
     {
         "id": 4,
-        "name": "Pill Reminder",
+        "name": "MedTime: Pill Reminder",
         "url_app": null,
         "slug": "pill-reminder",
         "bg": "linear-gradient(270deg, rgba(58, 166, 190, 0.30) -10.97%, #FCFFFF 68.56%, #D6EDF2 89.01%)",
@@ -11,9 +11,9 @@
             "ru": "Соблюдайте график приема лекарств"
         },
         "desc": {
-            "en": "Pill Reminder is an easy-to-use medication reminder app that allows you to set up a medication schedule and receive timely reminders to take your medications.",
-            "ua": "Pill Reminder — зручна програма для нагадування про прийом ліків, яка дозволяє встановити розклад прийому ліків і отримувати своєчасні нагадування про необхідність їх прийому.",
-            "ru": "Pill Reminder — удобное приложение для напоминания о приеме лекарств, которое позволяет установить расписание приема лекарств и получать своевременные напоминания о необходимости их приема."
+            "en": "MedTime: Pill Reminder is an easy-to-use medication reminder app that allows you to set up a medication schedule and receive timely reminders to take your medications.",
+            "ua": "MedTime: Pill Reminder — зручна програма для нагадування про прийом ліків, яка дозволяє встановити розклад прийому ліків і отримувати своєчасні нагадування про необхідність їх прийому.",
+            "ru": "MedTime: Pill Reminder — удобное приложение для напоминания о приеме лекарств, которое позволяет установить расписание приема лекарств и получать своевременные напоминания о необходимости их приема."
         },
         "images": ["img1.svg"]
     },

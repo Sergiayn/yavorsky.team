@@ -1,0 +1,55 @@
+{
+    "id": 3,
+    "name": {"en":"Hidden photos: how to protect your privacy on iPhone", "ua":"Приховані фотографії: як захистити свою конфіденційність", "ru":"Скрытые фотографии: как защитить свою конфиденциальность"},
+    "author": {
+        "id": 1,
+        "name": {"en": "Galina", "ua": "Галина", "ru": "Галина"},
+        "position": {"en": "Content writer", "ua": "Content writer", "ru": "Content writer"},
+        "img": "/images/blog-author/1/img.png"
+    },
+    "content": [
+        {
+            "id": 1,
+            "type": "text",
+            "html": {
+                "en": "<p>In today's world, protecting personal information is becoming increasingly difficult. In particular, it is known that our photos can become the subject of an invasion of privacy if we do not protect them properly. If you use an iPhone, there are several methods that can help you protect your photos from prying eyes. In this article, we'll take a look at the Secret Vault app, which allows you to protect your private photos on your iPhone.</p><h3>What is the Secret Vault app?</h3><p>Secret Vault is a free iPhone app that allows you to hide your photos from prying eyes. It allows you to create a password to enter the app because your photos will be stored on your device in an encrypted form. Once you save the photos in the app, they will be hidden from other people using your iPhone.</p><h3>How to install the Hidden Photos app?</h3><p>To install the Secret Vault app, you need to download it from the App Store. After installing the app, you will be able to create your own password. This password will be used to log in to the app and protect your private photos.</p><h3>How to hide photos in the Hidden Photos app?</h3><p>To hide photos in the Secret Vault app, you need to select the photos you want to hide and click on the Import button. The photos will be saved in the app in an encrypted form. After that, you can delete them from your main photo album.</p>",
+                "ua": "<p>У сучасному світі захищати особисту інформацію стає дедалі складніше. Зокрема, відомо, що наші фотографії можуть стати предметом вторгнення у приватне життя, якщо ми не захистимо їх належним чином. Якщо ви користуєтесь iPhone, є кілька методів, які допоможуть вам захистити свої фотографії від сторонніх очей. У цій статті ми розглянемо застосунок \"Secret Vault\", яка дозволяє захистити ваші приватні фотографії на iPhone.</p><h3>Що це за застосунок Secret Vault?</h3><p>Secret Vault — це безкоштовний додаток для iPhone, який дозволяє приховати ваші фотографії від сторонніх очей. Воно дозволяє створити пароль для входу в програму, оскільки ваші фотографії зберігатимуться на вашому пристрої в зашифрованому вигляді. Як тільки ви збережете фотографії у додатку, вони будуть приховані від інших людей, які користуються вашим iPhone.</p><h3>Як встановити застосунок Secret Vault?</h3><p>Щоб встановити застосунок Secret Vault, необхідно завантажити його з App Store. Після встановлення програми ви зможете створити власний пароль. Цей пароль буде використовуватися для входу до програми та захисту ваших особистих фотографій.</p><h3>Як приховати фотографії у застосунку Secret Vault?</h3><p>Щоб приховати фотографії у застосунку Secret Vault, потрібно вибрати фотографії, які потрібно приховати, і натиснути кнопку Імпорт. Фотографії будуть збережені у програмі у зашифрованому вигляді. Після цього ви зможете видалити їх зі свого основного фотоальбому.</p>",
+                "ru": "<p>В современном мире защищать личную информацию становится все сложнее. В частности, известно, что наши фотографии могут стать предметом вторжения в частную жизнь, если мы не защитим их должным образом. Если вы пользуетесь iPhone, существует несколько методов, которые помогут вам защитить свои фотографии от посторонних глаз. В этой статье мы рассмотрим приложение \"Secret Vault\", которое позволяет защитить ваши частные фотографии на iPhone.</p><h3>Что это за приложение Secret Vault?</h3><p>Secret Vault — это бесплатное приложение для iPhone, которое позволяет скрыть ваши фотографии от посторонних глаз. Оно позволяет создать пароль для входа в приложение, поскольку ваши фотографии будут храниться на вашем устройстве в зашифрованном виде. Как только вы сохраните фотографии в приложении, они будут скрыты от других людей, пользующихся вашим iPhone.</p><h3>Как установить приложение Secret Vault?</h3><p>Чтобы установить приложение Secret Vault, необходимо загрузить его из App Store. После установки приложения вы сможете создать свой собственный пароль. Этот пароль будет использоваться для входа в приложение и защиты ваших личных фотографий.</p><h3>Как скрыть фотографии в приложении Secret Vault?</h3><p>Чтобы скрыть фотографии в приложении Secret Vault, необходимо выбрать фотографии, которые вы хотите скрыть, и нажать кнопку Импорт. Фотографии будут сохранены в приложении в зашифрованном виде. После этого вы сможете удалить их из своего основного фотоальбома.</p>"
+            }
+        },
+        {
+            "id" : 2,
+            "type": "img",
+            "list": ["/images/blog/3/img_1.png","/images/blog/3/img_2.png"]
+        },
+        {
+            "id": 3,
+            "type": "text",
+            "html": {
+                "en": "<h3>How to view hidden photos in the Secret Vault app?</h3><p>To view hidden photos in the Secret Vault app, you need to open the app and enter your password. You will then be able to view all your hidden photos.</p><h3>How to delete photos from the Secret Vault app?</h3><p>To delete photos from the Secret Vault app, you need to open the app and enter your password. After that, you can select the photos you want to delete and click on the \"Delete\" button.</p><h3>How to keep photos safe on my iPhone?</h3><p>The Secret Vault app is one way to help you keep your photos on iPhone safe.</p><p>Besides, there are several other ways to help you keep your photos safe on iPhone. First, you can use a passcode or Touch ID to protect access to your iPhone. This will help prevent unauthorized access to your device. Second, you can use iCloud to store your photos. Using iCloud allows you to store your photos safely on Apple's servers and provides longer-term protection against data loss.</p><p>So, if you want to keep your private photos safe on your iPhone, using the Secret Vault app is the best solution. It allows you to create a password, encrypt your photos, and keep them safe on your device.</p>",
+                "ua": "<h3>Як переглядати приховані фотогрффії у застосунку Secret Vault? </h3><p>Щоб переглянути приховані фотографії, потрібно відкрити програму та ввести пароль. Після цього ви зможете переглянути усі свої приховані фотографії.</p><h3>Як видалити фотографії із застосунку Secret Vault?</h3><p>Щоб видалити фотографії, необхідно відкрити програму та ввести пароль. Після цього можна вибрати фотографії, які потрібно видалити, і натиснути на кнопку \"Видалити\".</p><h3>Як зберігати фотографії в безпеці на моєму iPhone?</h3><p>Програма Secret Vault — це один із способів, який допоможе вам зберегти фотографії на iPhone в безпеці.</p><p>Крім того, є ще кілька способів, які допоможуть вам зберегти ваші фотографії в безпеці на iPhone. По-перше, ви можете використовувати пароль або Touch ID для захисту доступу до iPhone. Це допоможе запобігти спробі отримати доступ до пристрою сторонніх осіб. По-друге, для зберігання фотографій можна використовувати iCloud. Використання iCloud дозволяє безпечно зберігати фотографії на серверах Apple та забезпечує більш тривалий захист від втрати даних.</p><p>Отже, якщо ви хочете зберегти свої особисті фотографії в безпеці на iPhone, використання програми Secret Vault — найкраще рішення. Це дозволяє створити пароль, зашифрувати фотографії та зберегти їх у безпеці на вашому пристрої.</p>",
+                "ru": "<h3>Как просматривать скрытые фотографии в приложении Secret Vault?</h3><p>Чтобы просмотреть скрытые фотографии в приложении Secret Vault, необходимо открыть приложение и ввести пароль. После этого вы сможете просмотреть все свои скрытые фотографии.</p><h3>Как удалить фотографии из приложения Secret Vault?</h3><p>Чтобы удалить фотографии из приложения Secret Vault, необходимо открыть приложение и ввести пароль. После этого можно выбрать фотографии, которые вы хотите удалить, и нажать на кнопку \"Удалить\".</p><h3>Как сохранить фотографии в безопасности на моем iPhone?</h3><p>Приложение Secret Vault — это один из способов, который поможет вам сохранить фотографии на iPhone в безопасности.</p><p>Кроме того, есть еще несколько способов, которые помогут вам сохранить ваши фотографии в безопасности на iPhone. Во-первых, вы можете использовать пароль или Touch ID для защиты доступа к iPhone. Это поможет предотвратить попытку получить доступ к устройству посторонних лиц. Во-вторых, для хранения фотографий можно использовать iCloud. Использование iCloud позволяет безопасно хранить фотографии на серверах Apple и обеспечивает более длительную защиту от потери данных.</p><p>Итак, если вы хотите сохранить свои личные фотографии в безопасности на iPhone, использование приложения Secret Vault — лучшее решение. Оно позволяет создать пароль, зашифровать фотографии и сохранить их в безопасности на вашем устройстве.</p>"
+            }
+        }
+    ],
+    "banner_fixed": {
+        "id": 1,
+        "bg": "linear-gradient(343deg, #0E3520 -15.1%, #58977C 84.83%)",
+        "name": "Secret Vault",
+        "logo": "/images/blog/3/banner_1_logo.svg",
+        "url": "#"
+    },
+    "banner_bottom": {
+        "id": 2,
+        "bg_color": "#E6F8F2",
+        "bg_image": "/images/blog/3/banner_2_img.png",
+        "name": "Secret Vault",
+        "desc": {
+            "en": "Your privacy is important.",
+            "ua": "Ваша конфіденційність є важливою.",
+            "ru": "Ваша конфиденциальность важна."
+        },
+        "url": "#"
+    },
+    "created_at": 1681960050
+}

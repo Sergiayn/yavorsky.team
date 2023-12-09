@@ -10,16 +10,6 @@
     "img": "img.png"
   },
   {
-    "id": 2,
-    "name": {
-      "en": "Kirill",
-      "ua": "Кирил",
-      "ru": "Кирил"
-    },
-    "position": "iOS Developer",
-    "img": "img.png"
-  },
-  {
     "id": 4,
     "name": {
       "en": "Serhii",

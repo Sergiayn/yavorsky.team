@@ -45,6 +45,9 @@ const translate = {
         latest_posts: 'Последние публикации',
         no_results_found: 'Результаты не найдены',
         all_results: 'Все результаты',
+        social_title: 'Понравилась статья?',
+        social_desc: 'Поделитесь постом или подпишитесь на нашу рассылку',
+        subscribe_btn: 'Подписаться',
     },
     common: {
         email: 'Электронная почта',
@@ -72,6 +75,7 @@ const translate = {
         contact_us: "Написать",
         still_have_questions: "Остались вопросы?",
         still_have_questions__msg: "Свяжитесь с нами и мы ответим вам как можно скорее",
+        published: 'Опубликовано',
     },
     languages: {
         language: 'Язык',

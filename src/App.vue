@@ -71,7 +71,7 @@ body
     border-color: $color_gray_40
     color: $color_black
 
-    &:hover
+    &:hover, &:active, &:focus
         background-color: transparent
         color: $color_primary_hover
         border-color: $color_primary_hover

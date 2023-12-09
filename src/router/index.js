@@ -54,6 +54,11 @@ const routes = [
                 props: () => ({slug: "cookies-policy"})
             },
             {
+                path: "blog/:slug",
+                name: "Blog",
+                component: () => import("@/views/Blogs/ItemBlogView"),
+            },
+            {
                 path: "blogs",
                 name: "Blogs",
                 component: () => import("@/views/Blogs/ListBlogsView"),

@@ -20,6 +20,7 @@ export default {
     apps: {},
     apps_short: {},
     apps_banner: {},
+    blog: [],
     blogs: [],
     blogs_short: [],
     company: [],

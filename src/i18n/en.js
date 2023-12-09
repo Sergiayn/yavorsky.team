@@ -45,6 +45,9 @@ const translate = {
         latest_posts: 'Latest posts',
         no_results_found: 'No results found',
         all_results: 'All results',
+        social_title: 'Did you find this post helpful?',
+        social_desc: 'Share the post or subscribe to our newsletter',
+        subscribe_btn: 'Subscribe',
     },
     common: {
         email: 'E-mail',
@@ -72,6 +75,7 @@ const translate = {
         contact_us: "Contact us",
         still_have_questions: "Still have questions?",
         still_have_questions__msg: "Contact us and we’ll come back to you ASAP.",
+        published: 'Published',
     },
     languages: {
         language: 'Language',

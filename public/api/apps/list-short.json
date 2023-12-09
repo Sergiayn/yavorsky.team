@@ -49,7 +49,7 @@
     },
     {
         "id": 4,
-        "name": "Pill Reminder",
+        "name": "MedTime: Pill Reminder",
         "url_app": null,
         "slug": "pill-reminder",
         "desc": {

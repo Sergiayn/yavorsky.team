@@ -2,11 +2,14 @@
 import AppBlock1 from "@/components/app/AppBlock1"
 import AppBlock2 from "@/components/app/AppBlock2"
 import AppBlock3 from "@/components/app/AppBlock3"
+import AppBlock4 from "@/components/app/AppBlock4"
+import AppBlock5 from "@/components/app/AppBlock5"
+import AppBlockTextColumn from "@/components/app/AppBlockTextColumn"
 import AppBlockUserReview from "@/components/app/AppBlockUserReview"
 
 export default {
     name: "AppView",
-    components: {AppBlock1, AppBlock2, AppBlock3, AppBlockUserReview},
+    components: {AppBlock1, AppBlock2, AppBlock3, AppBlock4, AppBlock5, AppBlockTextColumn, AppBlockUserReview},
     methods: {
         getBasePath() {
             let str = 'https://apps.apple.com/'
@@ -43,8 +46,11 @@ export default {
             <div class="app-item">
                 <div class="row">
                     <div class="col-6">
-                        <div class="img" :style="{ backgroundImage: 'url(' + app.logo_bg + ')' }">
-                            <div class="app-img"><img :src="app.logo" :alt="app.name" class="img-fluid"></div>
+                        <div class="img-wrapper">
+                            <div class="img-inner">
+                                <div class="app-img"><img :src="app.logo" :alt="app.name" class="img-fluid"></div>
+                            </div>
+                            <div class="img-bg1 rotating" :style="{ backgroundImage: 'url(' + app.logo_bg + ')' }"></div>
                         </div>
                     </div>
                     <div class="col-6">
@@ -67,6 +73,9 @@ export default {
                 <app-block1 v-if="appBlock.type === 1" :block="appBlock" :app-url="this.getBasePath() + app.url_app"></app-block1>
                 <app-block2 v-else-if="appBlock.type === 2" :block="appBlock" :app-url="this.getBasePath() + app.url_app"></app-block2>
                 <app-block3 v-else-if="appBlock.type === 3" :block="appBlock" :app-url="this.getBasePath() + app.url_app"></app-block3>
+                <app-block4 v-else-if="appBlock.type === 4" :block="appBlock" :app-url="this.getBasePath() + app.url_app"></app-block4>
+                <app-block5 v-else-if="appBlock.type === 5" :block="appBlock" :app-url="this.getBasePath() + app.url_app"></app-block5>
+                <app-block-text-column v-else-if="appBlock.type === 'text-column'" :block="appBlock"></app-block-text-column>
                 <app-block-user-review v-else-if="appBlock.type === 'user-review'" :block="appBlock"></app-block-user-review>
             </div>
         </div>
@@ -78,13 +87,57 @@ export default {
 
 .app-view
     .app-item
+        .img-wrapper
+            position: relative
+            .img-inner
+                position: relative
+                z-index: 5
+            .img-bg1, .img-bg2
+                background-position: center
+                background-repeat: no-repeat
+                background-size: 70%
+                position: absolute
+                height: 100%
+                left: 0
+                top: 0
+                width: 100%
+
+            @-webkit-keyframes rotating /* Safari and Chrome */
+                from
+                    -webkit-transform: rotate(0deg)
+                    -o-transform: rotate(0deg)
+                    transform: rotate(0deg)
+
+                to
+                    -webkit-transform: rotate(360deg)
+                    -o-transform: rotate(360deg)
+                    transform: rotate(360deg)
+
+            @keyframes rotating
+                from
+                    -ms-transform: rotate(0deg)
+                    -moz-transform: rotate(0deg)
+                    -webkit-transform: rotate(0deg)
+                    -o-transform: rotate(0deg)
+                    transform: rotate(0deg)
+
+                to
+                    -ms-transform: rotate(360deg)
+                    -moz-transform: rotate(360deg)
+                    -webkit-transform: rotate(360deg)
+                    -o-transform: rotate(360deg)
+                    transform: rotate(360deg)
+
+            .rotating
+                -webkit-animation: rotating 10s linear infinite
+                -moz-animation: rotating 10s linear infinite
+                -ms-animation: rotating 10s linear infinite
+                -o-animation: rotating 10s linear infinite
+                animation: rotating 10s linear infinite
+
         .app-img
             padding: 122px 0
             text-align: center
-        .img
-            background-position: center
-            background-repeat: no-repeat
-            background-size: 70%
         img
             height: 264px
             width: 264px

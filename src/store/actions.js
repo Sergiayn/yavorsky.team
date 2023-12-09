@@ -36,6 +36,17 @@ export default {
             commit('setAppsBanner', data)
         } catch (e) {console.error(e.message)}
     },
+    setBlog: async ({ commit }, params) => {
+        try {
+            const slug = params.slug
+            if (undefined === slug) {
+                commit('setBlog', {})
+            } else {
+                const {data} = await axios.get('blog/' + slug + '.json')
+                commit('setBlog', data)
+            }
+        } catch (e) {console.error(e.message); commit('setBlog', {})}
+    },
     setBlogs: async ({ commit }) => {
         try {
             const {data} = await axios.get('blogs/list.json')

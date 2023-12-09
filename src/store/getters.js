@@ -44,6 +44,7 @@ export default {
             })
         return banners
     },
+    blog: state => state.blog,
     blogs: state => {
         let blogs = structuredClone( state.blogs)
         Object.keys(blogs).forEach(key => {
@@ -82,8 +83,6 @@ export default {
         })
         return company
     },
-    page: state => {
-        return state.page
-    },
+    page: state => state.page,
     user_reviews: state => state.user_reviews,
 }

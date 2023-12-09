@@ -60,7 +60,11 @@ export default defineComponent({
                         <div class="img" :style="{ backgroundImage: 'url(' + app.logo + ')' }">
                             <div class="app-img"><img :src="app.img" :alt="app.name" class="img-fluid"></div>
                         </div>
-                        <div class="title">
+                        <div class="title" v-if="app.name.length > 16">
+                            <span class="msg-dev" v-if="app.dev">{{ $t('home.coming_soon') }}</span>
+                            <span class="name">{{ app.name }}</span>
+                        </div>
+                        <div class="title" v-else>
                             <span class="name">{{ app.name }}</span>
                             <span class="msg-dev" v-if="app.dev">{{ $t('home.coming_soon') }}</span>
                         </div>

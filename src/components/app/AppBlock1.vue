@@ -25,7 +25,9 @@ export default {
 
 <template>
     <div class="app-block-1" :class="{'block-has-bg-color': block.bg_color ?? false}"
-         :style="{ backgroundColor: block.bg_color ?? 'transperent', backgroundImage: block.bg_img ? 'url(' + block.bg_img + ')' : '' }">
+         :style="{ backgroundColor: block.bg_color ?? 'transperent', backgroundImage: block.bg_img ? 'url(' + block.bg_img + ')' : '',
+            paddingTop: (typeof block.block_padding_top === 'undefined') ? 0 : block.block_padding_top + 'px',
+            paddingBottom: (typeof block.block_padding_bottom === 'undefined') ? 0 : block.block_padding_bottom + 'px'}">
         <div class="container">
             <div class="direction_row row" v-if='block.direction === "row"'>
                 <div class="col-6" v-for="item in items()" :key="item">
@@ -45,7 +47,10 @@ export default {
                     </div>
                     <div v-else-if='item.type === "img"'
                          :style="{ backgroundImage: item.bg ? 'url(' + item.bg + ')' : ''}"
-                         :class="{'img-part-padding-top-xl': item.padding_top === 'xl', 'img-part-size-xl': item.size === 'xl'}"
+                         :class="{
+                         'img-part-padding-top-xl': item.padding_top === 'xl',
+                         'img-part-size-xl': item.size === 'xl',
+                         'bg-part-size-xl': item.bg_size === 'xl'}"
                          class="img-part" >
                         <div class="img-part-inner" :style="{ backgroundImage: item.bg_side ? 'url(' + item.bg_side + ')' : '' }">
                             <div class="app-img" v-if="item.img">
@@ -79,7 +84,10 @@ export default {
                     </div>
                     <div v-else-if='item.type === "img"'
                          :style="{ backgroundImage: item.bg ? 'url(' + item.bg + ')' : ''}"
-                         :class="{'img-part-padding-top-xl': item.padding_top === 'xl', 'img-part-size-xl': item.size === 'xl'}"
+                         :class="{
+                        'img-part-padding-top-xl': item.padding_top === 'xl',
+                        'img-part-size-xl': item.size === 'xl',
+                        'bg-part-size-xl': item.bg_size === 'xl'}"
                          class="img-part">
                         <div class="img-part-inner" :class="{'img-part-inner-3': item.imgs.length === 3}"
                              :style="{ backgroundImage: item.bg_side ? 'url(' + item.bg_side + ')' : '' }">
@@ -92,6 +100,16 @@ export default {
                                 <img v-for="img in item.imgs" :src="img" class="img-fluid" :key="img">
                             </div>
                         </div>
+                    </div>
+                    <div v-else-if='item.type === "list"' class="list-part">
+                        <ul>
+                            <li v-for="sub_item in item.list" :key="sub_item.id">
+                                <div class="li_inner" :style="{ backgroundColor: item.bg_color ? item.bg_color : 'transperent' }">
+                                    <img :src="sub_item.img" class="img-fluid">
+                                    <div class="title">{{sub_item.title[$i18n.locale] ?? ''}}</div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -130,7 +148,7 @@ $app_block_1_padding: 54px
     .img-part
         background-position: center center
         background-repeat: no-repeat
-        background-size: auto 110%
+        background-size: auto 100%
         .app-img, .app-imgs
             text-align: center
         .app-img
@@ -164,6 +182,28 @@ $app_block_1_padding: 54px
             .app-img, .app-imgs
                 img
                     max-height: 580px
+        &.bg-part-size-xl
+            height: 560px
+
+    .list-part
+        padding: 64px 0
+        ul
+            display: flex
+            justify-content: center
+            margin: 0
+            padding: 0
+        li
+            list-style: none
+            text-align: center
+        .li_inner
+            border-radius: 12px
+            margin: 0 12px
+            padding: 16px 10px
+            height: 110px
+            width: 170px
+        .title
+            font-size: 14px
+            margin-top: 12px
 
     .txt-part-inner, .img-part-inner
         background-repeat: no-repeat
