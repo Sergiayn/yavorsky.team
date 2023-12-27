@@ -5,9 +5,11 @@
     </div>
     <main-footer></main-footer>
     <modal-info/>
+    <cookie-agreement></cookie-agreement>
 </template>
 
 <script>
+import CookieAgreement from "@/components/CookieAgreement"
 import MainFooter from "@/components/MainFooter"
 import MainHeader from "@/components/MainHeader"
 import ModalInfo from "@/components/ModalInfo";
@@ -19,6 +21,7 @@ export default {
         return {}
     },
     components: {
+        CookieAgreement,
         ModalInfo,
         MainFooter,
         MainHeader,
@@ -31,12 +34,14 @@ export default {
 @import "@/assets/color.sass"
 
 body
+    background-color: $color_background_light
     font-family: 'Open Sans', sans-serif
 
 .form-control
     border-radius: 8px
     font-size: 14px
-    padding: 8px 9px
+    line-height: 24px
+    padding: 7px 9px
 
     &:focus
         border-color: $color_primary
@@ -49,15 +54,16 @@ body
     font-size: 16px
     font-weight: 600
     padding: 7px
+    &:active, &:focus
+        box-shadow: none!important
 
 .btn-primary
     background-color: $color_primary
     border-color: $color_primary
 
-    &:hover, &:active, &:focus
+    &:hover, &:active, &:focus, &:focus-visible
         background-color: $color_primary_hover
         border-color: $color_primary_hover
-        box-shadow: none
 
     &:disabled
         background-color: $color_gray_40
@@ -68,7 +74,7 @@ body
     border-color: $color_gray_40
     color: $color_black
 
-    &:hover
+    &:hover, &:active, &:focus
         background-color: transparent
         color: $color_primary_hover
         border-color: $color_primary_hover
@@ -82,6 +88,11 @@ body
     background-color: $color_gray_40
     color: $color_white
     border-color: $color_gray_40
+    &:hover
+        background-color: $color_gray_40
+        border-color: $color_gray_40
+        color: $color_white
+        cursor: default
 
 .btn-arrow
     background-color: $color_white
@@ -113,7 +124,7 @@ body
     color: $color_black
     text-decoration: none
 
-    &:hover
+    &:hover, &.active
         color: $color_primary
 
 .link-purplle a
@@ -175,9 +186,9 @@ body
     background: transparent
     border: 2px solid $color_black
     border-radius: 50%
-    height: 8px
+    height: 10px
     opacity: .5
-    width: 8px
+    width: 10px
 
 .carousel .carousel__pagination-button--active::after
     background: $color_black

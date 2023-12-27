@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": {
+            "en": "User orientation",
+            "ua": "Орієнтація на користувача",
+            "ru": "Ориентация на пользователя"
+        },
+        "desc": {
+            "en": "We care about satisfying users and providing them with convenient and easy-to-use applications.",
+            "ua": "Ми прагнемо задовольнити ваші потреби зі зручними застосунками.",
+            "ru": "Мы стремимся удовлетворить ваши потребности с удобными приложениями."
+        },
+        "bg": "linear-gradient(292deg, #BBE7F0 0%, #DAFFE5 100%)"
+    },
+    {
+        "id": 2,
+        "name": {
+            "en": "Continuous improvement",
+            "ua": "Безперервне покращення",
+            "ru": "Непрерывное улучшение"
+        },
+        "desc": {
+            "en": "Constantly develop our knowledge and skills, explore new technologies and development methods.",
+            "ua": "Постійно вдосконалюємо свої знання та навички, вивчаємо нові технології та методи розробки.",
+            "ru": "Постоянно совершенствуем свои знания и навыки, изучаем новые технологии и методы разработки."
+        },
+        "bg": "linear-gradient(180deg, #C2CDF3 12.35%, #FCF5FF 100%)"
+    },
+    {
+        "id": 3,
+        "name": {
+            "en": "Simplicity",
+            "ua": "Простота",
+            "ru": "Простота"
+        },
+        "desc": {
+            "en": "Applications are easy to navigate and use",
+            "ua": "Програми прості у навігації та використанні.",
+            "ru": "Приложения просты в навигации и использовании."
+        },
+        "bg": "linear-gradient(357deg, #92E0D7 0%, #D0D4FF 100%)"
+    },
+    {
+        "id": 4,
+        "name": {
+            "en": "Attention to details",
+            "ua": "Увага до деталей",
+            "ru": "Внимание к деталям"
+        },
+        "desc": {
+            "en": "Pay enough attention to the smallest details, such as design and logo, that create a positive impression of the application.",
+            "ua": "Приділяємо увагу на найдрібніші деталі дизайну та логотипів для гарного користувальницького досвіду.",
+            "ru": "Уделяем внимание на мельчайшие детали дизайна и логотипы для хорошего пользовательского опыта."
+        },
+        "bg": "linear-gradient(6deg, #F5D78A 0%, #FFE4D0 100%)"
+    },
+    {
+        "id": 5,
+        "name": {
+            "en": "Security",
+            "ua": "Надійність",
+            "ru": "Надежность"
+        },
+        "desc": {
+            "en": "We adhere to requirements for protecting the confidentiality and security of user data.",
+            "ua": "Ми дотримуємось вимог щодо захисту конфіденційності та безпеки даних користувачів.",
+            "ru": "Мы придерживаемся требований по защите конфиденциальности и безопасности данных пользователей."
+        },
+        "bg": "linear-gradient(156deg, #A4E2A6 0%, #FDFFA1 100%)"
+    },
+    {
+        "id": 6,
+        "name": {
+            "en": "Team spirit",
+            "ua": "Командний дух",
+            "ru": "Командный дух"
+        },
+        "desc": {
+            "en": "Success depends on a team of professionals working on projects. Our company consists of people who know their work thoroughly.",
+            "ua": "Успіх залежить від команди професіоналів у нашій компанії, які досконально знають свою роботу.",
+            "ru": "Успех зависит от команды профессионалов в нашей компании, досконально знающих свою работу."
+        },
+        "bg": "linear-gradient(156deg, #FFC9FD 0%, #B9D9FF 100%)"
+    }
+]

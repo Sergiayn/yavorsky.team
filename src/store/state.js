@@ -16,12 +16,15 @@ export default {
             name: "russian"
         },
     ],
+    app: {},
     apps: {},
     apps_short: {},
     apps_banner: {},
+    blog: [],
     blogs: [],
     blogs_short: [],
     company: [],
+    page: [],
     user_reviews: [
         // {
         //     id: 1,

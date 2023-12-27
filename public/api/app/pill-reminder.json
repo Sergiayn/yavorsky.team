@@ -1,0 +1,109 @@
+{
+    "id": 4,
+    "name": "MedTime: Pill Reminder",
+    "url_app": null,
+    "desc": {
+        "en": "Medication regimen can be quite complex, especially if you need to take multiple medications at different times of the day. The \"MedTime: Pill Reminder\" app on iOS can help you organize your medication regimen and take your medications on time to achieve better treatment outcomes.",
+        "ua": "Режим прийому ліків може бути досить складним, якщо вам необхідно приймати кілька препаратів у різний час доби. Додаток \"MedTime: Pill Reminder\" на iOS допоможе вам організувати свій режим прийому ліків та приймати їх вчасно для досягнення найкращих результатів лікування.",
+        "ru": "Режим приема лекарств может быть довольно сложным, особенно если вам необходимо принимать несколько препаратов в разное время суток. Приложение \"MedTime: Pill Reminder\" на iOS поможет вам организовать свой режим приема лекарств и принимать их вовремя для достижения лучших результатов лечения."
+    },
+    "logo": "/images/app/4/logo.png",
+    "logo_bg": "/images/app/4/logo_bg.svg",
+    "blocks": [
+        {
+            "id" : 1,
+            "type" : 5,
+            "bg_color": "#E3F4F8",
+            "first": {
+                "type": "text",
+                "rubric_color": "#269DB7",
+                "rubric_title": {
+                    "en": "Timely",
+                    "ua": "Своєчасний",
+                    "ru": "Своевременный"
+                },
+                "title": {
+                    "en": "Create reminders",
+                    "ua": "Створюйте нагадування",
+                    "ru": "Создавайте напоминания"
+                },
+                "desc": {
+                    "en": "You can add your medications and reminders for their intake to the app. Choose the medication name, dosage, and time when you need to take the medication, and the app will send you a notification on time.",
+                    "ua": "Ви можете додати в застосунок свої ліки та нагадування про їх прийом. Виберіть назву ліків, дозування та час, коли вам потрібно їх прийняти, та програма вчасно відправить вам нагадування.",
+                    "ru": "Вы можете добавить в приложение свои лекарства и напоминания об их приеме. Выберите название лекарства, дозировку и время, когда вам нужно принять лекарство, и приложение вовремя отправит вам уведомление."
+                }
+            },
+            "last": {
+                "type": "img",
+                "bg": "/images/app/4/block_1_1_img.png",
+                "bg_size": "xl"
+            }
+        },
+        {
+            "id" : 2,
+            "type" : "text-column",
+            "padding_bottom": 0,
+            "first" : {
+                "rubric_color": "#269DB7",
+                "rubric_title": {
+                    "en": "Organized",
+                    "ua": "Організований",
+                    "ru": "Организованный"
+                },
+                "title": {
+                    "en": "Medication intake tracking",
+                    "ua": "Відстеження прийому ліків",
+                    "ru": "Отслеживание приема лекарств"
+                },
+                "desc": {
+                    "en": "You can track the medication intakes that you have taken or missed in the calendar.",
+                    "ua": "У календарі можна відстежувати прийняті чи пропущені прийоми ліків.",
+                    "ru": "В календаре можно отслеживать принятые или пропущенные приемы лекарств."
+                }
+            },
+            "last" : {
+                "rubric_color": "#269DB7",
+                "rubric_title": {
+                    "en": "Simple",
+                    "ua": "Легкий",
+                    "ru": "Лёгкий"
+                },
+                "title": {
+                    "en": "User-friendly interface",
+                    "ua": "Зручний інтерфейс",
+                    "ru": "Удобный интерфейс"
+                },
+                "desc": {
+                    "en": "The app has a simple interface that allows you to easily and quickly set reminders on the main screen of the app. You can also adjust the frequency of reminders to meet your needs.",
+                    "ua": "Програма має зручний інтерфейс, який дозволяє легко та швидко встановлювати нагадування на головному екрані програми. Ви також можете налаштувати частоту нагадувань відповідно до ваших потреб.",
+                    "ru": "Приложение имеет удобный интерфейс, который позволяет легко и быстро устанавливать напоминания на главном экране приложения. Вы также можете настроить частоту напоминаний в соответствии с вашими потребностями."
+                }
+            }
+        },
+        {
+            "id" : 3,
+            "type" : 4,
+            "first" : {
+                "type" : "img",
+                "img": "/images/app/4/block_3_1_img.png"
+            },
+            "middle" : {
+                "type" : "text",
+                "title": {
+                    "en": "Never miss a dose again: MedTime: Pill Reminder app on iOS",
+                    "ua": "Ніколи не пропускайте прийом таблеток: застосунок MedTime: Pill Reminder на iOS",
+                    "ru": "Никогда больше не пропускайте прием таблеток: Приложение MedTime: Pill Reminder на iOS"
+                },
+                "desc": {
+                    "en": "With the \"MedTime: Pill Reminder\" app on iOS, you can truly control your medication regimen and take your medications on time. This can help ensure better treatment outcomes and improve your health and well-being.",
+                    "ua": "За допомогою програми \"MedTime: Pill Reminder\" на iOS ви зможете ефективно контролювати свій режим прийому ліків та приймати їх вчасно. Це допоможе забезпечити кращі результати лікування та покращити ваше здоров'я та самопочуття.",
+                    "ru": "С помощью приложения \"MedTime: Pill Reminder\" на iOS вы сможете эффективно контролировать свой режим приема лекарств и принимать их вовремя. Это поможет обеспечить лучшие результаты лечения и улучшить ваше здоровье и самочувствие."
+                }
+            },
+            "last" : {
+                "type" : "img",
+                "img": "/images/app/4/block_3_2_img.png"
+            }
+        }
+    ]
+}

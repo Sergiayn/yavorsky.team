@@ -1,0 +1,185 @@
+{
+    "id": 3,
+    "name": "Network Analyzer",
+    "url_app": "network-analyzer-speed-test/id1660559510",
+    "desc": {
+        "en": "Network Analyzer is a powerful tool for testing and analyzing the quality of your Internet connection. With this application, you can easily and quickly determine the speed of your Internet connection, the quality of your network connection, and other important parameters.",
+        "ua": "Сучасний інструмент для тестування та аналізу якості вашого інтернет-з'єднання. З цією програмою ви можете легко і швидко визначити швидкість вашого інтернет-з'єднання, якість мережного підключення та інші важливі параметри мережі.",
+        "ru": "Современный инструмент для тестирования и анализа качества вашего интернет-соединения. С этим приложением вы можете легко и быстро определить скорость вашего интернет-соединения, качество сетевого подключения и другие важные параметры сети."
+    },
+    "logo": "/images/app/3/logo.png",
+    "logo_bg": "/images/app/3/logo_bg.svg",
+    "blocks": [
+        {
+            "id" : 1,
+            "type" : 1,
+            "direction": "row",
+            "bg_color": "#F2F8FF",
+            "first": {
+                "type": "text",
+                "rubric_color": "#1F2555",
+                "rubric_title": {
+                    "en": "Hard-working",
+                    "ua": "Точний",
+                    "ru": "Точный"
+                },
+                "title": {
+                    "en": "Test your Internet speed in real-time",
+                    "ua": "Перевіряйте швидкість Інтернету в режимі реального часу",
+                    "ru": "Проверяйте скорость Интернета в режиме реального времени"
+                },
+                "desc": {
+                    "en": "The application tests the speed of the Internet connection, which allows you to determine the speed of downloading and uploading data, as well as ping (network response). Testing is performed by sending several requests to the selected server and determining the average speed.",
+                    "ua": "Програма тестує швидкість інтернет-з'єднання, що дозволяє визначити швидкість завантаження та вивантаження даних, а також ping (відгук мережі). Тестування виконується шляхом надсилання кількох запитів на вибраний сервер та визначення середньої швидкості.",
+                    "ru": "Приложение тестирует скорость интернет-соединения, что позволяет определить скорость загрузки и выгрузки данных, а также ping (отклик сети). Тестирование выполняется путем отправки нескольких запросов на выбранный сервер и определения средней скорости."
+                }
+            },
+            "last": {
+                "type": "img",
+                "img": "/images/app/3/block_1_img.png",
+                "bg": "/images/app/3/block_bg_1.png"
+            }
+        },
+        {
+            "id" : 2,
+            "type" : 1,
+            "direction": "row",
+            "first": {
+                "type": "img",
+                "img": "/images/app/3/block_2_img.png",
+                "bg": "/images/app/3/block_bg_1.png",
+                "padding_top": "xl"
+            },
+            "last": {
+                "type": "text",
+                "rubric_color": "#1F2555",
+                "rubric_title": {
+                    "en": "Protective",
+                    "ua": "Захисний",
+                    "ru": "Защитный"
+                },
+                "title": {
+                    "en": "Identify connected devices with network scanning",
+                    "ua": "Ідентифікуйте підключені пристрої за допомогою сканування мережі",
+                    "ru": "Идентифицируйте подключенные устройства с помощью сканирования сети"
+                },
+                "desc": {
+                    "en": "The app enables network scanning to identify all connected devices and their IP addresses. This helps determine which devices are accessing the network and allows for control over their access.",
+                    "ua": "Програма сканує мережу для визначення всіх підключених пристроїв та їх IP-адрес. Це допомагає визначити, які пристрої мають доступ до мережі, і дозволяє контролювати їх доступ.",
+                    "ru": "Приложение сканирует сеть для определения всех подключенных устройств и их IP-адресов. Это помогает определить, какие устройства имеют доступ к сети, и позволяет контролировать их доступ."
+                }
+            }
+        },
+        {
+            "id" : 3,
+            "type" : 2,
+            "bg_img": "/images/app/3/block_3_img_1.svg",
+            "first": {
+                "rubric_color": "#1F2555",
+                "rubric_title": {
+                    "en": "Speedy",
+                    "ua": "Швидкісний",
+                    "ru": "Скоростной"
+                },
+                "title": {
+                    "en": "Never miss a network problem",
+                    "ua": "Ніколи не пропустіть проблему з мережею",
+                    "ru": "Никогда не пропустите проблему с сетью"
+                },
+                "desc": {
+                    "en": "The application provides real-time notifications of any issues detected in your internet connection or network, allowing you to promptly address and resolve them to maintain a stable and speedy internet experience.",
+                    "ua": "Програма надає повідомлення в режимі реального часу про будь-які проблеми, виявлені у вашому інтернет-з'єднанні або мережі, дозволяючи вам оперативно усунути їх для підтримки стабільного та швидкісного інтернету.",
+                    "ru": "Приложение предоставляет уведомления в режиме реального времени о любых проблемах, обнаруженных в вашем интернет-соединении или сети, позволяя вам оперативно устранить их для поддержания стабильного и скоростного интернета."
+                }
+            },
+            "last": {
+                "img": "/images/app/3/block_3_img_2.png",
+                "rubric_color": "#1F2555",
+                "rubric_title": {
+                    "en": "Versatile",
+                    "ua": "Універсальний",
+                    "ru": "Универсальный"
+                },
+                "title": {
+                    "en": "Multiple connection testing",
+                    "ua": "Тестування кількох з'єднань",
+                    "ru": "Тестирование нескольких соединений"
+                },
+                "desc": {
+                    "en": "The application is capable of testing the quality of various connection types, such as Wi-Fi, cellular data, Ethernet, and more. This feature enables you to verify that all your sources of internet connection are functioning correctly.",
+                    "ua": "Програма здатна тестувати якість різних типів з'єднань, таких як Wi-Fi, стільникові дані, Ethernet та інші. Ця функція дозволяє переконатися, що всі джерела підключення до Інтернету працюють правильно.",
+                    "ru": "Приложение способно тестировать качество различных типов соединений, таких как Wi-Fi, сотовые данные, Ethernet и другие. Эта функция позволяет убедиться, что все источники подключения к Интернету работают правильно."
+                }
+            }
+        },
+        {
+            "id" : 4,
+            "type" : "user-review",
+            "title": {
+                "en": "Discover our app through their experiences",
+                "ua":"Дізнайтесь про наш додаток з досвіду інших",
+                "ru":"Узнайте о нашем приложении из опыта других"
+            },
+            "reviews": [
+                {
+                    "id": 1,
+                    "name": {
+                        "en":"Mia Campbell",
+                        "ua":"Міа Кемпбелл",
+                        "ru":"Миа Кэмпбелл"
+                    },
+                    "review": {
+                        "en":"A must-have for tech enthusiasts! Network Analyzer provides detailed insights and helped me optimize my Wi-Fi.",
+                        "ua":"Network Analyzer надає детальну інформацію і допоміг мені оптимізувати роботу Wi-Fi.",
+                        "ru":"Network Analyzer предоставляет подробную информацию и помог мне оптимизировать работу Wi-Fi."
+                    }
+                },
+                {
+                    "id": 2,
+                    "name": {
+                        "en":"Ethan Foster",
+                        "ua":"Ітан Фостер",
+                        "ru":"Итан Фостер"
+                    },
+                    "review": {
+                        "en":"The user interface is clean, and the data it provides is extensive yet easy to understand. It helped me diagnose network issues within minutes.",
+                        "ua":"Приємний інтерфейс, обширні і водночас прості для розуміння дані. З його допомогою я за лічені хвилини діагностував проблеми в мережі.",
+                        "ru":"Приятный интерфейс, обширные и просты для понимания данные. С его помощью я быстро нашел проблемы в сети."
+                    }
+                },
+                {
+                    "id": 3,
+                    "name": {
+                        "en":"Elijah Parker",
+                        "ua":"Елайджа Паркер",
+                        "ru":"Элайджа Паркер"
+                    },
+                    "review": {
+                        "en":"I’m genuinely impressed by how user-friendly and informative this app is. It made me aware of my network blind spots and provided fixes.",
+                        "ua":"Вражений тим, наскільки цей додаток зручний та інформативний. Дізнався про \"сліпі зони\" своєї мережі та знайшов способи їх усунення.",
+                        "ru":"Впечатлен тем, насколько это приложение удобно и информативно. С его помощью я узнал о \"слепых зонах\" своей сети и нашел способы их устранения."
+                    }
+                }
+            ]
+        },
+        {
+            "id" : 5,
+            "type" : 1,
+            "direction": "column",
+            "first": {
+                "type": "text",
+                "title": {
+                    "en": "User-friendly network tool",
+                    "ua": "Зручний мережевий інструмент",
+                    "ru": "Удобный сетевой инструмент"
+                },
+                "desc": {
+                    "en": "Network Analyzer is a valuable tool for users who seek to guarantee the reliability and performance of their Internet connection. It provides free access to its features, has a user-friendly interface, and allows testing from multiple sources.",
+                    "ua": "Network Analyzer — цінний інструмент для користувачів, які хочуть надійність та продуктивність свого інтернет-з'єднання. Він надає безкоштовний доступ до своїх функцій, має зручний інтерфейс та дозволяє проводити тестування з кількох джерел.",
+                    "ru": "Network Analyzer — ценный инструмент для пользователей, которые хотят надежность и производительность своего интернет-соединения. Он предоставляет бесплатный доступ к своим функциям, имеет удобный интерфейс и позволяет проводить тестирование из нескольких источников."
+                },
+                "show_url": true
+            }
+        }
+    ]
+}

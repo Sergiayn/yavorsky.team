@@ -51,7 +51,9 @@ export default defineComponent({
                     </div>
                     <div class="date">{{ timestampToDate(firstItem.created_at) }}</div>
                     <div class="name">
-                        <a href="#">{{ firstItem.name[$i18n.locale] ?? '' }}</a>
+                        <router-link :to="{name:'Blog', params:{locale:$i18n.locale, slug:firstItem.id}}">
+                            {{ firstItem.name[$i18n.locale] ?? '' }}
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -60,7 +62,9 @@ export default defineComponent({
                     <li v-for="item in otherItems" :key="item.id">
                         <div class="date">{{ timestampToDate(item.created_at) }}</div>
                         <div class="name">
-                            <a href="#">{{ item.name[$i18n.locale] ?? '' }}</a>
+                            <router-link :to="{name:'Blog', params:{locale:$i18n.locale, slug:item.id}}">
+                                {{ item.name[$i18n.locale] ?? '' }}
+                            </router-link>
                         </div>
                     </li>
                 </ul>
@@ -73,7 +77,7 @@ export default defineComponent({
 @import "@/assets/color.sass"
 
 .blog__list-preview-top
-    padding-bottom: 80px
+    //padding-bottom: 80px
 
     .date
         color: $color_gray_60
@@ -94,6 +98,8 @@ export default defineComponent({
             border-radius: 8px
             overflow: hidden
             padding-bottom: 8px
+        img
+            transform: scale(1.05)
 
     .list
         list-style: none

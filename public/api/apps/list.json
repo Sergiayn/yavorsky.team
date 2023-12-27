@@ -1,62 +1,67 @@
 [
-  {
-    "id": 1,
-    "name": "Ad Blocker",
-    "url": "ad-blocker-safari-adblock/id1587657245",
-    "desc": {
-      "en": "A reliable ad-blocking app that helps you enjoy a safe and efficient browsing experience by blocking banner ads and pop-ups.",
-      "ua": "Надійний блокувальник реклами убезпечить користування Інтернетом, блокуючи рекламу та спливаючі вікна.",
-      "ru": "Надежный блокировщик рекламы обезопасит пользование Интернетом, блокируя рекламу и всплывающие окна."
+    {
+        "id": 1,
+        "name": "Ad Blocker",
+        "url_app": "ad-blocker-safari-adblock/id1587657245",
+        "slug": "ad-blocker",
+        "desc": {
+            "en": "A reliable ad-blocking app that helps you enjoy a safe and efficient browsing experience by blocking banner ads and pop-ups.",
+            "ua": "Надійний блокувальник реклами убезпечить користування Інтернетом, блокуючи рекламу та спливаючі вікна.",
+            "ru": "Надежный блокировщик рекламы обезопасит пользование Интернетом, блокируя рекламу и всплывающие окна."
+        },
+        "logo": "1/logo.svg",
+        "img": "1/app.png"
     },
-    "logo": "1/logo.svg",
-    "img": "1/app.png"
-  },
-  {
-    "id": 2,
-    "name": "RoboCleaner",
-    "url": "phone-cleaner-robo-clean-up/id1603385704",
-    "desc": {
-      "en": "A fast app for cleaning your phone of unwanted files and debris, ensuring optimal performance for your device.",
-      "ua": "Швидка програма для очищення телефону від сміття та оптимізації продуктивності пристрою.",
-      "ru": "Быстрое приложение для очистки телефона от мусора и оптимизации производительности устройства."
+    {
+        "id": 2,
+        "name": "RoboCleaner",
+        "url_app": "phone-cleaner-robo-clean-up/id1603385704",
+        "slug": "robocleaner",
+        "desc": {
+            "en": "A fast app for cleaning your phone of unwanted files and debris, ensuring optimal performance for your device.",
+            "ua": "Швидка програма для очищення телефону від сміття та оптимізації продуктивності пристрою.",
+            "ru": "Быстрое приложение для очистки телефона от мусора и оптимизации производительности устройства."
+        },
+        "logo": "2/logo.svg",
+        "img": "2/app.png"
     },
-    "logo": "2/logo.svg",
-    "img": "2/app.png"
-  },
-  {
-    "id": 3,
-    "name": "Network Analyzer",
-    "url": "network-analyzer-speed-test/id1660559510",
-    "desc": {
-      "en": "A powerful and easy-to-use network scanning and analysis program.",
-      "ua": "Потужна та проста у використанні програма сканування та аналізу мережі.",
-      "ru": "Мощная и простая в использовании программа сканирования и анализа сети."
+    {
+        "id": 3,
+        "name": "Network Analyzer",
+        "url_app": "network-analyzer-speed-test/id1660559510",
+        "slug": "network-analyzer",
+        "desc": {
+            "en": "A powerful and easy-to-use network scanning and analysis program.",
+            "ua": "Потужна та проста у використанні програма сканування та аналізу мережі.",
+            "ru": "Мощная и простая в использовании программа сканирования и анализа сети."
+        },
+        "logo": "3/logo.svg",
+        "img": "3/app.png"
     },
-    "logo": "3/logo.svg",
-    "img": "3/app.png"
-  },
-  {
-    "id": 4,
-    "name": "Secret Valut",
-    "url": null,
-    "desc": {
-      "en": "A secure photo storage app that allows you to hide important photos from prying eyes and store them in a private vault.\n",
-      "ua": "Додаток для безпечного зберігання фотографій у власному сховищі.",
-      "ru": "Приложение для безопасного хранения фотографий в личном хранилище."
+    {
+        "id": 5,
+        "name": "Secret Valut",
+        "url_app": null,
+        "slug": "secret-vault",
+        "desc": {
+            "en": "A secure photo storage app that allows you to hide important photos from prying eyes and store them in a private vault.\n",
+            "ua": "Додаток для безпечного зберігання фотографій у власному сховищі.",
+            "ru": "Приложение для безопасного хранения фотографий в личном хранилище."
+        },
+        "logo": "5/logo.svg",
+        "img": "5/app.png"
     },
-    "logo": "4/logo.svg",
-    "img": "4/app.png"
-  },
-  {
-    "id": 5,
-    "name": "Pill Reminder",
-    "url": null,
-    "desc": {
-      "en": "A medication reminder app that allows you to set up a medication schedule and receive timely reminders to take your medications.",
-      "ua": "Додаток для нагадування про прийом ліків за розкладом.",
-      "ru": "Приложение для напоминания о приеме лекарств по расписанию."
-    },
-    "logo": "5/logo.svg",
-    "img": "5/app.png"
-  }
+    {
+        "id": 4,
+        "name": "MedTime: Pill Reminder",
+        "url_app": null,
+        "slug": "pill-reminder",
+        "desc": {
+            "en": "A medication reminder app that allows you to set up a medication schedule and receive timely reminders to take your medications.",
+            "ua": "Додаток для нагадування про прийом ліків за розкладом.",
+            "ru": "Приложение для напоминания о приеме лекарств по расписанию."
+        },
+        "logo": "4/logo.svg",
+        "img": "4/app.svg"
+    }
 ]

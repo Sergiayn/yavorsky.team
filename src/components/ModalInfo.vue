@@ -18,7 +18,7 @@ export default defineComponent({
   methods: {
     open_modal(){
       this.is_visible = true
-      setTimeout(() => this.is_visible = false, 5000)
+      setTimeout(() => this.is_visible = false, 3000)
     }
   },
   data() {
@@ -32,6 +32,7 @@ export default defineComponent({
 <template>
   <div class="modal-info-wrap">
     <Modal :visible="is_visible"
+           offsetTop="35%"
            title="" modalClass="modal-info">
       <div class="img"><img src="@/assets/img/icons/check.svg" alt="check"/></div>
       <div class="title">{{ $t("common.thank_you") }}!</div>
@@ -45,7 +46,7 @@ export default defineComponent({
 <style lang="sass">
 .modal-info-wrap
   .modal-vue3-content
-    border-radius: 8px
+    border-radius: 8px!important
     background: #FFF
     box-shadow: 0 2px 4px 1px rgba(143, 130, 130, 0.25)
     width: 550px
@@ -61,6 +62,5 @@ export default defineComponent({
   .desc
     font-size: 18px
     margin: auto
-    width: 220px
 
 </style>

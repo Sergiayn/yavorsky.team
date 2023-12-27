@@ -7,12 +7,19 @@ export default {
         })
         return languages
     },
+    app: state => {
+        let app = structuredClone( state.app)
+        if (Object.keys(app).length) {
+            app.dev = app.url_app === null
+        }
+        return app
+    },
     apps: state => {
         let apps = structuredClone( state.apps)
         Object.keys(apps).forEach(key => {
             apps[key].logo = '/images/apps/' + apps[key].logo
             apps[key].img = '/images/apps/' + apps[key].img
-            apps[key].dev = apps[key].url === null
+            apps[key].dev = apps[key].url_app === null
         })
         return apps
     },
@@ -20,7 +27,7 @@ export default {
         let apps = structuredClone( state.apps_short)
         Object.keys(apps).forEach(key => {
                 apps[key].logo = '/images/apps/' + apps[key].logo
-                apps[key].dev = apps[key].url === null
+                apps[key].dev = apps[key].url_app === null
             }
         )
         return apps
@@ -32,11 +39,12 @@ export default {
                 banners[key].images
                     .forEach((v,i) => {
                         banners[key].images[i] = '/images/apps/banner/' + banners[key].id + '/' + v
-                        banners[key].dev = banners[key].url === null
+                        banners[key].dev = banners[key].url_app === null
                     })
             })
         return banners
     },
+    blog: state => state.blog,
     blogs: state => {
         let blogs = structuredClone( state.blogs)
         Object.keys(blogs).forEach(key => {
@@ -59,10 +67,22 @@ export default {
     company: state => {
         let company = structuredClone( state.company)
         Object.keys(company).forEach(key => {
-                company[key].img = '/images/company/employees/' + company[key].id + '/' + company[key].img
+            if('employees' === key) {
+                Object.keys(company[key]).forEach(k => {
+                    company[key][k].img = '/images/company/employees/' + company[key][k].id + '/' + company[key][k].img
+                })
+            } else if('slider' === key) {
+                Object.keys(company[key]).forEach(k => {
+                    company[key][k].img = '/images/company/slider/' + company[key][k].id + '/' + company[key][k].img
+                })
+            } else if('tasks' === key) {
+                Object.keys(company[key]).forEach(k => {
+                    company[key][k].img = '/images/company/tasks/' + company[key][k].id + '/' + company[key][k].img
+                })
             }
-        )
+        })
         return company
     },
+    page: state => state.page,
     user_reviews: state => state.user_reviews,
 }
