@@ -98,6 +98,8 @@ export default defineComponent({
             border-radius: 8px
             overflow: hidden
             padding-bottom: 8px
+        img
+            transform: scale(1.05)
 
     .list
         list-style: none

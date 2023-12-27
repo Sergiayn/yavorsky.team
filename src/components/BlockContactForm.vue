@@ -1,5 +1,6 @@
 <script>
-import {defineComponent} from 'vue'
+import {defineComponent, ref} from 'vue'
+import FileUpload from '@/components/FileUpload'
 
 export default defineComponent({
     name: "BlockContactForm",
@@ -12,7 +13,9 @@ export default defineComponent({
         }
     },
     data() {
+        const clearFiles = ref(false)
         return {
+            clearFiles,
             errors: [],
             name: '',
             email: '',
@@ -20,6 +23,7 @@ export default defineComponent({
         };
     },
     inject: ['emitter'],
+    components: {FileUpload},
     methods: {
         checkForm: function (e) {
             e.preventDefault()
@@ -34,6 +38,13 @@ export default defineComponent({
             formData.append('email', this.email)
             formData.append('comment', this.comment)
 
+            const fileInput = document.getElementById('inp-files')
+            if (null !== fileInput && null !== fileInput.files)
+            {
+                for (var i = 0; i < fileInput.files.length; i++) {
+                    formData.append('files[]', fileInput.files[i]);
+                }
+            }
             const requestOptions = {
                 method: "POST",
                 body: formData,
@@ -43,10 +54,11 @@ export default defineComponent({
             try {
                 fetch("https://dev.api.yavorsky.team.galaxys.info/v1/contact", requestOptions)
                     .then(() => {
-                        this.emitter.emit('modal_info', {type: 'open'})
+                        this.emitter.emit('modal_info', {type: 'open', desc: this.$t('common.modal_successfully_submitted')})
                         this.name = ''
                         this.email = ''
                         this.comment = ''
+                        this.emitter.emit('file_upload', {type: 'clear'})
                     })
             } catch (e) {
                 console.warn(e.toString())
@@ -104,13 +116,8 @@ export default defineComponent({
               >
               </textarea>
             </p>
-            <div class="file-upload" v-if="has_file_upload">
-                <div class="img">
-                    <img src="@/assets/img/icons/upload.svg"
-                         :alt="$t('common.contact_form__file_desc_1') + ' ' + $t('common.contact_form__file_desc_2')">
-                </div>
-                <div class="desc">{{ $t('common.contact_form__file_desc_1') }}</div>
-                <div class="choice-file">{{ $t('common.contact_form__file_desc_2') }}</div>
+            <div v-if="has_file_upload">
+                <FileUpload />
             </div>
             <div class="row">
                 <div class="col-8">
@@ -147,21 +154,5 @@ export default defineComponent({
 
     form .link-purplle
         margin: 10px 0 0
-
-    .file-upload
-        border-radius: 12px
-        border: 1px dashed $color_secondary
-        font-size: 14px
-        margin-bottom: 24px
-        padding: 22px
-        text-align: center
-
-        .img
-            margin-bottom: 10px
-
-        .choice-file
-            color: $color_primary
-            cursor: pointer
-            margin: 2px 0
 
 </style>

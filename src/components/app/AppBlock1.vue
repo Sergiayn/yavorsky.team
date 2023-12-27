@@ -38,7 +38,7 @@ export default {
                                 <span>{{item.rubric_title[$i18n.locale] ?? ''}}</span>
                                 <i :style="{ borderColor: item.rubric_color ?? 'inherit' }"></i>
                             </div>
-                            <div class="title">{{item.title[$i18n.locale] ?? ''}}</div>
+                            <div class="title" v-html="item.title[$i18n.locale] ?? ''"></div>
                             <div class="desc">{{item.desc[$i18n.locale] ?? ''}}</div>
                             <a v-if="item.show_url" :href="appUrl" target="_blank" class="btn btn-primary">
                                 {{ $t('common.free_download') }}
@@ -75,7 +75,7 @@ export default {
                                 <span>{{item.rubric_title[$i18n.locale] ?? ''}}</span>
                                 <i :style="{ borderColor: item.rubric_color ?? 'inherit' }"></i>
                             </div>
-                            <div class="title">{{item.title[$i18n.locale] ?? ''}}</div>
+                            <div class="title" v-html="item.title[$i18n.locale] ?? ''"></div>
                             <div class="desc">{{item.desc[$i18n.locale] ?? ''}}</div>
                             <a v-if="item.show_url" :href="appUrl" target="_blank" class="btn btn-primary">
                                 {{ $t('common.free_download') }}
@@ -106,7 +106,7 @@ export default {
                             <li v-for="sub_item in item.list" :key="sub_item.id">
                                 <div class="li_inner" :style="{ backgroundColor: item.bg_color ? item.bg_color : 'transperent' }">
                                     <img :src="sub_item.img" class="img-fluid">
-                                    <div class="title">{{sub_item.title[$i18n.locale] ?? ''}}</div>
+                                    <div class="title" v-html="sub_item.title[$i18n.locale] ?? ''"></div>
                                 </div>
                             </li>
                         </ul>

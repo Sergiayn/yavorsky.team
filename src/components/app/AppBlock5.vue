@@ -25,9 +25,13 @@ export default {
 
 <template>
     <div class="app-block-5" :class="{'block-has-bg-color': block.bg_color ?? false}"
-         :style="{ backgroundColor: block.bg_color ?? 'transperent', backgroundImage: block.last.bg ? 'url(' + block.last.bg + ')' : '',
-            paddingTop: (typeof block.block_padding_top === 'undefined') ? 0 : block.block_padding_top + 'px',
-            paddingBottom: (typeof block.block_padding_bottom === 'undefined') ? 0 : block.block_padding_bottom + 'px'}">
+         :style="[
+             block.bg_color ? {backgroundColor: block.bg_color}: {},
+             block.last.bg ? {backgroundImage: 'url(' + block.last.bg + ')'} : {},
+             block.last.bg_position ? {backgroundPosition: block.last.bg_position} : {},
+             (typeof block.block_padding_top === 'undefined') ? {} : {paddingTop: block.block_padding_top + 'px'},
+             (typeof block.block_padding_bottom === 'undefined') ? {} : {paddingBottom: block.block_padding_bottom + 'px'}
+         ]">
         <div class="container">
             <div class="direction_row row">
                 <div class="col-6" v-for="item in items()" :key="item">

@@ -21,7 +21,7 @@
             <span>Yavorsky Team</span>
           </div>
           <div class="email-title">{{ $t('common.email') }}</div>
-          <div class="email"><a href="mailto:yavorsky.team@gmail.com">yavorsky.team@gmail.com</a></div>
+          <div class="email link-purplle"><a href="mailto:yavorsky.team@gmail.com">yavorsky.team@gmail.com</a></div>
         </div>
       </div>
     </div>

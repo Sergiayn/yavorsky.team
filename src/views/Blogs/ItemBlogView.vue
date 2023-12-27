@@ -1,12 +1,19 @@
 <script>
-import SocialNetwork from "@/components/SocialNetwork.vue";
-import moment from "moment";
+import {Modal} from 'usemodal-vue3'
+import moment from "moment"
+import ShareNetworks from "@/components/ShareNetworks"
+import {ref} from "vue";
 
 export default {
     name: "ItemBlogView",
-    components: {SocialNetwork},
+    inject: ['emitter'],
+    components: {Modal, ShareNetworks},
     data() {
+        const isVisibleModal = ref(false)
+        const email = ref('')
         return {
+            isVisibleModal,
+            email,
             showFixedBanner: false,
             closeFixedBanner: false
         }
@@ -39,6 +46,24 @@ export default {
         },
         getHeightOfPage(){
             return document.body.offsetHeight
+        },
+        subscribeUser() {
+            let formData = new FormData();
+            formData.append('email', this.email)
+            formData.append('type', 'yavorsky.team')
+
+            const requestOptions = {
+                method: "POST",
+                body: formData,
+                mode: "no-cors"
+            }
+
+            fetch("https://api.galaxys.info/v1/subscribe", requestOptions)
+                .then(() => {
+                    this.emitter.emit('modal_info', {type: 'open', desc: 'common.modal_successfully_subscribed'})
+                    this.email = ''
+                    this.isVisibleModal = false
+                })
         }
     }
 }
@@ -87,10 +112,10 @@ export default {
                             <div class="desc">{{ $t('blog.social_desc') }}</div>
                         </div>
                         <div class="btn-block">
-                            <social-network :is-color="true"></social-network>
+                            <share-networks :name="blog.name[$i18n.locale] ?? ''" :url="'http://localhost:8080/ua/blog/2'"></share-networks>
                             <div class="dash"></div>
                             <div class="btns">
-                                <button class="btn btn-primary">{{ $t('blog.subscribe_btn') }}</button>
+                                <button class="btn btn-primary" @click="isVisibleModal = true">{{ $t('blog.subscribe_btn') }}</button>
                             </div>
                         </div>
                     </div>
@@ -125,6 +150,18 @@ export default {
                 </div>
             </div>
         </div>
+        <Modal :visible="isVisibleModal" modalClass="modal-blog-subscribe" title="" type="clean" width="740px" offsetTop="25%">
+            <button class="close" @click="isVisibleModal = false"></button>
+            <div class="modal-blog-subscribe-inner">
+                <div class="title">{{ $t('home.subscribe_title') }}</div>
+                <div class="desc" v-html='$t("home.subscribe_desc")'></div>
+                <form @submit.prevent="subscribeUser">
+                    <input type="email" class="form-control" name="email" v-model="email"
+                           :placeholder='$t("common.email")' required>
+                    <input type="submit" class="btn btn-primary" :value='$t("home.subscribe_btn")'>
+                </form>
+            </div>
+        </Modal>
     </div>
 </template>
 
@@ -135,7 +172,7 @@ export default {
     .bottom-banner-inner
         background-repeat: no-repeat
         background-position: 30% 100%
-        background-size: 148px
+        background-size: auto 80%
         height: 307px
         .desc-block
             margin-left: 50%
@@ -148,6 +185,47 @@ export default {
         .desc
             font-size: 16px
             margin-bottom: 32px
+    .modal-blog-subscribe
+        .modal-vue3-body
+            background-color: $color_white
+            border-radius: 12px
+            padding: 100px
+            .close
+                border: none
+                background-color: transparent
+                background-image: url("@/assets/img/icons/close-gray.svg")
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: 24px 24px
+                height: 24px
+                width: 24px
+                position: absolute
+                right: 24px
+                top: 24px
+        .modal-blog-subscribe-inner
+            width: 540px
+            .title
+                color: $color_black
+                font-size: 26px
+                font-weight: 600
+                margin-bottom: 16px
+                text-align: center
+            .desc
+                font-size: 16px
+                margin-bottom: 32px
+                text-align: center
+
+            input
+                height: 40px
+
+            input[type="email"]
+                height: 40px
+                margin-right: 20px
+                width: 350px
+
+            input[type="email"], input[type="submit"], .submit
+                display: inline-block
+
 .item-blog-view__inner
     margin: 0 auto 120px
     max-width: 636px
@@ -155,6 +233,8 @@ export default {
         color: $color_black
         font-size: 30px
         font-weight: 600
+        margin-bottom: 25px
+        text-transform: capitalize
     .author
         font-size: 14px
         align-items: center
@@ -185,20 +265,24 @@ export default {
         h3
             font-size: 20px
             font-weight: 600
+            margin-top: 12px
             margin-bottom: 12px
         h4
             font-size: 18px
             font-weight: 600
+            margin-top: 12px
             margin-bottom: 12px
         p
             font-size: 14px
-            margin-bottom: 40px
+            margin-bottom: 30px
         .block-img
+            align-items: center
             display: flex
             justify-content: space-between
+            margin-bottom: 50px
         .fixed-banner
             top: 50%
-            right: 20%
+            right: 10%
             position: fixed
     .socials
         border-top: 1px solid $color_gray_40
@@ -209,7 +293,7 @@ export default {
         justify-content: space-between
         padding: 24px 0
         .txt-block
-            padding-top: 10px
+            padding-top: 18px
         ul
             padding: 0
             text-align: center
@@ -217,8 +301,6 @@ export default {
             font-size: 18px
             font-weight: 600
             margin-bottom: 4px
-        .desc
-            max-width: 250px
         .dash
             background-image: url("@/assets/img/icons/dash.svg")
             background-position: center center
@@ -259,7 +341,7 @@ export default {
 @media (max-width: 1600px)
     .item-blog-view__inner
         .fixed-banner
-            right: 15%
+            right: 8%
 @media (max-width: 1399px)
     .item-blog-view__inner
         .fixed-banner

@@ -68,6 +68,7 @@ const translate = {
         contact_form__file_desc_1: 'Перетащите сюда',
         contact_form__file_desc_2: 'или Поиск файла',
         thank_you: 'Спасибо',
+        modal_successfully_submitted: 'Форма успешно отправлена!',
         modal_successfully_subscribed: 'Вы успешно подписались',
         modal_successfully_sent: 'Форма успешно отправлена',
         table_of_contents: "Содержание",
@@ -76,6 +77,8 @@ const translate = {
         still_have_questions: "Остались вопросы?",
         still_have_questions__msg: "Свяжитесь с нами и мы ответим вам как можно скорее",
         published: 'Опубликовано',
+        coockie_desc: 'Этот сайт использует файлы cookie, чтобы обеспечить вам наилучшие опыт от использования нашего сайта.',
+        coockie_btn: 'Принять cookies',
     },
     languages: {
         language: 'Язык',

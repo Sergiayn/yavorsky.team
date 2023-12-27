@@ -26,17 +26,15 @@ export default {
 <template>
     <div class="app-block-text-column" :style="{paddingBottom: (typeof block.padding_bottom === 'undefined') ? '120px' : block.padding_bottom + 'px'}">
         <div class="container">
-            <div class="row">
-                <div class="col-6" v-for="item in items()" :key="item">
-                    <div class="item-inner">
-                        <div :style="{ color: item.rubric_color ?? 'inherit' }"
-                             class="rubric_title" v-if="item.rubric_title">
-                            <span>{{item.rubric_title[$i18n.locale] ?? ''}}</span>
-                            <i :style="{ borderColor: item.rubric_color ?? 'inherit' }"></i>
-                        </div>
-                        <div class="title">{{item.title[$i18n.locale] ?? ''}}</div>
-                        <div class="desc">{{item.desc[$i18n.locale] ?? ''}}</div>
+            <div class="app-block-text-column-inner">
+                <div class="item" v-for="item in items()" :key="item">
+                    <div :style="{ color: item.rubric_color ?? 'inherit' }"
+                         class="rubric_title" v-if="item.rubric_title">
+                        <span>{{item.rubric_title[$i18n.locale] ?? ''}}</span>
+                        <i :style="{ borderColor: item.rubric_color ?? 'inherit' }"></i>
                     </div>
+                    <div class="title">{{item.title[$i18n.locale] ?? ''}}</div>
+                    <div class="desc">{{item.desc[$i18n.locale] ?? ''}}</div>
                 </div>
             </div>
         </div>
@@ -46,22 +44,32 @@ export default {
 <style scoped lang="sass">
 .app-block-text-column
     padding: 120px 0
-    .row
+    .app-block-text-column-inner
+        display: flex
+        justify-content: center
         > :nth-child(odd)
             text-align: right
             .desc
                 margin-left: auto
                 margin-right: 0
-            .item-inner
+            .item
                 border-right: 1px solid #D6D6D6
                 padding-right: 108px
         > :nth-child(even)
-            .item-inner
+            .item
                 padding-left: 108px
-    .item-inner
-        height: 100%
+    .item
         padding-top: 38px
         padding-bottom: 38px
+        &:first-child
+            border-right: 1px solid #D6D6D6
+            padding-right: 108px
+            text-align: right
+            .desc
+                margin-left: auto
+                margin-right: 0
+        &:last-child
+            padding-left: 108px
     .rubric_title
         display: inline-block
         font-size: 14px

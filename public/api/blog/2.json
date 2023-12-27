@@ -32,24 +32,5 @@
             }
         }
     ],
-    "banner_fixed": {
-        "id": 1,
-        "bg": "linear-gradient(343deg, #0E4956 -15.1%, #318DA0 84.83%)",
-        "name": "MedTime: Pill Reminder",
-        "logo": "/images/blog/2/banner_1_logo.svg",
-        "url": "#"
-    },
-    "banner_bottom": {
-        "id": 2,
-        "bg_color": "#E6F4F8",
-        "bg_image": "/images/blog/2/banner_2_img.png",
-        "name": "MedTime: Pill Reminder",
-        "desc": {
-            "en": "Keep your medication course under control.",
-            "ua": "Тримайте курс прийому ліків під контролем.",
-            "ru": "Держите курс приема лекарств под контролем."
-        },
-        "url": "#"
-    },
     "created_at": 1681940050
 }

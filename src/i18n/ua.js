@@ -68,6 +68,7 @@ const translate = {
         contact_form__file_desc_1: 'Перетягніть сюди',
         contact_form__file_desc_2: 'або Пошук файлу',
         thank_you: 'Дякуємо',
+        modal_successfully_submitted: 'Форма успішно відправлена!',
         modal_successfully_subscribed: 'Ви успішно підписалися',
         modal_successfully_sent: 'Форма успішно відправлена',
         table_of_contents: "Зміст",
@@ -76,6 +77,8 @@ const translate = {
         still_have_questions: "Залишилися питання?",
         still_have_questions__msg: "Зв'яжіться з нами і ми відповімо вам якнайшвидше",
         published: 'Опубликовано',
+        coockie_desc: 'Цей сайт використовує файли cookie, щоб забезпечити вам найкращий досвід від використання нашого сайту.',
+        coockie_btn: 'Прийняти cookies',
     },
     languages: {
         language: 'Мова',

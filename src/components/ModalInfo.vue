@@ -18,7 +18,7 @@ export default defineComponent({
   methods: {
     open_modal(){
       this.is_visible = true
-      setTimeout(() => this.is_visible = false, 5000)
+      setTimeout(() => this.is_visible = false, 3000)
     }
   },
   data() {
@@ -32,6 +32,7 @@ export default defineComponent({
 <template>
   <div class="modal-info-wrap">
     <Modal :visible="is_visible"
+           offsetTop="35%"
            title="" modalClass="modal-info">
       <div class="img"><img src="@/assets/img/icons/check.svg" alt="check"/></div>
       <div class="title">{{ $t("common.thank_you") }}!</div>

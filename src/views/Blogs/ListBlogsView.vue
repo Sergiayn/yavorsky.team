@@ -101,6 +101,17 @@ export default defineComponent({
                 left = left + 24
 
             this.$refs.rubricItemLine.style.left = left + 'px'
+        },
+        list_top() {
+            let blogs
+            if ('all' === this.target_rubric)
+                blogs = this.blogs
+            else
+                blogs = this.blogs.filter(item => this.target_rubric === item.rubric)
+            return blogs.slice(0, 4)
+        },
+        list_main() {
+            return this.hasTopBlock ? this.blogs.slice(4) : this.blogs
         }
     },
     computed: {
@@ -109,12 +120,6 @@ export default defineComponent({
         },
         blogs() {
             return this.$store.getters.blogs
-        },
-        list_top() {
-            return this.hasTopBlock ? this.blogs.slice(0, 4) : []
-        },
-        list_main() {
-            return this.hasTopBlock ? this.blogs.slice(4) : this.blogs
         }
     },
 })
@@ -156,12 +161,16 @@ export default defineComponent({
                                             <ul>
                                                 <li v-for="quickSearchItem in quickSearchList"
                                                     :key="quickSearchItem.id">
-                                                    <a href="#" class="img">
+                                                    <router-link :to="{name:'Blog', params:{locale:$i18n.locale, slug:quickSearchItem.id}}"
+                                                                 class="img">
                                                         <img :src="quickSearchItem.preview"
                                                              :alt="quickSearchItem.name"
                                                              class="img-fluid">
-                                                    </a>
-                                                    <a href="#" class="name" v-html="quickSearchItem.name"></a>
+                                                    </router-link>
+                                                    <router-link :to="{name:'Blog', params:{locale:$i18n.locale, slug:quickSearchItem.id}}"
+                                                                 v-html="quickSearchItem.name"
+                                                                 class="name">
+                                                    </router-link>
                                                 </li>
                                             </ul>
                                             <button class="btn btn-primary" v-if="quickSearchShowBtnAll">{{ $t("blog.all_results") }}</button>
@@ -174,10 +183,10 @@ export default defineComponent({
                     </div>
                 </div>
             </div>
-            <list-preview-top :list="list_top"/>
+            <list-preview-top :list="list_top()"/>
             <template v-if="false">
                 <div class="list-preview-desc">{{ $t('blog.latest_posts') }}</div>
-                <list-preview :list="list_main"/>
+                <list-preview :list="list_main()"/>
             </template>
         </div>
     </div>

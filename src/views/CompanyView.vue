@@ -115,14 +115,17 @@ export default {
                     <div class="brief">{{ descriptions[4].brief[$i18n.locale] }}</div>
                 </div>
                 <div>
-                    <ul v-for="(employees, index) in employeesChunks" :key="index">
-                        <li v-for="employee in employees" :key="employee.id">
-                            <div class="img">
-                                <img :src="employee.img" :alt="employee.name[$i18n.locale] ?? ''" class="img-fluid">
-                            </div>
-                            <div class="brief">
-                                <div class="name">{{ employee.name[$i18n.locale] ?? '' }}</div>
-                                <div class="position">{{ employee.position }}</div>
+                    <ul v-for="(employees, indexChunk) in employeesChunks" :key="indexChunk">
+                        <li v-for="(employee,index) in employees" :key="employee.id"
+                            :class="{'first-item': 0 === (index - (indexChunk * 4)), 'last-item': 3 === (index - (indexChunk * 4))}">
+                            <div class="employee">
+                                <div class="img">
+                                    <img :src="employee.img" :alt="employee.name[$i18n.locale] ?? ''" class="img-fluid">
+                                </div>
+                                <div class="brief">
+                                    <div class="name">{{ employee.name[$i18n.locale] ?? '' }}</div>
+                                    <div class="position">{{ employee.position }}</div>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -308,18 +311,21 @@ export default {
         li
             flex: 25%
             max-width: 25%
-            padding: 0 12px
+            .employee
+                padding: 0 12px
 
-            &:first-child
-                padding-left: 0
+        .first-item .employee
+            padding-left: 0
 
-            &:last-child
-                padding-right: 0
+        .last-item .employee
+            padding-right: 0
 
         .img
             background-color: #FFFAEA
             border-radius: 12px
-            margin-bottom: 12px
+            margin: 0 auto 12px
+            display: flex
+            justify-content: center
 
         img
             height: 264px

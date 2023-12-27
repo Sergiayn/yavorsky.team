@@ -76,7 +76,11 @@ export default defineComponent({
                                     {{ $t('footer.blog') }}
                                 </router-link>
                             </li>
-                            <li><a href="#">{{ $t('footer.support') }}</a></li>
+                            <li>
+                                <router-link :to="{name:'Contact', params:{locale:$i18n.locale}}">
+                                    {{ $t('footer.support') }}
+                                </router-link>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -132,7 +136,11 @@ export default defineComponent({
                                         {{ $t('footer.blog') }}
                                     </router-link>
                                 </li>
-                                <li><a href="#">{{ $t('footer.support') }}</a></li>
+                                <li>
+                                    <router-link :to="{name:'Contact', params:{locale:$i18n.locale}}">
+                                        {{ $t('footer.support') }}
+                                    </router-link>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -194,7 +202,11 @@ export default defineComponent({
                                             {{ $t('footer.blog') }}
                                         </router-link>
                                     </li>
-                                    <li><a href="#">{{ $t('footer.support') }}</a></li>
+                                    <li>
+                                        <router-link :to="{name:'Contact', params:{locale:$i18n.locale}}">
+                                            {{ $t('footer.support') }}
+                                        </router-link>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>

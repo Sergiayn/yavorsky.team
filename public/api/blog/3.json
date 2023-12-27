@@ -32,24 +32,5 @@
             }
         }
     ],
-    "banner_fixed": {
-        "id": 1,
-        "bg": "linear-gradient(343deg, #0E3520 -15.1%, #58977C 84.83%)",
-        "name": "Secret Vault",
-        "logo": "/images/blog/3/banner_1_logo.svg",
-        "url": "#"
-    },
-    "banner_bottom": {
-        "id": 2,
-        "bg_color": "#E6F8F2",
-        "bg_image": "/images/blog/3/banner_2_img.png",
-        "name": "Secret Vault",
-        "desc": {
-            "en": "Your privacy is important.",
-            "ua": "Ваша конфіденційність є важливою.",
-            "ru": "Ваша конфиденциальность важна."
-        },
-        "url": "#"
-    },
     "created_at": 1681960050
 }

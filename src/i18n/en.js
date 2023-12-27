@@ -68,6 +68,7 @@ const translate = {
         contact_form__file_desc_1: 'Drag and Drop here',
         contact_form__file_desc_2: 'or Browse file',
         thank_you: 'Thank you',
+        modal_successfully_submitted: 'The form was submitted successfully!',
         modal_successfully_subscribed: 'You have been successfully subscribed',
         modal_successfully_sent: 'The form was submitted successfully',
         table_of_contents: "Table of contents",
@@ -76,6 +77,8 @@ const translate = {
         still_have_questions: "Still have questions?",
         still_have_questions__msg: "Contact us and we’ll come back to you ASAP.",
         published: 'Published',
+        coockie_desc: 'This website uses cookies to ensure you get the best experience on our website.',
+        coockie_btn: 'Accept cookies',
     },
     languages: {
         language: 'Language',

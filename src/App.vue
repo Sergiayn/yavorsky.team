@@ -5,9 +5,11 @@
     </div>
     <main-footer></main-footer>
     <modal-info/>
+    <cookie-agreement></cookie-agreement>
 </template>
 
 <script>
+import CookieAgreement from "@/components/CookieAgreement"
 import MainFooter from "@/components/MainFooter"
 import MainHeader from "@/components/MainHeader"
 import ModalInfo from "@/components/ModalInfo";
@@ -19,6 +21,7 @@ export default {
         return {}
     },
     components: {
+        CookieAgreement,
         ModalInfo,
         MainFooter,
         MainHeader,
