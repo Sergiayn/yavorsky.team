@@ -103,19 +103,20 @@ export default defineComponent({
             this.$refs.rubricItemLine.style.left = left + 'px'
         },
         list_top() {
-            let blogs
-            if ('all' === this.target_rubric)
-                blogs = this.blogs
-            else
-                blogs = this.blogs.filter(item => this.target_rubric === item.rubric)
-            return blogs.slice(0, 4)
+            return this.isAllRubric ? this.blogs.slice(0, 4) : []
         },
         list_main() {
-            return this.hasTopBlock ? this.blogs.slice(4) : this.blogs
+            let blogs
+            if ('how_to' === this.target_rubric)
+                blogs = this.blogs.filter(item => this.target_rubric === item.rubric)
+            else
+                blogs = []
+
+            return blogs
         }
     },
     computed: {
-        hasTopBlock() {
+        isAllRubric() {
             return 'all' === this.target_rubric || '' === this.target_rubric || null === this.target_rubric
         },
         blogs() {
@@ -184,10 +185,10 @@ export default defineComponent({
                 </div>
             </div>
             <list-preview-top :list="list_top()"/>
-            <template v-if="false">
-                <div class="list-preview-desc">{{ $t('blog.latest_posts') }}</div>
+            <div v-if="list_main().length">
+                <div class="list-preview-desc" style="display: none">{{ $t('blog.latest_posts') }}</div>
                 <list-preview :list="list_main()"/>
-            </template>
+            </div>
         </div>
     </div>
     <block-subscribe :is_wide="true" :margin_top="0"/>
