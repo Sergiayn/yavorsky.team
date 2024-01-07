@@ -84,5 +84,6 @@ export default {
         return company
     },
     page: state => state.page,
+    screen_width: state => state.screen_width,
     user_reviews: state => state.user_reviews,
 }

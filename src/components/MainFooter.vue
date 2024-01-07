@@ -13,22 +13,12 @@ export default defineComponent({
     },
     data() {
         return {
-            isOpenMobileMenu: true,
-            screenWidth: 0
+            isOpenMobileMenu: true
         }
     },
-    mounted() {
-        this.updateScreenWidth()
-        this.onScreenResize()
-    },
     methods: {
-        onScreenResize() {
-            window.addEventListener("resize", () => {
-                this.updateScreenWidth()
-            })
-        },
-        updateScreenWidth() {
-            this.screenWidth = window.innerWidth
+        screenWidth() {
+            return this.$store.getters.screen_width
         }
     },
     computed: {
@@ -42,7 +32,7 @@ export default defineComponent({
 <template>
     <footer class="link-black">
         <div class="container">
-            <div class="row f-desktop" v-if="screenWidth > 990">
+            <div class="row s-desktop" v-if="screenWidth() > 990">
                 <div class="col-xxl-3 col-lg-3">
                     <site-logo/>
                     <div class="mail">
@@ -107,7 +97,7 @@ export default defineComponent({
                     <change-language @eventSetLocale="isOpenMobileMenu = false"></change-language>
                 </div>
             </div>
-            <div class="row f-tablet" v-else-if="screenWidth > 767">
+            <div class="row s-tablet" v-else-if="screenWidth() > 767">
                 <div class="col-5">
                     <site-logo/>
                     <div class="mail">
@@ -170,7 +160,7 @@ export default defineComponent({
                     </div>
                 </div>
             </div>
-            <div class="row f-mobile" v-else>
+            <div class="row s-mobile" v-else>
                 <div class="col-12">
                     <div>
                         <site-logo/>
