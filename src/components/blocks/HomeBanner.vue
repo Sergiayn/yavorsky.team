@@ -43,19 +43,15 @@ export default defineComponent({
                 <div class="container">
                     <div class="banner-inner">
                         <div class="row">
-                            <div class="col">
-                                <div class="image-single" v-if="1 === slotProps.item.images.length">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="image-single">
                                     <div class="image">
-                                        <img :src="slotProps.item.images[0]" :alt="slotProps.item.name" class="img-fluid">
+                                        <img :src="slotProps.item.images[0]" :alt="slotProps.item.name"
+                                             class="img-fluid">
                                     </div>
                                 </div>
-                                <ul class="images" v-else>
-                                    <li class="image" v-for="(image,index) in slotProps.item.images" :key="index">
-                                        <img :src="image" :alt="slotProps.item.name" class="img-fluid">
-                                    </li>
-                                </ul>
                             </div>
-                            <div class="col">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="msg-dev" v-if="slotProps.item.dev">{{ $t('home.soon_on_app_store') }}</div>
                                 <div class="name">{{ slotProps.item.name }}</div>
                                 <div class="brief">{{ slotProps.item.brief[$i18n.locale] ?? '' }}</div>
@@ -95,24 +91,18 @@ export default defineComponent({
     .banner
         padding: 116px 0 16px
 
-        .images, .image-single
+        .image-single
             background-image: url("@/assets/img/image-shadow.webp")
             background-repeat: no-repeat
             background-position: bottom center
+            background-size: 90% auto
             list-style: none
             padding: 0 0 100px
             margin: auto
             max-width: 510px
 
-            li
-                display: inline-block
-                padding: 0 6px
-
             img
                 max-height: 336px
-
-        .images li
-            max-width: 177px
 
         .name
             font-size: 26px
@@ -143,5 +133,72 @@ export default defineComponent({
         justify-content: right
         position: relative
         z-index: auto
+
+@media (max-width: 1200px)
+    .home-banner
+        .buttons
+            padding-top: 40px
+
+        .banner
+            padding: 100px 0 30px
+
+            .image-single
+                max-width: 420px
+
+        .carousel__pagination
+            margin: -40px 0 40px
+
+@media (max-width: 991px)
+    .home-banner
+        .banner
+            padding: 80px 0 40px
+
+            .name
+                font-size: 20px
+
+            .brief
+                font-size: 16px
+                padding-bottom: 16px
+
+            .desc
+                font-size: 16px
+
+        .buttons
+            padding-top: 32px
+
+            a
+                min-width: 156px
+
+                &:nth-child(1)
+                    margin-right: 16px
+
+                &:nth-child(2)
+                    margin-right: 0
+
+        .carousel__pagination
+            margin: -45px 0 0
+
+@media (max-width: 768px)
+    .home-banner
+        .banner
+            padding: 40px 0
+
+            .image-single
+                background: none
+                max-width: none
+                padding-bottom: 58px
+                text-align: center
+
+            .name
+                padding-bottom: 4px
+
+        .banner-inner
+            padding: 0 17px
+
+        .msg-dev
+            margin-top: 0
+
+        .carousel__pagination
+            display: none
 
 </style>
