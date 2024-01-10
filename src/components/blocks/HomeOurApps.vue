@@ -6,10 +6,18 @@ export default defineComponent({
     name: "HomeOurApps",
     components: {SiteLogo},
     computed: {
+        apps() {
+            return this.$store.getters.apps_short
+        },
         appsChunks() {
-            return window.objectToChunks(this.$store.getters.apps_short, 3)
+            return window.objectToChunks(this.apps, 3)
         }
-    }
+    },
+    methods: {
+        screenWidth() {
+            return this.$store.getters.screen_width
+        }
+    },
 })
 </script>
 
@@ -20,7 +28,7 @@ export default defineComponent({
                 <div class="title">{{ $t('home.our_apps__title') }}</div>
                 <div class="desc">{{ $t('home.our_apps__desc') }}</div>
             </div>
-            <div class="list-app-chunks link-black">
+            <div class="list-app-chunks link-black" v-if="screenWidth() > 991">
                 <div v-for="(chunkValue, chunkKey) in appsChunks" :key="chunkKey" class="app-chunk">
                     <div v-for="app in chunkValue" :key="app.id" class="app">
                         <router-link class="app-inner" :class="{'app-inner-dev':app.dev}" :to="{name:'App', params:{locale:$i18n.locale, slug:app.slug}}">
@@ -40,6 +48,28 @@ export default defineComponent({
                             <div class="brief">
                                 <div class="desc">{{ $t('home.our_apps__new_desc') }}</div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list-app-mobile link-black" v-else>
+                <div v-for="app in apps" :key="app.id" class="app">
+                    <router-link class="app-inner" :class="{'app-inner-dev':app.dev}" :to="{name:'App', params:{locale:$i18n.locale, slug:app.slug}}">
+                        <span class="img"><img :src="app.logo" :alt="app.name" class="img-fluid"></span>
+                        <span class="brief">
+                            <span class="msg-dev">{{ $t('home.soon_on_app_store') }}</span>
+                            <span class="name">{{ app.name }}</span>
+                            <span class="desc">{{ app.desc[$i18n.locale] ?? '' }}</span>
+                        </span>
+                    </router-link>
+                </div>
+                <div class="app app-new">
+                    <div class="app-inner">
+                        <div class="img">
+                            <site-logo/>
+                        </div>
+                        <div class="brief">
+                            <div class="desc">{{ $t('home.our_apps__new_desc') }}</div>
                         </div>
                     </div>
                 </div>
@@ -166,5 +196,45 @@ export default defineComponent({
 
         &:last-child
             margin-bottom: 0
+
+    .list-app-mobile
+        display: flex
+        flex-wrap: wrap
+        gap: 16px
+        .app
+            flex-basis: calc(50% - 16px)
+        .app-inner
+            margin: 0
+
+@media (max-width: 1200px)
+    .home-our-apps
+        padding-top: 100px
+        .app-inner img
+            height: 70px
+            width: 70px
+        .app-chunk
+            &:nth-child(odd) .app:last-child, &:nth-child(even) .app:first-child
+                .app-inner img
+                    height: 90px
+                    width: 90px
+
+@media (max-width: 768px)
+    .home-our-apps
+        padding-top: 80px
+
+@media (max-width: 576px)
+    .home-our-apps
+        .list-app-mobile
+            .app-inner
+                padding: 20px 8px
+            .msg-dev
+                font-size: 10px
+            img
+                height: 45px
+                width: 45px
+            .brief
+                padding-top: 12px
+            .name
+                font-size: 16px
 
 </style>
