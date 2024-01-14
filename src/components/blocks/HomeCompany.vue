@@ -45,6 +45,7 @@ export default defineComponent({
             padding-bottom: 16px
 
     .social-network-part
+        font-weight: 600
         max-width: 340px
         margin: auto
         text-align: center
@@ -62,5 +63,34 @@ export default defineComponent({
         background-size: auto 100%
         height: 850px
         margin: -194px auto 0
+
+@media (max-width: 1200px)
+    .home-company
+        padding: 100px 0
+
+        .desc-part
+            padding: 56px 0 40px
+
+        .home-company-bg
+            background-size: 100% auto
+            height: 450px
+            margin: -120px auto 0
+
+@media (max-width: 768px)
+    .home-company
+        .desc-part
+            padding: 40px 0
+
+        .home-company-bg
+            background-size: 768px auto
+            height: 340px
+            margin: -90px auto 0
+
+@media (max-width: 576px)
+    .home-company
+        padding: 80px 0
+
+        .desc-part
+            padding: 32px 0
 
 </style>

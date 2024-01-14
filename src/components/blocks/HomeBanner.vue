@@ -165,6 +165,7 @@ export default defineComponent({
 
         .buttons
             padding-top: 32px
+            text-align: center
 
             a
                 min-width: 156px
@@ -201,4 +202,14 @@ export default defineComponent({
         .carousel__pagination
             display: none
 
+@media (max-width: 400px)
+    .home-banner
+        .buttons
+            a
+                display: block
+                max-width: 150px
+                &:nth-child(1)
+                    margin: 0 auto 10px
+                &:nth-child(2)
+                    margin: 0 auto
 </style>
