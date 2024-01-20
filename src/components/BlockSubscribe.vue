@@ -25,7 +25,7 @@ export default defineComponent({
         description() {
             return (this.$store.getters.screen_width > 768) ?
                 this.$t("home.subscribe_desc") :
-                this.$t("home.subscribe_desc").replace(/<\/?[^>]+(>|$)/g, "")
+                this.$t("home.subscribe_desc").replace(/<\/?[^>]+(>|$)/g, " ")
         }
     },
     data() {
@@ -123,12 +123,16 @@ export default defineComponent({
     .block-subscribe
         background-color: $color_background_dark
         margin-top: 80px
+        input[type="email"]
+            width: calc(100% - 198px)
+
+@media (max-width: 500px)
+    .block-subscribe
         input[type="email"], input[type="submit"], .submit
             display: block
             margin: auto
         input[type="email"]
-            max-width: 320px
             margin-bottom: 24px
-            width: 90%
+
 
 </style>

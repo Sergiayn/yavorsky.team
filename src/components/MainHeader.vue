@@ -173,10 +173,14 @@ header
 
         ul
             display: flex
+            gap: 15px
             list-style: none
+            align-items: center
             justify-content: space-between
             margin: 0
             padding: 21px 0 24px
+        li
+            text-align: center
 
         a
             font-size: 16px
@@ -188,5 +192,9 @@ header
     header
         height: 84px
         padding-top: 0
+
+@media (max-width: 400px)
+    header .mobile-top-list a
+        font-size: 14px
 
 </style>

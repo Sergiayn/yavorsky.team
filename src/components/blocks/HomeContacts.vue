@@ -39,7 +39,7 @@ export default {
     padding-bottom: 120px
 
     .block-brief
-        max-width: 300px
+        max-width: 350px
 
     .logo
         padding-bottom: 18px

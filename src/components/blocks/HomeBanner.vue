@@ -194,7 +194,7 @@ export default defineComponent({
                 padding-bottom: 4px
 
         .banner-inner
-            padding: 0 17px
+            padding: 0
 
         .msg-dev
             margin-top: 0
@@ -206,8 +206,13 @@ export default defineComponent({
     .home-banner
         .buttons
             a
-                display: block
                 max-width: 150px
+
+@media (max-width: 360px)
+    .home-banner
+        .buttons
+            a
+                display: block
                 &:nth-child(1)
                     margin: 0 auto 10px
                 &:nth-child(2)

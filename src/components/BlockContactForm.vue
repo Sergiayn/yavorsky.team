@@ -120,13 +120,13 @@ export default defineComponent({
                 <FileUpload />
             </div>
             <div class="row">
-                <div class="col-8">
+                <div class="col-sm-8 col-xs-12">
                     <p class="link-purplle agree-block">
                         <span>{{ $t('common.i_agree_with_1') }}</span>&nbsp;<router-link :to="{name:'PrivacyPolicy', params:{locale:$i18n.locale}}">{{ $t('common.i_agree_with_2') }}</router-link>
                     </p>
                 </div>
-                <div class="col-4">
-                    <p>
+                <div class="col-sm-4 col-xs-12">
+                    <p class="send-block">
                         <input
                             :value="$t('common.send')"
                             class="btn btn-primary"
@@ -155,13 +155,23 @@ export default defineComponent({
     form .link-purplle
         margin: 10px 0 0
 
+@media (max-width: 990px)
+    .contact-form
+        .send-block
+            display: block
+            margin: 9px 0 0 0
+
 @media (max-width: 576px)
     .contact-form
         p
             margin-bottom: 16px
         .agree-block
             font-size: 14px
-        .btn
-            min-width: 140px
+        .send-block
+            margin: 0
+            text-align: center
+            input
+                margin-top: 16px
+                float: none
 
 </style>
