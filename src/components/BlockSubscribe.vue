@@ -120,9 +120,12 @@ export default defineComponent({
         margin-top: 100px
 
 @media (max-width: 768px)
+    .block-subscribe-inner
+        max-width: 440px
     .block-subscribe
         background-color: $color_background_dark
         margin-top: 80px
+
         input[type="email"]
             width: calc(100% - 198px)
 
@@ -131,8 +134,9 @@ export default defineComponent({
         input[type="email"], input[type="submit"], .submit
             display: block
             margin: auto
+
         input[type="email"]
             margin-bottom: 24px
-
+            width: 90%
 
 </style>

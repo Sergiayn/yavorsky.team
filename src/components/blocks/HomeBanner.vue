@@ -165,7 +165,6 @@ export default defineComponent({
 
         .buttons
             padding-top: 32px
-            text-align: center
 
             a
                 min-width: 156px
@@ -213,8 +212,10 @@ export default defineComponent({
         .buttons
             a
                 display: block
+
                 &:nth-child(1)
                     margin: 0 auto 10px
+
                 &:nth-child(2)
                     margin: 0 auto
 </style>

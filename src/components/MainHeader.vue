@@ -179,7 +179,9 @@ header
             justify-content: space-between
             margin: 0
             padding: 21px 0 24px
+
         li
+            flex: 1
             text-align: center
 
         a

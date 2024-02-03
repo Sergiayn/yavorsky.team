@@ -39,8 +39,7 @@ export default defineComponent({
             formData.append('comment', this.comment)
 
             const fileInput = document.getElementById('inp-files')
-            if (null !== fileInput && null !== fileInput.files)
-            {
+            if (null !== fileInput && null !== fileInput.files) {
                 for (var i = 0; i < fileInput.files.length; i++) {
                     formData.append('files[]', fileInput.files[i]);
                 }
@@ -54,7 +53,10 @@ export default defineComponent({
             try {
                 fetch("https://dev.api.yavorsky.team.galaxys.info/v1/contact", requestOptions)
                     .then(() => {
-                        this.emitter.emit('modal_info', {type: 'open', desc: this.$t('common.modal_successfully_submitted')})
+                        this.emitter.emit('modal_info', {
+                            type: 'open',
+                            desc: this.$t('common.modal_successfully_submitted')
+                        })
                         this.name = ''
                         this.email = ''
                         this.comment = ''
@@ -117,12 +119,14 @@ export default defineComponent({
               </textarea>
             </p>
             <div v-if="has_file_upload">
-                <FileUpload />
+                <FileUpload/>
             </div>
             <div class="row">
                 <div class="col-sm-8 col-xs-12">
                     <p class="link-purplle agree-block">
-                        <span>{{ $t('common.i_agree_with_1') }}</span>&nbsp;<router-link :to="{name:'PrivacyPolicy', params:{locale:$i18n.locale}}">{{ $t('common.i_agree_with_2') }}</router-link>
+                        <span>{{ $t('common.i_agree_with_1') }}</span>&nbsp;<router-link
+                        :to="{name:'PrivacyPolicy', params:{locale:$i18n.locale}}">{{ $t('common.i_agree_with_2') }}
+                    </router-link>
                     </p>
                 </div>
                 <div class="col-sm-4 col-xs-12">
@@ -155,7 +159,7 @@ export default defineComponent({
     form .link-purplle
         margin: 10px 0 0
 
-@media (max-width: 990px)
+@media (max-width: 991px)
     .contact-form
         .send-block
             display: block
@@ -165,11 +169,14 @@ export default defineComponent({
     .contact-form
         p
             margin-bottom: 16px
+
         .agree-block
             font-size: 14px
+
         .send-block
             margin: 0
-            text-align: center
+            text-align: right
+
             input
                 margin-top: 16px
                 float: none

@@ -6,7 +6,7 @@
                 :href="item.link"
                 :class="item.name"
                 :title="item.name"
-                v-if="isColor || screenWidth() < 768"
+                v-if="isColor || screenWidth() < 991"
                 class="active"
             ></a>
             <a

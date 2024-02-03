@@ -16,6 +16,9 @@ export default {
 
             return values
         },
+        screenWidth() {
+            return this.$store.getters.screen_width
+        }
     },
     computed: {
         descriptions() {
@@ -23,11 +26,16 @@ export default {
         },
         keyValuesChunks() {
             return window.objectToChunks(
-                this.setKeyObj(this.$store.getters.company['key-values']), 4
+                this.setKeyObj(this.$store.getters.company['key-values']), 8
             )
         },
         employeesChunks() {
-            return this.$store.getters.company.employees ? window.objectToChunks(this.$store.getters.company.employees, 4) : []
+            let size
+            if (this.screenWidth() > 576)
+                size = 4
+            else
+                size = 2
+            return this.$store.getters.company.employees ? window.objectToChunks(this.$store.getters.company.employees, size) : []
         },
         slider() {
             return this.setKeyObj(this.$store.getters.company.slider)
@@ -101,9 +109,11 @@ export default {
                 <div v-if="Object.keys(keyValuesChunks).length">
                     <ul v-for="keyValues in keyValuesChunks" :key="keyValues">
                         <li v-for="keyValue in keyValues" :key="keyValue.id">
-                            <div class="inner-item" :style="{'background':keyValue.bg}">
-                                <div class="name">{{ keyValue.name[$i18n.locale] }}</div>
-                                <div class="desc">{{ keyValue.desc[$i18n.locale] }}</div>
+                            <div class="item">
+                                <div class="inner-item" :style="{'background':keyValue.bg}">
+                                    <div class="name">{{ keyValue.name[$i18n.locale] }}</div>
+                                    <div class="desc">{{ keyValue.desc[$i18n.locale] }}</div>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -116,8 +126,7 @@ export default {
                 </div>
                 <div>
                     <ul v-for="(employees, indexChunk) in employeesChunks" :key="indexChunk">
-                        <li v-for="(employee,index) in employees" :key="employee.id"
-                            :class="{'first-item': 0 === (index - (indexChunk * 4)), 'last-item': 3 === (index - (indexChunk * 4))}">
+                        <li v-for="(employee) in employees" :key="employee.id">
                             <div class="employee">
                                 <div class="img">
                                     <img :src="employee.img" :alt="employee.name[$i18n.locale] ?? ''" class="img-fluid">
@@ -142,6 +151,7 @@ export default {
     ul
         display: flex
         display: -webkit-flex
+        gap: 24px
         list-style: none
         margin: 0
         padding: 0
@@ -164,6 +174,7 @@ export default {
 
     .list-slider
         padding: 72px 0
+
         img
             display: block
 
@@ -171,12 +182,14 @@ export default {
             display: inline-block
             padding: 0 12px
             vertical-align: top
+
             img
                 width: 100%
 
         .slider-col-1
             padding-left: 0
             width: 25%
+
             img
                 padding-bottom: 24px
 
@@ -198,42 +211,44 @@ export default {
         .slider-row-1
             img
                 display: inline-block
+
                 &:first-child
                     vertical-align: bottom
                     margin-right: 24px
                     width: calc(64% - 24px)
+
                 &:last-child
                     width: 36%
+
         .slider-row-2
             padding-top: 24px
+
             img
                 display: inline-block
                 vertical-align: top
+
                 &:first-child
                     margin-right: 24px
                     width: calc(36% - 24px)
+
                 &:last-child
                     width: 64%
 
     .list-tasks
         padding-bottom: 72px
+
         ul
+            justify-content: center
             width: 100%
+
         li
-            flex: 25%
-            padding: 12px
-
-            &:first-child
-                padding-left: 0
-
-            &:last-child
-                padding-right: 0
+            flex: 1
 
         .inner-item
             background: linear-gradient(360deg, rgba(196, 189, 200, 0.54) 0%, rgba(196, 189, 200, 0.00) 62.60%)
             border-radius: 12px
-            height: 190px
-            padding: 12px
+            height: 100%
+            padding: 12px 12px 24px
             text-align: center
 
             .img
@@ -251,24 +266,28 @@ export default {
 
     .list-key_values
         padding-bottom: 72px
+
         ul
+            gap: 0
+            flex-wrap: wrap
             justify-content: center
             margin: 36px 0
-            &:first-child
-                margin-bottom: 85px
-                li:hover
-                    .inner-item
-                        width: calc(100% - 24px)
 
         li
-            flex: 25%
+            flex: 1 0 21%
             max-width: 25%
-            padding: 0 12px
+            padding: 0
             position: relative
+
+            .item
+                padding: 0 12px
+                height: 150px
+
+            .inner-item
+                position: absolute
+                width: calc(100% - 24px)
+
             &:hover
-                .inner-item
-                    margin-right: 12px
-                    position: absolute
                 .desc
                     display: block
 
@@ -284,6 +303,7 @@ export default {
             cursor: default
             padding: 20px 12px
             text-align: center
+            width: 100%
 
         .name
             font-size: 16px
@@ -311,14 +331,6 @@ export default {
         li
             flex: 25%
             max-width: 25%
-            .employee
-                padding: 0 12px
-
-        .first-item .employee
-            padding-left: 0
-
-        .last-item .employee
-            padding-right: 0
 
         .img
             background-color: #FFFAEA
@@ -341,5 +353,147 @@ export default {
 
         .position
             font-size: 16px
+
+@media (max-width: 1200px)
+    .page-company
+        ul
+            gap: 22px
+
+        .list-tasks
+            .inner-item
+                padding: 12px
+
+        .list-key_values
+            ul
+                margin: 0
+
+            li
+                flex: 1 0 33.33%
+                max-width: none
+
+                .item
+                    display: table
+                    height: 100%
+                    padding: 11px
+                    width: 100%
+
+                .inner-item
+                    display: table-cell
+                    height: 100%
+                    position: static
+                    vertical-align: middle
+                    width: 100%
+
+                .desc
+                    max-height: none
+
+        .list-slider
+            padding: 60px 0
+
+        .list-employees
+            img
+                height: 220px
+
+@media (max-width: 991px)
+    .page-company
+        ul
+            gap: 16px
+
+        .list-tasks
+            .inner-item
+                img
+                    height: 48px
+                    width: 48px
+
+        .list-key_values
+            li
+                flex: 1 0 50%
+
+                .item
+                    padding: 10px
+
+        .list-slider
+            padding: 30px 0
+
+        .list-employees
+            ul
+                gap: 16px
+
+            .name
+                font-size: 16px
+
+            .position
+                font-size: 14px
+
+            img
+                height: 156px
+
+@media (max-width: 768px)
+    .page-company
+        .list-key_values
+            padding-bottom: 50px
+
+            li
+                .item
+                    padding: 8px
+
+        .list-employees
+            img
+                height: 120px
+
+@media (max-width: 576px)
+    .page-company
+        .txt-desc
+            padding: 40px 0
+
+            .title
+                font-size: 20px
+
+        .list-slider
+            padding: 0 0 40px
+
+        .list-tasks
+            padding-bottom: 30px
+
+            .txt-desc
+                padding-bottom: 32px
+
+            ul
+                flex-wrap: wrap
+
+            li
+                flex-basis: calc(50% - 16px)
+
+        .list-key_values
+            padding-bottom: 24px
+
+            ul
+                display: block
+                column-count: 2
+
+            li
+                break-inside: avoid
+
+        .list-employees
+            li
+                flex: 50%
+                max-width: 50%
+
+            .employee
+                max-width: 180px
+                margin: auto
+
+@media (max-width: 350px)
+    .page-company
+        .list-key_values
+            ul
+                column-count: 1
+
+        .list-employees
+            .employee
+                max-width: 140px
+
+            img
+                height: 90px
 
 </style>
