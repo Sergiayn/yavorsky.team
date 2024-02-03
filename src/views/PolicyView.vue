@@ -103,8 +103,8 @@ export default {
                 <div class="desc">{{ $t('common.updated') }} {{ timestampToDate(page.updated_at) }}</div>
             </div>
             <div class="row">
-                <div class="col-3">
-                    <div class="left-menu link-black" v-if="page.has_menu"
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="left-menu" v-if="page.has_menu"
                          :style="{top: (235 - screenPositionHeight < 0) ? 0 : (235 - screenPositionHeight) + 'px' }">
                         <strong>{{ $t('common.table_of_contents') }}</strong>
                         <ul class="link-black">
@@ -117,7 +117,7 @@ export default {
                         </ul>
                     </div>
                 </div>
-                <div class="col-9">
+                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12">
                     <div class="main-content">
                         <ul class="link-purplle">
                             <li v-for="item in page.list" :key="item.id"
@@ -167,6 +167,7 @@ export default {
         strong
             display: inline-block
             margin-bottom: 16px
+            font-weight: 600
 
         ul
             max-width: 220px
@@ -230,5 +231,38 @@ export default {
 
             span
                 font-size: 14px
+
+@media (max-width: 1200px)
+    .page-policy
+        .left-menu
+            a
+                font-size: 14px
+        .main-content
+            > ul li
+                padding-bottom: 15px
+
+@media (max-width: 991px)
+    .page-policy
+        .left-menu
+            ul
+                max-width: 168px
+
+@media (max-width: 768px)
+    .page-policy
+        .left-menu
+            padding-bottom: 40px
+            position: static
+            ul
+                max-width: none
+        .main-content
+            ul
+                word-break: break-word
+@media (max-width: 350px)
+    .page-policy
+        .main-content
+            .end_block
+                section
+                    gap: 10px
+                    flex-direction: column
 
 </style>
