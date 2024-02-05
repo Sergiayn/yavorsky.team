@@ -430,6 +430,31 @@ export default {
 
 @media (max-width: 768px)
     .page-company
+        .list-slider
+            .slider-col
+                padding: 0 6px
+            .slider-col-1
+                img
+                    padding-bottom: 16px
+            .slider-col-2
+                padding-top: 16px
+
+            .slider-col-4
+                padding-top: 16px
+
+            .slider-row-1
+                img
+                    &:first-child
+                        margin-right: 16px
+                        width: calc(64% - 16px)
+
+            .slider-row-2
+                padding-top: 16px
+                img
+                    &:first-child
+                        margin-right: 16px
+                        width: calc(36% - 16px)
+
         .list-key_values
             padding-bottom: 50px
 
@@ -451,6 +476,28 @@ export default {
 
         .list-slider
             padding: 0 0 40px
+            .slider-col
+                padding: 0 3px
+            .slider-col-1
+                img
+                    padding-bottom: 8px
+            .slider-col-2
+                padding-top: 8px
+
+            .slider-col-4
+                padding-top: 8px
+            .slider-row-1
+                img
+                    &:first-child
+                        margin-right: 8px
+                        width: calc(64% - 8px)
+
+            .slider-row-2
+                padding-top: 8px
+                img
+                    &:first-child
+                        margin-right: 8px
+                        width: calc(36% - 8px)
 
         .list-tasks
             padding-bottom: 30px
@@ -480,8 +527,11 @@ export default {
                 max-width: 50%
 
             .employee
-                max-width: 180px
+                max-width: 156px
                 margin: auto
+
+                img
+                    height: 156px
 
 @media (max-width: 350px)
     .page-company
@@ -491,9 +541,9 @@ export default {
 
         .list-employees
             .employee
-                max-width: 140px
+                max-width: 120px
+                img
+                    height: 120px
 
-            img
-                height: 90px
 
 </style>

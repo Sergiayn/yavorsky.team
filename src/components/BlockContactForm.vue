@@ -161,6 +161,9 @@ export default defineComponent({
 
 @media (max-width: 991px)
     .contact-form
+        p
+            margin-bottom: 16px
+
         .send-block
             display: block
             margin: 9px 0 0 0

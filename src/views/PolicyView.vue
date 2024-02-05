@@ -39,23 +39,23 @@ export default {
         getRefMenuNameById(id) {
             return 'block_menu_item_' + id
         },
-        updateItemsParam(){
+        updateItemsParam() {
             if (this.page.list) {
                 this.activeItem = false
                 this.page.list.forEach((item) => {
                     try {
                         this.itemsParam[item.id] = this.$refs[this.getRefNameById(item.id)][0].getBoundingClientRect().top
                         this.checkActveItemForLeftMenu(item)
-                    } catch (e) { console.warn(e)}
+                    } catch (e) {
+                        console.warn(e)
+                    }
                 })
             }
         },
         checkActveItemForLeftMenu(item) {
-            if (undefined !== this.$refs[this.getRefMenuNameById(item.id)])
-            {
+            if (undefined !== this.$refs[this.getRefMenuNameById(item.id)]) {
                 this.$refs[this.getRefMenuNameById(item.id)][0].classList.remove('active')
-                if (false === this.activeItem && this.itemsParam[item.id] > -20)
-                {
+                if (false === this.activeItem && this.itemsParam[item.id] > -20) {
                     this.activeItem = item.id
                     this.$refs[this.getRefMenuNameById(item.id)][0].classList.add('active')
                 }
@@ -237,6 +237,7 @@ export default {
         .left-menu
             a
                 font-size: 14px
+
         .main-content
             > ul li
                 padding-bottom: 15px
@@ -252,17 +253,23 @@ export default {
         .left-menu
             padding-bottom: 40px
             position: static
+
             ul
                 max-width: none
+
         .main-content
             ul
                 word-break: break-word
-@media (max-width: 350px)
+
+@media (max-width: 375px)
     .page-policy
         .main-content
             .end_block
                 section
-                    gap: 10px
+                    max-width: 265px
+                    margin: auto
+                    gap: 24px
                     flex-direction: column
+                    text-align: center
 
 </style>

@@ -211,6 +211,10 @@ body
 .page-content
     padding: 60px 0 120px
 
+@media (max-width: 1200px)
+    .page-content
+        padding: 60px 0 90px
+
 @media (max-width: 768px)
     .page-content
         padding: 40px 0 40px
