@@ -145,16 +145,19 @@ export default defineComponent({
 
     .buttons
         margin-top: 16px
+        overflow: hidden
 
         .btn
             border-radius: 4px
             font-size: 14px
             padding: 8px 1px
-            min-width: 110px
+            min-width: 100px
             width: calc(50% - 10px)
 
             &:first-child
-                margin-right: 20px
+                float: left
+            &:last-child
+                float: right
 
         .btn-primary
             font-size: 16px
@@ -209,29 +212,39 @@ export default defineComponent({
 @media (max-width: 1200px)
     .list-apps-view
         .list
-            li
-                width: 33.33%
-
             .msg-dev
                 font-size: 10px
                 padding: 4px
                 margin-bottom: 2px
 
             .app
+                max-width: 350px
+                margin: auto
                 padding: 22px 8px
 
+            .title, .desc
+                padding: 0 8px
             .desc
-                height: 96px
-
-        .buttons
+                height: 130px
+            .buttons
+                padding: 0 0 0 7px
             .btn
-                &:first-child
-                    margin-right: 8px
+                font-size: 14px
 
 @media (max-width: 992px)
     .list-apps-view
         .block-brief
             margin-bottom: 40px
+
+        .list
+            li
+                width: 50%
+            .desc
+                height: 90px
+            .buttons
+                padding: 0 7px
+            .btn-primary
+                padding: 8px 1px
 
         .info-list
             li
@@ -263,7 +276,7 @@ export default defineComponent({
                 &:nth-child(even) .app
                     padding-right: 0
 
-@media (max-width: 768px)
+@media (max-width: 767px)
     .list-apps-view
         .list
             li
@@ -275,4 +288,12 @@ export default defineComponent({
             .desc
                 height: auto
 
+@media (max-width: 576px)
+    .list-apps-view
+        .info-list
+            overflow: hidden
+            li
+                float: left
+            .desc
+                display: block
 </style>
