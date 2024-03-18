@@ -45,7 +45,7 @@ export default {
         <div class="container">
             <div class="app-item">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="img-wrapper">
                             <div class="img-inner">
                                 <div class="app-img"><img :src="app.logo" :alt="app.name" class="img-fluid"></div>
@@ -53,7 +53,7 @@ export default {
                             <div class="img-bg1 rotating" :style="{ backgroundImage: 'url(' + app.logo_bg + ')' }"></div>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="block-txt">
                             <div class="title">
                                 <span class="msg-dev" v-if="app.dev">{{ $t('home.coming_soon') }}</span>
@@ -161,5 +161,61 @@ export default {
             margin-top: 40px
     .app-blocks
         margin-bottom: 100px
+
+@media (max-width: 1400px)
+    .app-view
+        .app-item
+            img
+                height: 210px
+                width: 210px
+
+@media (max-width: 1200px)
+    .app-view
+        .app-item
+            img
+                height: auto
+                width: 50%
+            .img-wrapper
+                .img-bg1, .img-bg2
+                    background-size: 100%
+            .btn
+                margin-top: 30px
+
+@media (max-width: 991px)
+    .app-view
+        .app-item
+            .block-txt
+                padding-bottom: 50px
+
+@media (max-width: 768px)
+    .app-view
+        .app-item
+            .block-txt
+                max-width: none
+                padding-top: 20px
+
+@media (max-width: 576px)
+    .app-view
+        .app-item
+            .block-txt
+                padding-top: 50px
+            .app-img
+                padding: 80px 0
+            .name
+                font-size: 20px
+            .btn
+                display: block
+                max-width: 350px
+                margin: 30px auto 0
+                width: 100%
+        .app-blocks
+            margin-bottom: 80px
+
+@media (max-width: 400px)
+    .app-view
+        .app-item
+            .block-txt
+                padding-top: 0
+
 
 </style>

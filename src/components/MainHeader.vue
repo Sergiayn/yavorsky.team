@@ -168,7 +168,7 @@ header
     .mobile-top-list
         background-color: $color_background_dark
         position: absolute
-        z-index: 5
+        z-index: 6
         width: 100%
 
         ul

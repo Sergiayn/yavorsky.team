@@ -17,7 +17,13 @@ export default {
     },
     methods: {
         items() {
-            return [this.block.first ?? {},this.block.middle ?? {},this.block.last ?? {}]
+            if (this.screenWidth() < 768)
+                return [this.block.last ?? {},this.block.middle ?? {},this.block.first ?? {}]
+            else
+                return [this.block.first ?? {},this.block.middle ?? {},this.block.last ?? {}]
+        },
+        screenWidth() {
+            return this.$store.getters.screen_width
         }
     }
 }
@@ -26,16 +32,17 @@ export default {
 <template>
     <div class="app-block-4">
         <div class="container">
-            <div class="items" v-for="item in items()" :key="item">
-                <div class="text-part" v-if="item.type === 'text'">
-                    <div class="title">{{item.title[$i18n.locale] ?? ''}}</div>
-                    <div class="desc">{{item.desc[$i18n.locale] ?? ''}}</div>
+            <template v-for="item in items()" :key="item">
+                <div class="items" v-if="Object.keys(item).length">
+                    <div class="text-part" v-if="item.type === 'text'">
+                        <div class="title">{{item.title[$i18n.locale] ?? ''}}</div>
+                        <div class="desc">{{item.desc[$i18n.locale] ?? ''}}</div>
+                    </div>
+                    <div class="img-part" v-if="item.type === 'img'">
+                        <img :src="item.img" class="img-fluid" alt="">
+                    </div>
                 </div>
-                <div class="img-part" v-if="item.type === 'img'">
-                    <img :src="item.img" class="img-fluid" alt="">
-                </div>
-            </div>
-
+            </template>
         </div>
     </div>
 </template>
@@ -58,4 +65,11 @@ export default {
         padding-bottom: 20px
         text-align: center
 
+@media (max-width: 768px)
+    .app-block-4
+        padding-top: 15px
+        .text-part
+            text-align: left
+            .title
+                font-size: 20px
 </style>

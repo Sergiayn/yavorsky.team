@@ -142,7 +142,8 @@
             },
             "last": {
                 "type": "img",
-                "img": "/images/app/2/block_3_img.webp"
+                "img": "/images/app/2/block_3_img.webp",
+                "hide_mobile": true
             }
         }
     ]

@@ -17,7 +17,13 @@ export default {
     },
     methods: {
         items() {
-            return [this.block.first ?? {},this.block.last ?? {}]
+            if (this.screenWidth() < 768 && true === this.block.reverse_order_mobile)
+                return [this.block.last ?? {},this.block.first ?? {}]
+            else
+                return [this.block.first ?? {},this.block.last ?? {}]
+        },
+        screenWidth() {
+            return this.$store.getters.screen_width
         }
     }
 }
@@ -30,7 +36,7 @@ export default {
             paddingBottom: (typeof block.block_padding_bottom === 'undefined') ? 0 : block.block_padding_bottom + 'px'}">
         <div class="container">
             <div class="direction_row row" v-if='block.direction === "row"'>
-                <div class="col-6" v-for="item in items()" :key="item">
+                <div class="col-xl-6 col-lg-6 col-md-6" v-for="item in items()" :key="item">
                     <div v-if='item.type === "text"' class="txt-part">
                         <div class="txt-part-inner">
                             <div :style="{ color: item.rubric_color ?? 'inherit' }"
@@ -45,7 +51,7 @@ export default {
                             </a>
                         </div>
                     </div>
-                    <div v-else-if='item.type === "img"'
+                    <div v-else-if='item.type === "img" && !(item.hide_mobile ?? false)'
                          :style="{ backgroundImage: item.bg ? 'url(' + item.bg + ')' : ''}"
                          :class="{
                          'img-part-padding-top-xl': item.padding_top === 'xl',
@@ -69,7 +75,7 @@ export default {
                          :class="{'txt-part-padding-top-xl': item.padding_top === 'xl'}"
                          class="txt-part">
                         <div class="txt-part-inner"
-                             :style="{ backgroundImage: item.bg_side ? 'url(' + item.bg_side + ')' : '' }" >
+                             :style="{ backgroundImage: (item.bg_side && screenWidth() > 767) ? 'url(' + item.bg_side + ')' : '' }" >
                             <div :style="{ color: item.rubric_color ?? 'inherit' }"
                                 class="rubric_title" v-if="item.rubric_title">
                                 <span>{{item.rubric_title[$i18n.locale] ?? ''}}</span>
@@ -90,7 +96,7 @@ export default {
                         'bg-part-size-xl': item.bg_size === 'xl'}"
                          class="img-part">
                         <div class="img-part-inner" :class="{'img-part-inner-3': item.imgs.length === 3}"
-                             :style="{ backgroundImage: item.bg_side ? 'url(' + item.bg_side + ')' : '' }">
+                             :style="{ backgroundImage: (item.bg_side && screenWidth() > 767) ? 'url(' + item.bg_side + ')' : '' }">
                             <div class="app-img" v-if="item.img">
                                 <img :src="item.img" class="img-fluid">
                             </div>
@@ -240,5 +246,61 @@ $app_block_1_padding: 54px
                 max-width: none
         .txt-part-padding-top-xl, .img-part-padding-top-xl
             padding-top: 147px
+
+@media (max-width: 1200px)
+    .app-block-1
+        .direction_column
+            > div:nth-child(1) > div > div
+                background-size: 85px
+            > div:nth-child(2) > div > div
+                background-position: 10% 0
+                background-size: 85px
+
+@media (max-width: 991px)
+    .app-block-1
+        .direction_column
+            > div:nth-child(1) > div > div
+                background-size: 65px
+            > div:nth-child(2) > div > div
+                background-position: 5% 0
+                background-size: 65px
+
+        .img-part
+            background-size: auto 90%
+            .app-imgs img
+                max-height: 340px
+
+@media (max-width: 768px)
+    .app-block-1
+        .txt-part
+            .title
+                font-size: 20px
+        .img-part .app-imgs img
+            margin: 0 15px
+            max-height: 290px
+        .direction_column
+            > div:nth-child(1) > div > div
+                padding: 40px 0 0
+        .list-part
+            ul
+                flex-wrap: wrap
+                gap: 16px
+            li
+                flex-basis: calc(50% - 16px)
+            .li_inner
+                margin: 0 auto
+                width: auto
+
+@media (max-width: 576px)
+    .app-block-1
+        .img-part .app-imgs img
+            margin: 0 5px
+            max-height: 250px
+        .btn
+            display: block
+            max-width: 350px
+            margin: 30px auto 0
+            width: 100%
+
 
 </style>

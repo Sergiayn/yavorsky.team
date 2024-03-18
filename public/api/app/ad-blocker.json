@@ -44,6 +44,7 @@
             "type" : 1,
             "direction": "row",
             "bg_color": "#FDFDFD",
+            "reverse_order_mobile": true,
             "first": {
                 "type": "img",
                 "img": "/images/app/1/block_2_img.png",
@@ -172,7 +173,8 @@
             },
             "last": {
                 "type": "img",
-                "img": "/images/app/1/block_4_img.webp"
+                "img": "/images/app/1/block_4_img.webp",
+                "hide_mobile": true
             }
         }
     ]
