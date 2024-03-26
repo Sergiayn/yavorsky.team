@@ -1,6 +1,8 @@
 <script>
 import {defineComponent} from 'vue'
-import moment from "moment/moment";
+import moment from "moment/moment"
+import 'vue3-carousel/dist/carousel.css'
+import {Carousel, Slide} from "vue3-carousel"
 
 export default defineComponent({
     name: "ListPreviewTop",
@@ -31,20 +33,30 @@ export default defineComponent({
         },
     },
     computed: {
+        allItems() {
+            return this.list ?? []
+        },
         firstItem() {
             return this.list ? this.list.slice(0, 1)[0] : []
         },
         otherItems() {
             return this.list.slice(1) ?? []
+        },
+        screenWidth() {
+            return this.$store.getters.screen_width
         }
-    }
+    },
+    components: {
+        Carousel,
+        Slide,
+    },
 })
 </script>
 
 <template>
     <div class="blog__list-preview-top" v-if="firstItem">
-        <div class="row">
-            <div class="col">
+        <div class="row" v-if="screenWidth > 767">
+            <div class="col-xl col-lg col-md-7">
                 <div class="first-item link-black">
                     <div class="img">
                         <img :src="firstItem.preview_large" :alt="firstItem.name[$i18n.locale] ?? ''">
@@ -57,7 +69,7 @@ export default defineComponent({
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-xl col-lg col-md-5">
                 <ul class="list link-black">
                     <li v-for="item in otherItems" :key="item.id">
                         <div class="date">{{ timestampToDate(item.created_at) }}</div>
@@ -69,6 +81,23 @@ export default defineComponent({
                     </li>
                 </ul>
             </div>
+        </div>
+        <div v-else class="mobile-block">
+            <carousel :wrapAround="true" :items-to-show="(screenWidth > 520) ? 1.6 : 1">
+                <slide v-for="(item, index) in allItems" :key="index">
+                     <div class="item-inner link-black">
+                         <div class="img">
+                             <img :src="item.preview_large" :alt="item.name[$i18n.locale] ?? ''">
+                         </div>
+                         <div class="date">{{ timestampToDate(item.created_at) }}</div>
+                         <div class="name">
+                             <router-link :to="{name:'Blog', params:{locale:$i18n.locale, slug:item.id}}">
+                                 {{ item.name[$i18n.locale] ?? '' }}
+                             </router-link>
+                         </div>
+                     </div>
+                </slide>
+            </carousel>
         </div>
     </div>
 </template>
@@ -99,6 +128,7 @@ export default defineComponent({
             overflow: hidden
             padding-bottom: 8px
         img
+            max-width: 100%
             transform: scale(1.05)
 
     .list
@@ -113,6 +143,20 @@ export default defineComponent({
 
             &:first-child
                 padding-top: 0
+    .mobile-block
+        .item-inner
+            .img img
+                max-width: 100%
+            .date, .name
+                padding-left: 10px
+                padding-right: 10px
+                text-align: left
 
+@media (max-width: 1200px)
+    .blog__list-preview-top
+        .name a
+            font-size: 18px
+        .date
+            font-size: 14px
 
 </style>

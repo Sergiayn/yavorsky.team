@@ -346,4 +346,47 @@ export default {
     .item-blog-view__inner
         .fixed-banner
             right: 5%
+
+@media (max-width: 1200px)
+    .item-blog-view .bottom-banner-inner
+        background-position: 20% 100%
+
+@media (max-width: 991px)
+    .item-blog-view .bottom-banner-inner
+        background-position: 10% 100%
+
+@media (max-width: 768px)
+    .item-blog-view__inner
+        margin: 0 auto 80px
+        .author-top
+            padding-bottom: 40px
+        .title
+            font-size: 26px
+        .socials-inner
+            flex-direction: column
+            text-align: center
+            .txt-block
+                padding-bottom: 24px
+                padding-top: 0
+
+    .item-blog-view .bottom-banner-inner
+        background-position: center 100%
+        background-size: auto 250px
+        height: 517px
+        .desc-block
+            margin: 0 auto
+            max-width: 270px
+            padding-top: 70px
+            text-align: center
+        .date-block
+            padding-left: 15px
+
+@media (max-width: 576px)
+    .item-blog-view .bottom-banner-inner
+        background-size: auto 180px
+        height: 400px
+        .desc-block
+            padding-top: 50px
+        .desc
+            margin-bottom: 20px
 </style>

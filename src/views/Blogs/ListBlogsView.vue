@@ -328,4 +328,23 @@ export default defineComponent({
         font-size: 18px
         padding-bottom: 32px
 
+@media (max-width: 1200px)
+    .list-blogs-view
+        .filter-form
+            padding-bottom: 60px
+
+@media (max-width: 768px)
+    .list-blogs-view
+        .filter-form
+            .rubrics li
+                padding: 0 10px
+            .quick-search
+                max-width: 82%
+                margin-left: 3%
+                width: 500px
+
+@media (max-width: 540px)
+    .list-blogs-view .filter-form .rubrics a
+        font-size: 16px
+
 </style>
