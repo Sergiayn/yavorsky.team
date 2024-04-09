@@ -57,7 +57,7 @@ export default defineComponent({
             padding: 0
 
     .home-company-bg
-        background-image: url("@/assets/img/home/company_bg.png")
+        background-image: url("@/assets/img/home/company_bg.webp")
         background-repeat: no-repeat
         background-position: center
         background-size: auto 100%

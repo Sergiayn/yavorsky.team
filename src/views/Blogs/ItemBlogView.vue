@@ -42,10 +42,16 @@ export default {
     },
     methods: {
         checkScroll() {
-            this.showFixedBanner = (window.scrollY > 50 && window.scrollY < (this.getHeightOfPage() - 1400));
+            if (this.screenWidth() > 767)
+                this.showFixedBanner = (window.scrollY > 50 && window.scrollY < (this.getHeightOfPage() - 1400))
+            else
+                this.showFixedBanner = false
         },
         getHeightOfPage(){
             return document.body.offsetHeight
+        },
+        screenWidth() {
+            return this.$store.getters.screen_width
         },
         subscribeUser() {
             let formData = new FormData();
@@ -150,7 +156,7 @@ export default {
                 </div>
             </div>
         </div>
-        <Modal :visible="isVisibleModal" modalClass="modal-blog-subscribe" title="" type="clean" width="740px" offsetTop="25%">
+        <Modal :visible="isVisibleModal" modalClass="modal-blog-subscribe" title="" type="clean" :width="screenWidth() > 990 ? '740px' : 'auto'" offsetTop="25%">
             <button class="close" @click="isVisibleModal = false"></button>
             <div class="modal-blog-subscribe-inner">
                 <div class="title">{{ $t('home.subscribe_title') }}</div>
@@ -186,6 +192,8 @@ export default {
             font-size: 16px
             margin-bottom: 32px
     .modal-blog-subscribe
+        .modal-vue3-content
+            max-width: 90%
         .modal-vue3-body
             background-color: $color_white
             border-radius: 12px
@@ -352,8 +360,16 @@ export default {
         background-position: 20% 100%
 
 @media (max-width: 991px)
-    .item-blog-view .bottom-banner-inner
-        background-position: 10% 100%
+    .item-blog-view
+        .bottom-banner-inner
+            background-position: 10% 100%
+        .modal-blog-subscribe
+            form
+                text-align: center
+            .modal-vue3-body
+                padding: 50px
+            .modal-blog-subscribe-inner
+                width: auto
 
 @media (max-width: 768px)
     .item-blog-view__inner
@@ -369,17 +385,23 @@ export default {
                 padding-bottom: 24px
                 padding-top: 0
 
-    .item-blog-view .bottom-banner-inner
-        background-position: center 100%
-        background-size: auto 250px
-        height: 517px
-        .desc-block
-            margin: 0 auto
-            max-width: 270px
-            padding-top: 70px
-            text-align: center
-        .date-block
-            padding-left: 15px
+    .item-blog-view
+        .bottom-banner-inner
+            background-position: center 100%
+            background-size: auto 250px
+            height: 517px
+            .desc-block
+                margin: 0 auto
+                max-width: 270px
+                padding-top: 70px
+                text-align: center
+            .date-block
+                padding-left: 15px
+        .modal-blog-subscribe
+            input
+                display: block
+                margin: 0 auto 10px!important
+                max-width: 90%
 
 @media (max-width: 576px)
     .item-blog-view .bottom-banner-inner

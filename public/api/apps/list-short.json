@@ -50,7 +50,7 @@
     {
         "id": 4,
         "name": "MedTime: Pill Reminder",
-        "url_app": null,
+        "url_app": "medtime-pill-reminder/id6472479066",
         "slug": "pill-reminder",
         "desc": {
             "en": "Set a reminder to take meds in time",

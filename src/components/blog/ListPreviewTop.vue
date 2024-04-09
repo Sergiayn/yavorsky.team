@@ -83,7 +83,7 @@ export default defineComponent({
             </div>
         </div>
         <div v-else class="mobile-block">
-            <carousel :wrapAround="true" :items-to-show="(screenWidth > 520) ? 1.6 : 1">
+            <carousel :wrapAround="true" :items-to-show="(screenWidth > 520) ? 1.6 : 1.3">
                 <slide v-for="(item, index) in allItems" :key="index">
                      <div class="item-inner link-black">
                          <div class="img">
@@ -145,6 +145,8 @@ export default defineComponent({
                 padding-top: 0
     .mobile-block
         .item-inner
+            height: 100%
+            padding: 0 10px
             .img img
                 max-width: 100%
             .date, .name
