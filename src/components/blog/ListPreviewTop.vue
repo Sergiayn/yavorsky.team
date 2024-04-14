@@ -55,8 +55,8 @@ export default defineComponent({
 
 <template>
     <div class="blog__list-preview-top" v-if="firstItem">
-        <div class="row" v-if="screenWidth > 767">
-            <div class="col-xl col-lg col-md-7">
+        <div class="row_custom" v-if="screenWidth > 767">
+            <div class="col__1">
                 <div class="first-item link-black">
                     <div class="img">
                         <img :src="firstItem.preview_large" :alt="firstItem.name[$i18n.locale] ?? ''">
@@ -69,7 +69,7 @@ export default defineComponent({
                     </div>
                 </div>
             </div>
-            <div class="col-xl col-lg col-md-5">
+            <div class="col__2">
                 <ul class="list link-black">
                     <li v-for="item in otherItems" :key="item.id">
                         <div class="date">{{ timestampToDate(item.created_at) }}</div>
@@ -107,7 +107,9 @@ export default defineComponent({
 
 .blog__list-preview-top
     //padding-bottom: 80px
-
+    .row_custom
+        display: flex
+        gap: 20px
     .date
         color: $color_gray_60
         padding: 8px 0
@@ -127,6 +129,7 @@ export default defineComponent({
             border-radius: 8px
             overflow: hidden
             padding-bottom: 8px
+            max-width: 660px
         img
             max-width: 100%
             transform: scale(1.05)

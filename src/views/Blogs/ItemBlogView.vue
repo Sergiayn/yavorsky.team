@@ -387,16 +387,14 @@ export default {
 
     .item-blog-view
         .bottom-banner-inner
-            background-position: center 100%
-            background-size: auto 250px
-            height: 517px
+            background-position: 0 100%
+            background-size: auto 200px
             .desc-block
-                margin: 0 auto
+                //margin: 0 auto
                 max-width: 270px
                 padding-top: 70px
                 text-align: center
-            .date-block
-                padding-left: 15px
+
         .modal-blog-subscribe
             input
                 display: block
@@ -405,10 +403,18 @@ export default {
 
 @media (max-width: 576px)
     .item-blog-view .bottom-banner-inner
+        background-position: center 100%
         background-size: auto 180px
         height: 400px
         .desc-block
+            margin: 0 auto
+            max-width: 100%
             padding-top: 50px
+            text-align: left
+        .date-block
+            padding-left: 15px
         .desc
             margin-bottom: 20px
+        .btn
+            width: 100%
 </style>

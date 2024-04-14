@@ -32,7 +32,7 @@ export default {
 <template>
     <div class="app-block-text-column" :style="{paddingBottom: (typeof block.padding_bottom === 'undefined') ? '120px' : block.padding_bottom + 'px'}">
         <div class="container">
-            <div v-if="screenWidth() < 768">
+            <div v-if="screenWidth() < 540">
                 <div class="app-block-inner-mobile">
                     <div class="item">
                         <div :style="{ color: items()[0].rubric_color ?? 'inherit' }"
@@ -130,7 +130,16 @@ export default {
         font-size: 16px
         max-width: 540px
 
-@media (max-width: 768px)
+@media (max-width: 767px)
+    .app-block-text-column
+        padding: 80px 0
+        .item
+            &:first-child
+                padding-right: 24px
+            &:last-child
+                padding-left: 24px
+
+@media (max-width: 539px)
     .app-block-text-column
         padding: 80px 0
         .title

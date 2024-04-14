@@ -115,10 +115,23 @@ export default defineComponent({
                 display: block
                 padding: 0 12px
 
-@media (max-width: 768px)
+@media (max-width: 767px)
     .blog__list-preview
         .list li
             flex: 50%
             max-width: 50%
+
+@media (max-width: 700px)
+    .blog__list-preview
+        .list
+            gap: 40px
+            flex-direction: column
+            max-width: 350px
+            margin: auto
+            li
+                flex: 100%
+                max-width: none
+                margin-right: 0
+                margin-left: 0
 
 </style>

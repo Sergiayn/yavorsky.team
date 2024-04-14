@@ -44,6 +44,7 @@
             "id" : 2,
             "type" : 1,
             "direction": "row",
+            "reverse_order_mobile": true,
             "first": {
                 "type": "img",
                 "img": "/images/app/3/block_2_img.png",

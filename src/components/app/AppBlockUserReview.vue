@@ -146,4 +146,8 @@ export default {
             .carousel__next
                 display: none
 
+@media (max-width: 576px)
+    .app-block-user-review .title
+        text-align: left
+
 </style>

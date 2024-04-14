@@ -110,7 +110,7 @@ export default defineComponent({
     input[type="email"]
         height: 40px
         margin-right: 30px
-        width: 370px
+        width: 350px
 
     input[type="email"], input[type="submit"], .submit
         display: inline-block
@@ -120,14 +120,15 @@ export default defineComponent({
         margin-top: 100px
 
 @media (max-width: 768px)
-    .block-subscribe-inner
+    .block-subscribe-inner .desc
+        margin: auto
         max-width: 440px
     .block-subscribe
-        background-color: $color_background_dark
+        //background-color: $color_background_dark
         margin-top: 80px
 
         input[type="email"]
-            width: calc(100% - 198px)
+            width: calc(95% - 198px)
 
 @media (max-width: 500px)
     .block-subscribe

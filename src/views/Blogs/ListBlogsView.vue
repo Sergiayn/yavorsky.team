@@ -27,16 +27,20 @@ export default defineComponent({
         const inputSearch = ref('')
         const isOpenSearch = ref(false)
         const isOpenQuickSearch = ref(false)
+        const widthForBlockRubric = ref('')
+        const widthForBlockSearch = ref('')
         const quickSearchList = ref([])
         const quickSearchListMax = 3
         const quickSearchShowBtnAll = ref(false)
         const rubrics = ['all', 'news', 'how_to']
 
-        return {inputSearch, isOpenSearch, isOpenQuickSearch, quickSearchList, quickSearchListMax, quickSearchShowBtnAll,rubrics}
+        return {inputSearch, isOpenSearch, isOpenQuickSearch, quickSearchList, quickSearchListMax, quickSearchShowBtnAll,
+            rubrics, widthForBlockRubric, widthForBlockSearch}
     },
     mounted() {
         this.inputSearch = this.search
         this.calcRubricActiveLine()
+        window.addEventListener("resize", () => this.calcRubricActiveLine())
     },
     methods: {
         eInputSearch() {
@@ -86,21 +90,31 @@ export default defineComponent({
         calcRubricActiveLine() {
             let left = 0
             let isLoop = true
-            this.$refs.rubricItem.forEach((item) => {
-                if(isLoop) {
-                    const isActive = item.classList.contains('active')
-                    if (isActive)
-                    {
-                        this.$refs.rubricItemLine.style.width = item.querySelector('a').offsetWidth + 'px'
-                        isLoop = false
-                    } else
-                        left = left + item.offsetWidth
+            try {
+                this.$refs.rubricItem.forEach((item) => {
+                    if(isLoop) {
+                        const isActive = item.classList.contains('active')
+                        if (isActive)
+                        {
+                            this.$refs.rubricItemLine.style.width = item.querySelector('a').offsetWidth + 'px'
+                            isLoop = false
+                        } else
+                            left = left + item.offsetWidth
+                    }
+                })
+                if (0 !== left) {
+                    if (this.screenWidth() > 768)
+                        left = left + 24
+                    else if (this.screenWidth() > 539)
+                        left = left + 10
+                    else
+                        left = left + 7
                 }
-            })
-            if (0 !== left)
-                left = left + 24
 
-            this.$refs.rubricItemLine.style.left = left + 'px'
+                this.$refs.rubricItemLine.style.left = left + 'px'
+            } catch (e) {
+                console.warn(e)
+            }
         },
         list_top() {
             return this.isAllRubric ? this.blogs.slice(0, 4) : []
@@ -113,6 +127,41 @@ export default defineComponent({
                 blogs = []
 
             return blogs
+        },
+        screenWidth() {
+            return this.$store.getters.screen_width
+        },
+        getWidthForBlockRubric() {
+            this.widthForBlockRubric = 'col-8 col-xl-6 col-lg-6 col-md-8 col-sm-9 col-xs-9'
+            if (this.isOpenSearch && this.screenWidth() <= 576)
+                this.widthForBlockRubric = 'd-none'
+
+            if (this.screenWidth() >= 1200)
+                this.widthForBlockRubric = '50%'
+            else if (this.screenWidth() >= 540)
+                this.widthForBlockRubric = '67%'
+            else {
+                if (this.isOpenSearch)
+                    this.widthForBlockRubric = '0%'
+                else
+                    this.widthForBlockRubric = '75%'
+            }
+
+            return this.widthForBlockRubric
+        },
+        getWidthForBlockSearch() {
+            if (this.screenWidth() >= 1200)
+                this.widthForBlockSearch = '50%'
+            else if (this.screenWidth() >= 540)
+                this.widthForBlockSearch = '33%'
+            else {
+                if (this.isOpenSearch)
+                    this.widthForBlockSearch = '99%'
+                else
+                    this.widthForBlockSearch = '25%'
+            }
+
+            return this.widthForBlockSearch
         }
     },
     computed: {
@@ -133,8 +182,8 @@ export default defineComponent({
                 <div class="title">{{ $t('blog.title') }}</div>
             </div>
             <div class="filter-form">
-                <div class="row">
-                    <div class="col">
+                <div class="form_row">
+                    <div :style="{width: getWidthForBlockRubric()}">
                         <div class="rubrics">
                             <ul>
                                 <li v-for="rubric in rubrics" :key="rubric"
@@ -149,7 +198,7 @@ export default defineComponent({
                             </ul>
                         </div>
                     </div>
-                    <div class="col">
+                    <div :style="{width: getWidthForBlockSearch()}">
                         <div class="search">
                             <Popper class="search-popper" :show="isOpenQuickSearch">
                                 <input type="search" :placeholder="$t('blog.search')"
@@ -203,6 +252,8 @@ export default defineComponent({
 
     .filter-form
         padding-bottom: 70px
+        .form_row
+            display: flex
 
         .rubrics
             padding-top: 6px
@@ -333,9 +384,11 @@ export default defineComponent({
         .filter-form
             padding-bottom: 60px
 
-@media (max-width: 768px)
+@media (max-width: 767px)
     .list-blogs-view
         .filter-form
+            .search
+                padding-left: 0
             .rubrics li
                 padding: 0 10px
             .quick-search
@@ -344,7 +397,18 @@ export default defineComponent({
                 width: 500px
 
 @media (max-width: 540px)
+    .list-blogs-view .filter-form
+        .search input
+            background-position: 2px center
+            padding-left: 32px
+        .rubrics
+            max-height: 38px
+            overflow: hidden
+            li
+                padding: 0 7px
+
+@media (max-width: 400px)
     .list-blogs-view .filter-form .rubrics a
-        font-size: 16px
+        font-size: 15px
 
 </style>

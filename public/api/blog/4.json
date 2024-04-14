@@ -5,7 +5,7 @@
         "id": 1,
         "name": {"en": "Galina", "ua": "Галина", "ru": "Галина"},
         "position": {"en": "Content writer", "ua": "Content writer", "ru": "Content writer"},
-        "img": "/images/blog-author/1/img.png"
+        "img": "/images/blog-author/1/img.webp"
     },
     "content": [
         {

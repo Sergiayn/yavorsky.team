@@ -101,7 +101,7 @@ export default {
     .app-block-2
         background-position: right 10%
         background-size: 60%
-@media (max-width: 768px)
+@media (max-width: 767px)
     .app-block-2
         background-position: right 28%
         background-size: 100% 370px

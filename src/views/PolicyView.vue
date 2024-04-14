@@ -204,6 +204,7 @@ export default {
 
         h2
             font-size: 20px
+            padding-bottom: 8px
 
         h3
             font-size: 18px

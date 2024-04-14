@@ -177,7 +177,7 @@ $app_block_1_padding: 54px
         .img-part .app-imgs img
             margin: 0 30px
 
-@media (max-width: 768px)
+@media (max-width: 767px)
     .app-block-3
         .img-part .app-imgs img
             max-height: 200px
@@ -191,6 +191,8 @@ $app_block_1_padding: 54px
 
 @media (max-width: 576px)
     .app-block-3
+        .direction_column .txt-part-inner
+            text-align: left
         .img-part .app-imgs img
             max-height: 180px
             margin: 0 5px

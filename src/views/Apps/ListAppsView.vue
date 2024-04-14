@@ -31,12 +31,12 @@ export default defineComponent({
     <div class="page-content list-apps-view">
         <div class="container">
             <div class="row">
-                <div class="col-xxl-6 col-xl-6 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-xxl-6 col-xl-6 col-lg-5 col-md-5 col-sm-12 col-xs-12">
                     <div class="block-brief single">
                         <div class="title">{{ $t('header.our_apps') }}</div>
                     </div>
                 </div>
-                <div class="col-xxl-6 col-xl-6 col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-xxl-6 col-xl-6 col-lg-7 col-md-7 col-sm-12 col-xs-12">
                     <ul class="info-list">
                         <li>
                             <div class="value">4+ {{ $t('common.years') }}</div>
@@ -171,9 +171,10 @@ export default defineComponent({
         list-style: none
         margin: 0
         padding: 0
+        display: flex
+        flex-wrap: wrap
 
         li
-            display: inline-block
             text-align: right
             width: 50%
 
@@ -231,6 +232,9 @@ export default defineComponent({
             .btn
                 font-size: 14px
 
+        .info-list
+            padding-right: 8px
+
 @media (max-width: 992px)
     .list-apps-view
         .block-brief
@@ -246,15 +250,7 @@ export default defineComponent({
             .btn-primary
                 padding: 8px 1px
 
-        .info-list
-            li
-                text-align: left
 
-                &:nth-child(1), &:nth-child(2)
-                    padding-bottom: 32px
-
-                &:nth-child(3)
-                    display: none
 
 @media (max-width: 992px) and (min-width: 1200px)
     .list-apps-view .list li
@@ -287,6 +283,17 @@ export default defineComponent({
 
             .desc
                 height: auto
+
+        .info-list
+            padding-right: 0
+            li
+                text-align: left
+
+                &:nth-child(1), &:nth-child(2)
+                    padding-bottom: 32px
+
+                &:nth-child(3)
+                    display: none
 
 @media (max-width: 576px)
     .list-apps-view

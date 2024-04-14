@@ -51,7 +51,7 @@ export default {
                             </a>
                         </div>
                     </div>
-                    <div v-else-if='item.type === "img" && !(item.hide_mobile ?? false)'
+                    <div v-else-if='item.type === "img" && !((item.hide_mobile ?? false) === true && screenWidth() < 576)'
                          :style="{ backgroundImage: item.bg ? 'url(' + item.bg + ')' : ''}"
                          :class="{
                          'img-part-padding-top-xl': item.padding_top === 'xl',
@@ -270,7 +270,7 @@ $app_block_1_padding: 54px
             .app-imgs img
                 max-height: 340px
 
-@media (max-width: 768px)
+@media (max-width: 767px)
     .app-block-1
         .txt-part
             .title
@@ -281,6 +281,38 @@ $app_block_1_padding: 54px
         .direction_column
             > div:nth-child(1) > div > div
                 padding: 40px 0 0
+        .direction_row
+            .txt-part
+                padding: 40px 0 20px
+            .img-part
+                padding: 20px 0 40px
+        .list-part
+            .title
+                margin-top: 8px
+            .li_inner
+                margin: 0 5px
+                padding: 16px 5px
+                height: 120px
+                width: 120px
+
+@media (max-width: 576px)
+    .app-block-1
+        .direction_column .txt-part-inner
+            text-align: left
+        .direction_row
+            .txt-part, .img-part
+                padding: 40px 0
+        .img-part
+            &.bg-part-size-xl
+                height: 430px
+            .app-imgs img
+                margin: 0 5px
+                max-height: 250px
+        .btn
+            display: block
+            max-width: 350px
+            margin: 30px auto 0
+            width: 100%
         .list-part
             ul
                 flex-wrap: wrap
@@ -291,16 +323,10 @@ $app_block_1_padding: 54px
                 margin: 0 auto
                 width: auto
 
-@media (max-width: 576px)
+@media (max-width: 350px)
     .app-block-1
-        .img-part .app-imgs img
-            margin: 0 5px
-            max-height: 250px
-        .btn
-            display: block
-            max-width: 350px
-            margin: 30px auto 0
-            width: 100%
-
+        .img-part
+            &.bg-part-size-xl
+                height: 390px
 
 </style>

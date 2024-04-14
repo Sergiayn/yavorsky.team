@@ -37,6 +37,9 @@ export default {
                     <div class="text-part" v-if="item.type === 'text'">
                         <div class="title">{{item.title[$i18n.locale] ?? ''}}</div>
                         <div class="desc">{{item.desc[$i18n.locale] ?? ''}}</div>
+                        <a v-if="item.show_url" :href="appUrl" target="_blank" class="btn btn-primary">
+                            {{ $t('common.free_download') }}
+                        </a>
                     </div>
                     <div class="img-part" v-if="item.type === 'img'">
                         <img :src="item.img" class="img-fluid" alt="">
@@ -60,12 +63,12 @@ export default {
         .desc
             font-size: 16px
             max-width: 515px
-            margin: auto
+            margin: 0 auto 15px
     .img-part
         padding-bottom: 20px
         text-align: center
 
-@media (max-width: 768px)
+@media (max-width: 450px)
     .app-block-4
         padding-top: 15px
         .text-part

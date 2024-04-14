@@ -265,7 +265,7 @@ export default {
                 max-width: 214px
 
     .list-key_values
-        padding-bottom: 72px
+        padding-bottom: 0
 
         ul
             gap: 0

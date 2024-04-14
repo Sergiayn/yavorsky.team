@@ -27,10 +27,10 @@ export default {
 </script>
 
 <template>
-    <div class="app-block-5" :class="{'block-has-bg-color': block.bg_color ?? false, 'bg_auto_size': block.bg_auto_size ?? false}"
+    <div class="app-block-5" :class="{'block-has-bg-color': block.bg_color ?? false, 'bg_auto_size': block.bg_auto_size ?? false, 'has_bg_mobile_img': block.last.bg_mobile ?? false}"
          :style="[
              block.bg_color ? {backgroundColor: block.bg_color}: {},
-             block.last.bg ? {backgroundImage: 'url(' + block.last.bg + ')'} : {},
+             block.last.bg ? {backgroundImage: 'url(' + (   (screenWidth() < 768 && block.last.bg_mobile) ? block.last.bg_mobile : block.last.bg) + ')'} : {},
              block.last.bg_position ? {backgroundPosition: block.last.bg_position} : {},
              (typeof block.block_padding_top === 'undefined') ? {} : {paddingTop: block.block_padding_top + 'px'},
              (typeof block.block_padding_bottom === 'undefined') ? {} : {paddingBottom: block.block_padding_bottom + 'px'},
@@ -178,10 +178,13 @@ $app_block_1_padding: 54px
         &.bg_auto_size
             background-size: auto 55%
 
-@media (max-width: 768px)
+@media (max-width: 767px)
     .app-block-5
         background-position: center bottom
         background-size: auto 420px
+        &.has_bg_mobile_img
+            background-position: center 105% !important
+            background-size: auto 60% !important
         .txt-part .title
             font-size: 20px
         .direction_row .img-part
