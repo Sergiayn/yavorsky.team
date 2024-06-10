@@ -104,13 +104,17 @@ export default defineComponent({
         font-size: 16px
         padding-bottom: 36px
 
+    form
+        max-width: 500px
+        margin: auto
+
     input
         height: 40px
 
     input[type="email"]
         height: 40px
         margin-right: 30px
-        width: 350px
+        width: 300px
 
     input[type="email"], input[type="submit"], .submit
         display: inline-block
@@ -126,6 +130,8 @@ export default defineComponent({
     .block-subscribe
         //background-color: $color_background_dark
         margin-top: 80px
+        form
+            max-width: 440px
 
         input[type="email"]
             width: calc(95% - 198px)
