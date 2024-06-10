@@ -9,4 +9,5 @@ export default {
     setBlogsShort: (state, data) => state.blogs_short = data,
     setCompany: (state, data) => state.company = data,
     setPage: (state, data) => state.page = data,
+    setScreenWidth: (state, data) =>  state.screen_width = data ?? 0,
 }

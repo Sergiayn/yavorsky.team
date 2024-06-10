@@ -31,12 +31,12 @@ export default defineComponent({
     <div class="page-content list-apps-view">
         <div class="container">
             <div class="row">
-                <div class="col-xxl-6 col-xl-6 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-xxl-6 col-xl-6 col-lg-5 col-md-5 col-sm-12 col-xs-12">
                     <div class="block-brief single">
                         <div class="title">{{ $t('header.our_apps') }}</div>
                     </div>
                 </div>
-                <div class="col-xxl-6 col-xl-6 col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-xxl-6 col-xl-6 col-lg-7 col-md-7 col-sm-12 col-xs-12">
                     <ul class="info-list">
                         <li>
                             <div class="value">4+ {{ $t('common.years') }}</div>
@@ -145,16 +145,19 @@ export default defineComponent({
 
     .buttons
         margin-top: 16px
+        overflow: hidden
 
         .btn
             border-radius: 4px
             font-size: 14px
             padding: 8px 1px
-            min-width: 110px
+            min-width: 100px
             width: calc(50% - 10px)
 
             &:first-child
-                margin-right: 20px
+                float: left
+            &:last-child
+                float: right
 
         .btn-primary
             font-size: 16px
@@ -168,9 +171,10 @@ export default defineComponent({
         list-style: none
         margin: 0
         padding: 0
+        display: flex
+        flex-wrap: wrap
 
         li
-            display: inline-block
             text-align: right
             width: 50%
 
@@ -209,39 +213,44 @@ export default defineComponent({
 @media (max-width: 1200px)
     .list-apps-view
         .list
-            li
-                width: 33.33%
-
             .msg-dev
                 font-size: 10px
                 padding: 4px
                 margin-bottom: 2px
 
             .app
+                max-width: 350px
+                margin: auto
                 padding: 22px 8px
 
+            .title, .desc
+                padding: 0 8px
             .desc
-                height: 96px
-
-        .buttons
+                height: 130px
+            .buttons
+                padding: 0 0 0 7px
             .btn
-                &:first-child
-                    margin-right: 8px
+                font-size: 14px
+
+        .info-list
+            padding-right: 8px
 
 @media (max-width: 992px)
     .list-apps-view
         .block-brief
             margin-bottom: 40px
 
-        .info-list
+        .list
             li
-                text-align: left
+                width: 50%
+            .desc
+                height: 90px
+            .buttons
+                padding: 0 7px
+            .btn-primary
+                padding: 8px 1px
 
-                &:nth-child(1), &:nth-child(2)
-                    padding-bottom: 32px
 
-                &:nth-child(3)
-                    display: none
 
 @media (max-width: 992px) and (min-width: 1200px)
     .list-apps-view .list li
@@ -263,7 +272,7 @@ export default defineComponent({
                 &:nth-child(even) .app
                     padding-right: 0
 
-@media (max-width: 768px)
+@media (max-width: 767px)
     .list-apps-view
         .list
             li
@@ -275,4 +284,23 @@ export default defineComponent({
             .desc
                 height: auto
 
+        .info-list
+            padding-right: 0
+            li
+                text-align: left
+
+                &:nth-child(1), &:nth-child(2)
+                    padding-bottom: 32px
+
+                &:nth-child(3)
+                    display: none
+
+@media (max-width: 576px)
+    .list-apps-view
+        .info-list
+            overflow: hidden
+            li
+                float: left
+            .desc
+                display: block
 </style>

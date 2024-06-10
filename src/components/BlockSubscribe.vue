@@ -21,6 +21,11 @@ export default defineComponent({
                     this.emitter.emit('modal_info', {type: 'open', desc: this.msg})
                     this.email = ''
                 })
+        },
+        description() {
+            return (this.$store.getters.screen_width > 768) ?
+                this.$t("home.subscribe_desc") :
+                this.$t("home.subscribe_desc").replace(/<\/?[^>]+(>|$)/g, " ")
         }
     },
     data() {
@@ -38,13 +43,13 @@ export default defineComponent({
         margin_top: {
             type: String,
             default() {
-                return '140px';
+                return null;
             }
         },
         msg: {
             type: String,
             default() {
-                return 'common.modal_successfully_subscribed';
+                return 'common.modal_successfully_subscribed'
             }
         }
     },
@@ -52,13 +57,14 @@ export default defineComponent({
 </script>
 
 <template>
-    <div class="block-subscribe" :style="{marginTop: margin_top}">
+    <div class="block-subscribe"
+         :style="[margin_top !== null ? {marginTop: margin_top} : {}]">
         <div :class="{'is-bg-wide': is_wide }">
             <div class="container">
                 <div :class="{'is-bg-not-wide': !is_wide }">
                     <div class="block-subscribe-inner">
                         <div class="title">{{ $t("home.subscribe_title") }}</div>
-                        <div class="desc" v-html='$t("home.subscribe_desc")'></div>
+                        <div class="desc" v-html='description()'></div>
                         <form @submit.prevent="subscribeUser">
                             <input type="email" class="form-control" name="email" v-model="email"
                                    :placeholder='$t("common.email")' required>
@@ -98,15 +104,46 @@ export default defineComponent({
         font-size: 16px
         padding-bottom: 36px
 
+    form
+        max-width: 500px
+        margin: auto
+
     input
         height: 40px
 
     input[type="email"]
         height: 40px
         margin-right: 30px
-        width: 370px
+        width: 300px
 
     input[type="email"], input[type="submit"], .submit
         display: inline-block
+
+@media (max-width: 1200px)
+    .block-subscribe
+        margin-top: 100px
+
+@media (max-width: 768px)
+    .block-subscribe-inner .desc
+        margin: auto
+        max-width: 440px
+    .block-subscribe
+        //background-color: $color_background_dark
+        margin-top: 80px
+        form
+            max-width: 440px
+
+        input[type="email"]
+            width: calc(95% - 198px)
+
+@media (max-width: 500px)
+    .block-subscribe
+        input[type="email"], input[type="submit"], .submit
+            display: block
+            margin: auto
+
+        input[type="email"]
+            margin-bottom: 24px
+            width: 90%
 
 </style>

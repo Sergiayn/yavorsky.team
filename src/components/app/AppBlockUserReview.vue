@@ -12,6 +12,11 @@ export default {
             }
         }
     },
+    methods: {
+        screenWidth() {
+            return this.$store.getters.screen_width
+        }
+    },
     computed: {
         reviews() {
             return this.block.reviews
@@ -30,7 +35,7 @@ export default {
         <div class="container" v-if="block">
             <div class="title">{{block.title[$i18n.locale] ?? ''}}</div>
             <div class="reviews">
-                <carousel :wrapAround="true" :items-to-show="2" snapAlign="start">
+                <carousel :wrapAround="true" :items-to-show="screenWidth() < 768 ? 1.2 : 2" snapAlign="start">
                     <slide v-for="(review, index) in reviews" :key="index">
                         <div class="review">
                             <div class="comment">{{ review.review[$i18n.locale] ?? '' }}</div>
@@ -119,5 +124,30 @@ export default {
 
         .comment
             min-height: 72px
+
+@media (max-width: 1200px)
+    .app-block-user-review
+        padding: 40px
+        .reviews
+            padding: 0 60px
+            .carousel__prev
+                left: -60px
+            .carousel__next
+                right: -60px
+
+@media (max-width: 768px)
+    .app-block-user-review
+        padding: 40px 0
+        .title
+            font-size: 20px
+        .reviews
+            padding: 0
+            .carousel__prev,
+            .carousel__next
+                display: none
+
+@media (max-width: 576px)
+    .app-block-user-review .title
+        text-align: left
 
 </style>

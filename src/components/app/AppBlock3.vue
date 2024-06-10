@@ -159,4 +159,42 @@ $app_block_1_padding: 54px
         background-size: cover
         z-index: 2
 
+@media (max-width: 1200px)
+    .app-block-3
+        .txt-part .desc
+            margin: auto
+        .img-part .app-imgs img
+            max-height: 320px
+            margin: 0 40px
+
+        .direction_column
+            .txt-part-inner
+                max-width: none
+                padding: 0
+
+@media (max-width: 991px)
+    .app-block-3
+        .img-part .app-imgs img
+            margin: 0 30px
+
+@media (max-width: 767px)
+    .app-block-3
+        .img-part .app-imgs img
+            max-height: 200px
+            margin: 0 10px
+            &:nth-child(1), &:nth-child(3)
+                margin-bottom: 40px
+            &:nth-child(2)
+                margin-top: 40px
+        .img-part-bg1, .img-part-bg2
+            background-size: auto 100%
+
+@media (max-width: 576px)
+    .app-block-3
+        .direction_column .txt-part-inner
+            text-align: left
+        .img-part .app-imgs img
+            max-height: 180px
+            margin: 0 5px
+
 </style>

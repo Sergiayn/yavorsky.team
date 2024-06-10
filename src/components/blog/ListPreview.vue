@@ -42,11 +42,13 @@ export default defineComponent({
     <div class="blog__list-preview">
         <ul class="list link-black" v-for="(blogs, index) in blogsChunks" :key="index">
             <li v-for="blog in blogs" :key="blog.id">
-                <a href="#" class="img">
+                <router-link class="img" :to="{name:'Blog', params:{locale:$i18n.locale, slug:blog.id}}">
                     <img :src="blog.preview" :alt="blog.name[$i18n.locale] ?? ''" class="img-fluid">
-                </a>
+                </router-link>
                 <div class="date">{{ timestampToDate(blog.created_at) }}</div>
-                <a href="#" class="name">{{ blog.name[$i18n.locale] ?? '' }}</a>
+                <router-link class="name" :to="{name:'Blog', params:{locale:$i18n.locale, slug:blog.id}}">
+                    {{ blog.name[$i18n.locale] ?? '' }}
+                </router-link>
             </li>
         </ul>
     </div>
@@ -60,7 +62,7 @@ export default defineComponent({
         display: flex
         display: -webkit-flex
         list-style: none
-        justify-content: space-between
+        justify-content: flex-start
         margin-bottom: 0
         padding: 12px 0
 
@@ -74,12 +76,15 @@ export default defineComponent({
             border-radius: 8px
             display: block
             overflow: hidden
+            text-align: center
 
         img
             max-width: 100%
+            transform: scale(1.05)
 
         li
             flex: 25%
+            max-width: 25%
             margin: 0 12px
             padding: 0
             text-transform: capitalize
@@ -109,5 +114,24 @@ export default defineComponent({
                 font-weight: 600
                 display: block
                 padding: 0 12px
+
+@media (max-width: 767px)
+    .blog__list-preview
+        .list li
+            flex: 50%
+            max-width: 50%
+
+@media (max-width: 700px)
+    .blog__list-preview
+        .list
+            gap: 40px
+            flex-direction: column
+            max-width: 350px
+            margin: auto
+            li
+                flex: 100%
+                max-width: none
+                margin-right: 0
+                margin-left: 0
 
 </style>

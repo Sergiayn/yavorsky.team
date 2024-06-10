@@ -25,6 +25,7 @@ export default {
     blogs_short: [],
     company: [],
     page: [],
+    screen_width: 0,
     user_reviews: [
         // {
         //     id: 1,

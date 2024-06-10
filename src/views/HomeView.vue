@@ -2,7 +2,7 @@
     <div class="page-home">
         <home-banner/>
         <home-our-apps/>
-        <block-subscribe/>
+        <block-subscribe :is_wide="this.screenWidth() < 540"/>
         <home-company/>
         <home-contacts/>
     </div>
@@ -24,6 +24,11 @@ export default {
         HomeCompany,
         BlockSubscribe,
         HomeContacts
+    },
+    methods: {
+        screenWidth() {
+            return this.$store.getters.screen_width
+        }
     }
 }
 </script>

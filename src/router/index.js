@@ -27,11 +27,6 @@ const routes = [
                 component: () => import("@/views/Apps/ListAppsView"),
             },
             {
-                path: "about",
-                name: "About",
-                component: () => import("@/views/AboutView"),
-            },
-            {
                 path: "company",
                 name: "Company",
                 component: () => import("@/views/CompanyView"),

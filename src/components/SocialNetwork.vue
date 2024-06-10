@@ -6,7 +6,7 @@
                 :href="item.link"
                 :class="item.name"
                 :title="item.name"
-                v-if="isColor || screenWidth < 768"
+                v-if="isColor || screenWidth() < 991"
                 class="active"
             ></a>
             <a
@@ -44,21 +44,11 @@ export default {
 
         return {
             list,
-            screenWidth: 0
         }
     },
-    mounted() {
-        this.updateScreenWidth()
-        this.onScreenResize()
-    },
     methods: {
-        onScreenResize() {
-            window.addEventListener("resize", () => {
-                this.updateScreenWidth()
-            })
-        },
-        updateScreenWidth() {
-            this.screenWidth = window.innerWidth
+        screenWidth() {
+            return this.$store.getters.screen_width
         }
     },
 }

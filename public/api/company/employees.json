@@ -7,7 +7,7 @@
       "ru": "Сергей"
     },
     "position": "CEO",
-    "img": "img.png"
+    "img": "img.webp"
   },
   {
     "id": 4,
@@ -17,7 +17,7 @@
       "ru": "Сергей"
     },
     "position": "Web Developer",
-    "img": "img.png"
+    "img": "img.webp"
   },
   {
     "id": 5,
@@ -27,17 +27,17 @@
       "ru": "Галина"
     },
     "position": "Marketing Promotion, Content Writer",
-    "img": "img.png"
+    "img": "img.webp"
   },
   {
     "id": 6,
     "name": {
-      "en": "Alina",
-      "ua": "Аліна",
-      "ru": "Алина"
+      "en": "Elena",
+      "ua": "Олена",
+      "ru": "Елена"
     },
     "position": "UI/UX Designer",
-    "img": "img.png"
+    "img": "img.webp"
   },
   {
     "id": 7,
@@ -47,6 +47,6 @@
       "ru": "Данил"
     },
     "position": "iOS Developer",
-    "img": "img.png"
+    "img": "img.webp"
   }
 ]

@@ -27,16 +27,20 @@ export default defineComponent({
         const inputSearch = ref('')
         const isOpenSearch = ref(false)
         const isOpenQuickSearch = ref(false)
+        const widthForBlockRubric = ref('')
+        const widthForBlockSearch = ref('')
         const quickSearchList = ref([])
         const quickSearchListMax = 3
         const quickSearchShowBtnAll = ref(false)
         const rubrics = ['all', 'news', 'how_to']
 
-        return {inputSearch, isOpenSearch, isOpenQuickSearch, quickSearchList, quickSearchListMax, quickSearchShowBtnAll,rubrics}
+        return {inputSearch, isOpenSearch, isOpenQuickSearch, quickSearchList, quickSearchListMax, quickSearchShowBtnAll,
+            rubrics, widthForBlockRubric, widthForBlockSearch}
     },
     mounted() {
         this.inputSearch = this.search
         this.calcRubricActiveLine()
+        window.addEventListener("resize", () => this.calcRubricActiveLine())
     },
     methods: {
         eInputSearch() {
@@ -86,36 +90,82 @@ export default defineComponent({
         calcRubricActiveLine() {
             let left = 0
             let isLoop = true
-            this.$refs.rubricItem.forEach((item) => {
-                if(isLoop) {
-                    const isActive = item.classList.contains('active')
-                    if (isActive)
-                    {
-                        this.$refs.rubricItemLine.style.width = item.querySelector('a').offsetWidth + 'px'
-                        isLoop = false
-                    } else
-                        left = left + item.offsetWidth
+            try {
+                this.$refs.rubricItem.forEach((item) => {
+                    if(isLoop) {
+                        const isActive = item.classList.contains('active')
+                        if (isActive)
+                        {
+                            this.$refs.rubricItemLine.style.width = item.querySelector('a').offsetWidth + 'px'
+                            isLoop = false
+                        } else
+                            left = left + item.offsetWidth
+                    }
+                })
+                if (0 !== left) {
+                    if (this.screenWidth() > 768)
+                        left = left + 24
+                    else if (this.screenWidth() > 539)
+                        left = left + 10
+                    else
+                        left = left + 7
                 }
-            })
-            if (0 !== left)
-                left = left + 24
 
-            this.$refs.rubricItemLine.style.left = left + 'px'
+                this.$refs.rubricItemLine.style.left = left + 'px'
+            } catch (e) {
+                console.warn(e)
+            }
         },
         list_top() {
-            let blogs
-            if ('all' === this.target_rubric)
-                blogs = this.blogs
-            else
-                blogs = this.blogs.filter(item => this.target_rubric === item.rubric)
-            return blogs.slice(0, 4)
+            return this.isAllRubric ? this.blogs.slice(0, 4) : []
         },
         list_main() {
-            return this.hasTopBlock ? this.blogs.slice(4) : this.blogs
+            let blogs
+            if ('how_to' === this.target_rubric)
+                blogs = this.blogs.filter(item => this.target_rubric === item.rubric)
+            else
+                blogs = []
+
+            return blogs
+        },
+        screenWidth() {
+            return this.$store.getters.screen_width
+        },
+        getWidthForBlockRubric() {
+            this.widthForBlockRubric = 'col-8 col-xl-6 col-lg-6 col-md-8 col-sm-9 col-xs-9'
+            if (this.isOpenSearch && this.screenWidth() <= 576)
+                this.widthForBlockRubric = 'd-none'
+
+            if (this.screenWidth() >= 1200)
+                this.widthForBlockRubric = '50%'
+            else if (this.screenWidth() >= 540)
+                this.widthForBlockRubric = '67%'
+            else {
+                if (this.isOpenSearch)
+                    this.widthForBlockRubric = '0%'
+                else
+                    this.widthForBlockRubric = '75%'
+            }
+
+            return this.widthForBlockRubric
+        },
+        getWidthForBlockSearch() {
+            if (this.screenWidth() >= 1200)
+                this.widthForBlockSearch = '50%'
+            else if (this.screenWidth() >= 540)
+                this.widthForBlockSearch = '33%'
+            else {
+                if (this.isOpenSearch)
+                    this.widthForBlockSearch = '99%'
+                else
+                    this.widthForBlockSearch = '25%'
+            }
+
+            return this.widthForBlockSearch
         }
     },
     computed: {
-        hasTopBlock() {
+        isAllRubric() {
             return 'all' === this.target_rubric || '' === this.target_rubric || null === this.target_rubric
         },
         blogs() {
@@ -132,8 +182,8 @@ export default defineComponent({
                 <div class="title">{{ $t('blog.title') }}</div>
             </div>
             <div class="filter-form">
-                <div class="row">
-                    <div class="col">
+                <div class="form_row">
+                    <div :style="{width: getWidthForBlockRubric()}">
                         <div class="rubrics">
                             <ul>
                                 <li v-for="rubric in rubrics" :key="rubric"
@@ -148,7 +198,7 @@ export default defineComponent({
                             </ul>
                         </div>
                     </div>
-                    <div class="col">
+                    <div :style="{width: getWidthForBlockSearch()}">
                         <div class="search">
                             <Popper class="search-popper" :show="isOpenQuickSearch">
                                 <input type="search" :placeholder="$t('blog.search')"
@@ -184,10 +234,10 @@ export default defineComponent({
                 </div>
             </div>
             <list-preview-top :list="list_top()"/>
-            <template v-if="false">
-                <div class="list-preview-desc">{{ $t('blog.latest_posts') }}</div>
+            <div v-if="list_main().length">
+                <div class="list-preview-desc" style="display: none">{{ $t('blog.latest_posts') }}</div>
                 <list-preview :list="list_main()"/>
-            </template>
+            </div>
         </div>
     </div>
     <block-subscribe :is_wide="true" :margin_top="0"/>
@@ -202,6 +252,8 @@ export default defineComponent({
 
     .filter-form
         padding-bottom: 70px
+        .form_row
+            display: flex
 
         .rubrics
             padding-top: 6px
@@ -326,5 +378,37 @@ export default defineComponent({
         color: $color_gray_60
         font-size: 18px
         padding-bottom: 32px
+
+@media (max-width: 1200px)
+    .list-blogs-view
+        .filter-form
+            padding-bottom: 60px
+
+@media (max-width: 767px)
+    .list-blogs-view
+        .filter-form
+            .search
+                padding-left: 0
+            .rubrics li
+                padding: 0 10px
+            .quick-search
+                max-width: 82%
+                margin-left: 3%
+                width: 500px
+
+@media (max-width: 540px)
+    .list-blogs-view .filter-form
+        .search input
+            background-position: 2px center
+            padding-left: 32px
+        .rubrics
+            max-height: 38px
+            overflow: hidden
+            li
+                padding: 0 7px
+
+@media (max-width: 400px)
+    .list-blogs-view .filter-form .rubrics a
+        font-size: 15px
 
 </style>

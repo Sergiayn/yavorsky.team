@@ -25,6 +25,18 @@ export default {
         ModalInfo,
         MainFooter,
         MainHeader,
+    },
+    mounted() {
+        this.updateScreenWidth()
+        this.onScreenResize()
+    },
+    methods: {
+        onScreenResize() {
+            window.addEventListener("resize", () => this.updateScreenWidth())
+        },
+        updateScreenWidth() {
+            this.$store.commit('setScreenWidth', window.innerWidth)
+        },
     }
 }
 
@@ -54,8 +66,9 @@ body
     font-size: 16px
     font-weight: 600
     padding: 7px
+
     &:active, &:focus
-        box-shadow: none!important
+        box-shadow: none !important
 
 .btn-primary
     background-color: $color_primary
@@ -88,6 +101,7 @@ body
     background-color: $color_gray_40
     color: $color_white
     border-color: $color_gray_40
+
     &:hover
         background-color: $color_gray_40
         border-color: $color_gray_40
@@ -196,6 +210,10 @@ body
 
 .page-content
     padding: 60px 0 120px
+
+@media (max-width: 1200px)
+    .page-content
+        padding: 60px 0 90px
 
 @media (max-width: 768px)
     .page-content

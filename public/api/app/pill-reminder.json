@@ -1,7 +1,7 @@
 {
     "id": 4,
     "name": "MedTime: Pill Reminder",
-    "url_app": null,
+    "url_app": "medtime-pill-reminder/id6472479066",
     "desc": {
         "en": "Medication regimen can be quite complex, especially if you need to take multiple medications at different times of the day. The \"MedTime: Pill Reminder\" app on iOS can help you organize your medication regimen and take your medications on time to achieve better treatment outcomes.",
         "ua": "Режим прийому ліків може бути досить складним, якщо вам необхідно приймати кілька препаратів у різний час доби. Додаток \"MedTime: Pill Reminder\" на iOS допоможе вам організувати свій режим прийому ліків та приймати їх вчасно для досягнення найкращих результатів лікування.",
@@ -78,15 +78,15 @@
                     "ua": "Програма має зручний інтерфейс, який дозволяє легко та швидко встановлювати нагадування на головному екрані програми. Ви також можете налаштувати частоту нагадувань відповідно до ваших потреб.",
                     "ru": "Приложение имеет удобный интерфейс, который позволяет легко и быстро устанавливать напоминания на главном экране приложения. Вы также можете настроить частоту напоминаний в соответствии с вашими потребностями."
                 }
+            },
+            "bg_item": {
+                "type" : "img",
+                "img": "/images/app/4/block_3_1_img.png"
             }
         },
         {
             "id" : 3,
             "type" : 4,
-            "first" : {
-                "type" : "img",
-                "img": "/images/app/4/block_3_1_img.png"
-            },
             "middle" : {
                 "type" : "text",
                 "title": {
@@ -98,7 +98,8 @@
                     "en": "With the \"MedTime: Pill Reminder\" app on iOS, you can truly control your medication regimen and take your medications on time. This can help ensure better treatment outcomes and improve your health and well-being.",
                     "ua": "За допомогою програми \"MedTime: Pill Reminder\" на iOS ви зможете ефективно контролювати свій режим прийому ліків та приймати їх вчасно. Це допоможе забезпечити кращі результати лікування та покращити ваше здоров'я та самопочуття.",
                     "ru": "С помощью приложения \"MedTime: Pill Reminder\" на iOS вы сможете эффективно контролировать свой режим приема лекарств и принимать их вовремя. Это поможет обеспечить лучшие результаты лечения и улучшить ваше здоровье и самочувствие."
-                }
+                },
+                "show_url": true
             },
             "last" : {
                 "type" : "img",

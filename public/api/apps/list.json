@@ -10,7 +10,7 @@
             "ru": "Надежный блокировщик рекламы обезопасит пользование Интернетом, блокируя рекламу и всплывающие окна."
         },
         "logo": "1/logo.svg",
-        "img": "1/app.png"
+        "img": "1/app.webp"
     },
     {
         "id": 2,
@@ -23,7 +23,7 @@
             "ru": "Быстрое приложение для очистки телефона от мусора и оптимизации производительности устройства."
         },
         "logo": "2/logo.svg",
-        "img": "2/app.png"
+        "img": "2/app.webp"
     },
     {
         "id": 3,
@@ -36,11 +36,11 @@
             "ru": "Мощная и простая в использовании программа сканирования и анализа сети."
         },
         "logo": "3/logo.svg",
-        "img": "3/app.png"
+        "img": "3/app.webp"
     },
     {
         "id": 5,
-        "name": "Secret Valut",
+        "name": "Secret Vault",
         "url_app": null,
         "slug": "secret-vault",
         "desc": {
@@ -49,12 +49,12 @@
             "ru": "Приложение для безопасного хранения фотографий в личном хранилище."
         },
         "logo": "5/logo.svg",
-        "img": "5/app.png"
+        "img": "5/app.webp"
     },
     {
         "id": 4,
         "name": "MedTime: Pill Reminder",
-        "url_app": null,
+        "url_app": "medtime-pill-reminder/id6472479066",
         "slug": "pill-reminder",
         "desc": {
             "en": "A medication reminder app that allows you to set up a medication schedule and receive timely reminders to take your medications.",

@@ -39,8 +39,7 @@ export default defineComponent({
             formData.append('comment', this.comment)
 
             const fileInput = document.getElementById('inp-files')
-            if (null !== fileInput && null !== fileInput.files)
-            {
+            if (null !== fileInput && null !== fileInput.files) {
                 for (var i = 0; i < fileInput.files.length; i++) {
                     formData.append('files[]', fileInput.files[i]);
                 }
@@ -54,7 +53,10 @@ export default defineComponent({
             try {
                 fetch("https://dev.api.yavorsky.team.galaxys.info/v1/contact", requestOptions)
                     .then(() => {
-                        this.emitter.emit('modal_info', {type: 'open', desc: this.$t('common.modal_successfully_submitted')})
+                        this.emitter.emit('modal_info', {
+                            type: 'open',
+                            desc: this.$t('common.modal_successfully_submitted')
+                        })
                         this.name = ''
                         this.email = ''
                         this.comment = ''
@@ -70,9 +72,9 @@ export default defineComponent({
 <template>
     <div class="contact-form">
         <form
-            @submit="checkForm"
             action="#"
             method="post"
+            @submit="checkForm"
         >
             <p v-if="errors.length">
                 <b>{{ $t('common.message_show_all_errors') }}:</b>
@@ -81,56 +83,58 @@ export default defineComponent({
                 </ul>
             </p>
             <div class="row">
-                <div class="col-6">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <p>
                         <input
-                            required
-                            class="form-control"
                             v-model="name"
-                            type="text"
-                            name="name"
                             :placeholder="$t('common.name')"
+                            class="form-control"
+                            name="name"
+                            required
+                            type="text"
                         >
                     </p>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <p>
                         <input
-                            required
-                            class="form-control"
                             v-model="email"
-                            type="email"
-                            name="email"
                             :placeholder="$t('common.email')"
+                            class="form-control"
+                            name="email"
+                            required
+                            type="email"
                         >
                     </p>
                 </div>
             </div>
             <p>
               <textarea
-                  required
-                  class="form-control"
                   v-model="comment"
-                  name="comment"
                   :placeholder="$t('common.form_comment')"
+                  class="form-control"
+                  name="comment"
+                  required
               >
               </textarea>
             </p>
             <div v-if="has_file_upload">
-                <FileUpload />
+                <FileUpload/>
             </div>
             <div class="row">
-                <div class="col-8">
-                    <p class="link-purplle">
-                        <span>{{ $t('common.i_agree_with_1') }}</span>&nbsp;<router-link :to="{name:'PrivacyPolicy', params:{locale:$i18n.locale}}">{{ $t('common.i_agree_with_2') }}</router-link>
+                <div class="col-sm-8 col-xs-12">
+                    <p class="link-purplle agree-block">
+                        <span>{{ $t('common.i_agree_with_1') }}</span>&nbsp;<router-link
+                        :to="{name:'PrivacyPolicy', params:{locale:$i18n.locale}}">{{ $t('common.i_agree_with_2') }}
+                    </router-link>
                     </p>
                 </div>
-                <div class="col-4">
-                    <p>
+                <div class="col-sm-4 col-xs-12">
+                    <p class="send-block">
                         <input
+                            :value="$t('common.send')"
                             class="btn btn-primary"
                             type="submit"
-                            :value="$t('common.send')"
                         >
                     </p>
                 </div>
@@ -139,7 +143,7 @@ export default defineComponent({
     </div>
 </template>
 
-<style scoped lang="sass">
+<style lang="sass" scoped>
 @import "@/assets/color"
 
 .contact-form
@@ -154,5 +158,30 @@ export default defineComponent({
 
     form .link-purplle
         margin: 10px 0 0
+
+@media (max-width: 991px)
+    .contact-form
+        p
+            margin-bottom: 16px
+
+        .send-block
+            display: block
+            margin: 9px 0 0 0
+
+@media (max-width: 576px)
+    .contact-form
+        p
+            margin-bottom: 16px
+
+        .agree-block
+            font-size: 14px
+
+        .send-block
+            margin: 0
+            text-align: right
+
+            input
+                margin-top: 16px
+                float: none
 
 </style>

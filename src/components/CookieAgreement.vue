@@ -55,10 +55,19 @@ export default {
     .desc
         font-size: 15px
         color: $color_black
+        padding-right: 10px
 
 .block-cookie-agreement-inner
     align-items: center
     display: flex
     justify-content: space-around
+
+@media (max-width: 768px)
+    .block-cookie-agreement
+        .desc
+            padding-right: 0
+    .block-cookie-agreement-inner
+        flex-direction: column
+        gap: 10px
 
 </style>
