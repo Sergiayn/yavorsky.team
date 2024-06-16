@@ -132,21 +132,21 @@ export default defineComponent({
             return this.$store.getters.screen_width
         },
         getWidthForBlockRubric() {
-            this.widthForBlockRubric = 'col-8 col-xl-6 col-lg-6 col-md-8 col-sm-9 col-xs-9'
+            let val = 'col-8 col-xl-6 col-lg-6 col-md-8 col-sm-9 col-xs-9'
             if (this.isOpenSearch && this.screenWidth() <= 576)
-                this.widthForBlockRubric = 'd-none'
+                val = 'd-none'
 
             if (this.screenWidth() >= 1200)
-                this.widthForBlockRubric = '50%'
+                val = '50%'
             else if (this.screenWidth() >= 540)
-                this.widthForBlockRubric = '67%'
+                val = '67%'
             else {
                 if (this.isOpenSearch)
-                    this.widthForBlockRubric = '0%'
+                    val = '0%'
                 else
-                    this.widthForBlockRubric = '75%'
+                    val = '75%'
             }
-
+            this.widthForBlockRubric = val
             return this.widthForBlockRubric
         },
         getWidthForBlockSearch() {
