@@ -74,7 +74,7 @@
     {
         "id": 5,
         "name": "Secret Vault",
-        "url_app": null,
+        "url_app": "secret-vault-hidden-gallery/id6670318394",
         "slug": "secret-vault",
         "bg": "linear-gradient(85deg, #CFEAEE -0.25%, rgba(167, 212, 218, 0.05) 30.36%, #CFEDF1 82.66%)",
         "brief": {
