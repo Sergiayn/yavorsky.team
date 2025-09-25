@@ -38,7 +38,7 @@
     {
         "id": 5,
         "name": "Secret Vault",
-        "url_app": null,
+        "url_app": "secret-vault-hidden-gallery/id6670318394",
         "slug": "secret-vault",
         "desc": {
             "en": "Hide photos and protect them with a passcode",
