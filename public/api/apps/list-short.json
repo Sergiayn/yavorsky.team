@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Ad Blocker",
-        "url_app": "ad-blocker-safari-adblock/id1587657245",
+        "url_app": "ad-blocker-for-safari-noads/id1587657245",
         "slug": "ad-blocker",
         "desc": {
             "en": "Block ads on any website",
@@ -14,7 +14,7 @@
     {
         "id": 2,
         "name": "RoboCleaner",
-        "url_app": "phone-cleaner-robo-clean-up/id1603385704",
+        "url_app": "clean-my-gallery-roboclean/id1603385704",
         "slug": "robocleaner",
         "desc": {
             "en": "Phone cleaner app",
@@ -26,7 +26,7 @@
     {
         "id": 3,
         "name": "Network Analyzer",
-        "url_app": "network-analyzer-speed-test/id1660559510",
+        "url_app": "secret-vault-hidden-photo/id6670318394",
         "slug": "network-analyzer",
         "desc": {
             "en": "Scan network and check the Internet speed",
@@ -50,7 +50,7 @@
     {
         "id": 4,
         "name": "MedTime: Pill Reminder",
-        "url_app": "medtime-pill-reminder/id6472479066",
+        "url_app": "med-time-pill-reminder-alarm/id6472479066",
         "slug": "pill-reminder",
         "desc": {
             "en": "Set a reminder to take meds in time",

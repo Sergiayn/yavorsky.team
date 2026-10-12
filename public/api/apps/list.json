@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Ad Blocker",
-        "url_app": "ad-blocker-safari-adblock/id1587657245",
+        "url_app": "ad-blocker-for-safari-noads/id1587657245",
         "slug": "ad-blocker",
         "desc": {
             "en": "A reliable ad-blocking app that helps you enjoy a safe and efficient browsing experience by blocking banner ads and pop-ups.",
@@ -15,7 +15,7 @@
     {
         "id": 2,
         "name": "RoboCleaner",
-        "url_app": "phone-cleaner-robo-clean-up/id1603385704",
+        "url_app": "clean-my-gallery-roboclean/id1603385704",
         "slug": "robocleaner",
         "desc": {
             "en": "A fast app for cleaning your phone of unwanted files and debris, ensuring optimal performance for your device.",
@@ -41,7 +41,7 @@
     {
         "id": 5,
         "name": "Secret Vault",
-        "url_app": "secret-vault-hidden-gallery/id6670318394",
+        "url_app": "secret-vault-hidden-photo/id6670318394",
         "slug": "secret-vault",
         "desc": {
             "en": "A secure photo storage app that allows you to hide important photos from prying eyes and store them in a private vault.\n",
@@ -54,7 +54,7 @@
     {
         "id": 4,
         "name": "MedTime: Pill Reminder",
-        "url_app": "medtime-pill-reminder/id6472479066",
+        "url_app": "med-time-pill-reminder-alarm/id6472479066",
         "slug": "pill-reminder",
         "desc": {
             "en": "A medication reminder app that allows you to set up a medication schedule and receive timely reminders to take your medications.",

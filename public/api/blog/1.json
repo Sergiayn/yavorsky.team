@@ -37,7 +37,7 @@
         "bg": "linear-gradient(15deg, #052319 2.97%, #0E523A 94.36%)",
         "name": "Ad Blocker",
         "logo": "/images/blog/1/banner_1_logo.svg",
-        "url": "https://apps.apple.com/us/app/ad-blocker-safari-adblock/id1587657245"
+        "url": "https://apps.apple.com/us/app/ad-blocker-for-safari-noads/id1587657245"
     },
     "banner_bottom": {
         "id": 2,
@@ -49,7 +49,7 @@
             "ua": "Позбавте свій телефон від нав'язливої реклами.",
             "ru": "Избавьте свой телефон от навязчивой рекламы."
         },
-        "url": "https://apps.apple.com/us/app/ad-blocker-safari-adblock/id1587657245"
+        "url": "https://apps.apple.com/us/app/ad-blocker-for-safari-noads/id1587657245"
     },
     "created_at": 1681920050
 }
