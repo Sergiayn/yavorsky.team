@@ -13,9 +13,9 @@ export default defineComponent({
             if ('ua' === this.$i18n.locale)
                 str += 'ua/'
             else if ('ru' === this.$i18n.locale)
-                str += 'ru-ru/'
+                str += 'ru/'
             else
-                str += 'en-us/'
+                str += 'en/'
             return str + 'app/'
         }
     },
